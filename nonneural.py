@@ -161,7 +161,7 @@ def numtrailingsyms(s, symbol):
 
 def main(argv):
     options, remainder = getopt.gnu_getopt(argv[1:], 'ohp:', ['output','help','path='])
-    TEST, OUTPUT, HELP, path = False,False, False, '../data/'
+    TEST, OUTPUT, HELP, path = False,False, False, '../Data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
