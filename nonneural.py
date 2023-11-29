@@ -171,8 +171,6 @@ def main(argv):
         if opt in ('-o', '--output'):
             OUTPUT = True
         if opt in ('-d', '--debug'):
-            path = './DebugData/'
-            TEST = True
             DEBUG = True
         if opt in ('-t', '--test'):
             TEST = True
@@ -236,6 +234,8 @@ def main(argv):
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
+        if DEBUG:
+            devlines = [line.strip() for line in open(path + lang + ".dbg", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
         numguesses = 0
         if OUTPUT:
