@@ -1,0 +1,116 @@
+﻿Will Kezerian, Sandro Ansari, Lemon An Wyner
+French Planned Tweaks and Rational
+
+
+
+
+There were a fair amount of mistakes made by the code, and they can generally be separated into two categories: 
+1. Verbs with irregular conjugations, which were otherwise correctly conjugated but had one or two tenses that it failed to infix a certain string
+2. Verbs from Old or Middle French, which have been replaced with other words in Modern French. These verbs have conjugations that are frequently irregular and difficult to predict for the model. In these cases, the code made errors in (in most cases) at least half of the lines with that particular verb, and thus are clearly very problematic for the provided script.
+
+
+Proposed list of improvements:
+1. Account for a couple infixing issues that the code is having when trying to read in certain verbs that require infixing in the conjugation ending.
+   1. -ss- infixation
+      1. Code is failing to infix -ss- in some certain situations
+         1. V;IND;PST;IPFV;NOM(3,SG)
+   2. -oi- infixation
+      1. Script fails to infix -oi-
+         1. Fails to infix it when it should, and also infixes it when it shouldn’t
+            1. V;COND;NOM(1,SG)
+            2. V;COND;NOM(2,SG)
+            3. V;COND;NOM(3,PL)
+            4. V;IND;PST;IPFV;NOM(3,PL)
+            5. V;IND;PST;IPFV;NOM(2,SG)                        
+            6. V;IND;PST;IPFV;NOM(1,SG)
+         2. Not a single instance of correct infixing of -oi-
+2. Attempt to account for the large amount of Old French and Middle French verbs in the data set. There are no common roots within these words, nor a common ending, and are thus giving us somewhat of a headache as to how to improve this particular aspect of the code.
+   1. Proposition: Create a list of all the Old French verbs. Ask the function to take into account if the verb it is working on is in this list, then it will apply different rules that it uses only for Old French.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notes:
+
+
+
+
+PATTERNS:
+-ss- infixation
+-ir endings - lines 33, 641, 
+                Situations: V;IND;PST;IPFV;NOM(3,SG)
+-oie- infixation
+        Failing to implement oie correctly anywhere
+        Inputs it when it is not supposed to, doesn’t when it should
+                Fails, and inputs it when: 
+Situations:
+V;COND;NOM(1,SG)
+V;COND;NOM(2,SG)
+V;COND;NOM(3,PL)
+V;IND;PST;IPFV;NOM(3,PL)
+V;IND;PST;IPFV;NOM(2,SG)                        
+V;IND;PST;IPFV;NOM(1,SG)
+        
+
+
+IRREGULAR/UNCOMMON
+prelever - to levy
+uncommon and usually explained around - aka other verbs are used
+reteindre - to re-dye
+uncommon and with a prefix
+wiki: "This verb is conjugated like peindre. It uses the same endings as rendreor vendre, but its -nd-becomes -gn-before a vowel, and its past participle ends in 't' instead of a vowel."
+So it seems the code is not expecting it to be conjugated so strangely
+mendier - to beg
+uncommon and irregular; taking ant rather than iant, es rather than ies, etc
+alanguir - to make languid; reflexive to become languid
+from wiki: "This is a regular verb of the second conjugation, like finir, choisir, and most other verbs with infinitives ending in -ir. One salient feature of this conjugation is the repeated appearance of the infix -iss-"
+So it seems the code is not catching this repeated appearance of the iss inflix in the V;IND;PST;IPFV;NOM(3,SG) tense
+investir - to invest
+SAME PROBLEM AS ABOVE, code outputted without iss
+
+
+
+
+ARCHAIC FRENCH - "Old French conjugation varies significantly by date and by region"
+ouïr - to listen
+terser (tercer) - to plough a third time
+c is softened to c with the tail
+Code is not conjugating it correctly - doing ii conjugations rather than ions and astes rather than ates with a circonflex accent
+delayer - to dilute
+IRREGULAR er verb, now diluer
+Not used anymore
+culcher - to lay down
+Alternate form of couchier
+desregler - to disrupt
+Middle french, became deregler
+contrepleder - to counterplead
+Old French, became English counterplead
+Applying aient instead of oient
+craqueler - to crack
+Reflexive form that is not used, craquer is
+broicher - to jab or prod
+Old French alternative form of brochier
+acoustrer - to prepare; to ready
+Middle French conjugation varies from one text to another.
+Middle French - se preparer is now used, reflexive
+
+
+RANDOM
+tuner - to tune a vehicle etc
+from English tune
+Making loads of mistakes on this one - seems irregular, not using ii conjugation patterns like the code seems to expect
+desarmer - to disarm
+irregular conjugations - applied oit to imparfait past 3rd
+objectiver - to objectivize
+larder - to lard
+Missing accent grave on the past perfect 3rd plural lardErent
