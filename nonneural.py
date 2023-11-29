@@ -186,8 +186,7 @@ def prefix_suffix_rules_get(lemma, form):
 
     return prules, srules
 
-
-def apply_best_rule(lemma, msd, allprules, allsrules):
+def apply_best_rule(lemma, msd, allprules, allsrules, debug=False):
     """
     Arguments:
         lemma -- 'root' or 'base' form of word to transform
@@ -200,6 +199,9 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
     For prefix-changing rules, only the most frequent rule is chosen.
     """
 
+    if debug: print("Lemma: %s\nFeatures: %s" % (lemma, msd))
+
+    bestrulelen = 0
     base = "<" + lemma + ">"
     if msd not in allprules and msd not in allsrules:
         return lemma # Haven't seen this inflection, so bail out
@@ -209,6 +211,7 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
         applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base]
         if applicablerules: # If there are applicable rules, find the best one
             bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
+            if debug: print("\nApplicable suffix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
             base = base.replace(bestrule[0], bestrule[1]) # Apply best rule to base form
 
     # Use above method to apply relevant prefixing rule to base form
@@ -216,6 +219,7 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
         applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (x[2]))
+            if debug: print("\nApplicable prefix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
             base = base.replace(bestrule[0], bestrule[1])
 
     # Remove extra characters
@@ -237,12 +241,13 @@ def numtrailingsyms(s, symbol):
 
 
 def main(argv):
-    # Had to add in 'test' option, seems like they forgot even though they included the structure for it
-    options, remainder = getopt.gnu_getopt(argv[1:], 'othp:', ['output','test','help','path='])
-    TEST, OUTPUT, HELP, path = False,False, False, './Data/'
+    options, remainder = getopt.gnu_getopt(argv[1:], 'odthp:', ['output','debug','test','help','path='])
+    DEBUG, TEST, OUTPUT, HELP, path = False,False,False, False, './Data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
+        if opt in ('-d', '--debug'):
+            DEBUG = True
         if opt in ('-t', '--test'):
             TEST = True
         if opt in ('-h', '--help'):
@@ -305,6 +310,8 @@ def main(argv):
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
+        if DEBUG:
+            devlines = [line.strip() for line in open(path + lang + ".dbg", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
         numguesses = 0
         if OUTPUT:
@@ -314,7 +321,7 @@ def main(argv):
 #                    lemma, msd, = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
-            outform = apply_best_rule(lemma, msd, allprules, allsrules)
+            outform = apply_best_rule(lemma, msd, allprules, allsrules, DEBUG)
             if prefbias > suffbias:
                 outform = outform[::-1]
                 lemma = lemma[::-1]
