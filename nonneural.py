@@ -122,10 +122,12 @@ def prefix_suffix_rules_get(lemma, form):
     return prules, srules
 
 
-def apply_best_rule(lemma, msd, allprules, allsrules):
+def apply_best_rule(lemma, msd, allprules, allsrules, debug=False):
     """Applies the longest-matching suffix-changing rule given an input
     form and the MSD. Length ties in suffix rules are broken by frequency.
     For prefix-changing rules, only the most frequent rule is chosen."""
+
+    if debug: print("Lemma: %s\nFeatures: %s" % (lemma, msd))
 
     bestrulelen = 0
     base = "<" + lemma + ">"
@@ -136,13 +138,16 @@ def apply_best_rule(lemma, msd, allprules, allsrules):
         applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
+            if debug: print("\nApplicable suffix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
             base = base.replace(bestrule[0], bestrule[1])
 
     if msd in allprules:
         applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (x[2]))
+            if debug: print("\nApplicable prefix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
             base = base.replace(bestrule[0], bestrule[1])
+
 
     base = base.replace('<', '')
     base = base.replace('>', '')
@@ -160,11 +165,15 @@ def numtrailingsyms(s, symbol):
 
 
 def main(argv):
-    options, remainder = getopt.gnu_getopt(argv[1:], 'ohp:', ['output','help','path='])
-    TEST, OUTPUT, HELP, path = False,False, False, './Data/'
+    options, remainder = getopt.gnu_getopt(argv[1:], 'odthp:', ['output','debug','test','help','path='])
+    DEBUG, TEST, OUTPUT, HELP, path = False,False,False, False, './Data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
+        if opt in ('-d', '--debug'):
+            path = './DebugData/'
+            TEST = True
+            DEBUG = True
         if opt in ('-t', '--test'):
             TEST = True
         if opt in ('-h', '--help'):
@@ -236,7 +245,7 @@ def main(argv):
 #                    lemma, msd, = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
-            outform = apply_best_rule(lemma, msd, allprules, allsrules)
+            outform = apply_best_rule(lemma, msd, allprules, allsrules, DEBUG)
             if prefbias > suffbias:
                 outform = outform[::-1]
                 lemma = lemma[::-1]
