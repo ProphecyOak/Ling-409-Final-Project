@@ -14,82 +14,133 @@ from glob import glob
 
 
 def hamming(s,t):
+    """
+    Arguments:
+        s,t -- two strings to calculate hamming distance for
+    
+    Returns:
+        Hamming distance between input strings (int)
+    """
+
     return sum(1 for x,y in zip(s,t) if x != y)
 
 
 def halign(s,t):
-    """Align two strings by Hamming distance."""
-    slen = len(s)
-    tlen = len(t)
-    minscore = len(s) + len(t) + 1
+    """
+    Arguments:
+        s,t -- strings to align by hamming distance
+    
+    Returns:
+        Newly aligned strings with leading and trailing _ characters added as needed.
+
+    Aligns two input strings by 'sliding' one along the other to find the alignment with
+    the lowest hamming distance.
+    """
+    
+    minscore = len(s) + len(t) + 1 # Starting "minimum" score 1 above maximum possible score
+
+    # 'Slide' forward string s along string t
     for upad in range(0, len(t)+1):
         upper = '_' * upad + s + (len(t) - upad) * '_'
         lower = len(s) * '_' + t
-        score = hamming(upper, lower)
-        if score < minscore:
-            bu = upper
-            bl = lower
+        score = hamming(upper, lower) # Calculate hamming distance between current alignment
+        if score < minscore: # Save best alignment so far if lower score is found
+            best_upper = upper
+            best_lower = lower
             minscore = score
 
+    # Repeat above algorithm 'sliding' t backwards along s
     for lpad in range(0, len(s)+1):
         upper = len(t) * '_' + s
         lower = (len(s) - lpad) * '_' + t + '_' * lpad
         score = hamming(upper, lower)
         if score < minscore:
-            bu = upper
-            bl = lower
+            best_upper = upper
+            best_lower = lower
             minscore = score
 
-    zipped = list(zip(bu,bl))
+    # Remove unnecessary trailing and leading _ characters from both strings
+    zipped = list(zip(best_upper,best_lower))
     newin  = ''.join(i for i,o in zipped if i != '_' or o != '_')
     newout = ''.join(o for i,o in zipped if i != '_' or o != '_')
     return newin, newout
 
 
 def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
-    """Recursive implementation of Levenshtein, with alignments returned."""
+    """
+    Arguments:
+        s,t -- input strings to align with levenshtein algorithm
+
+        inscost, delcost, substcost
+            -- (default values 1.0) costs to use respectively for insertion, deletion and
+               substitution (in input string s)
+    
+    Returns:
+        Newly aligned input s (str), newly aligned output t (str), cost required to make get
+        from s to t (int)
+    
+    Recursive implementation of the levenshtein algorithm to find the least expensive way to
+    get from s to t using given costs for insertion, deletion, and substitution.
+    """
     @memolrec
     def lrec(spast, tpast, srem, trem, cost):
+        # Base cases:
+        #     If either s or t has been fully 'processed', the remaining distance is simply
+        #     the cost of inserting/deleting remaining characters in the input string.
         if len(srem) == 0:
-            return spast + len(trem) * '_', tpast + trem, '', '', cost + len(trem)
+            return spast + len(trem) * '_', tpast + trem, '', '', cost + len(trem) * inscost
         if len(trem) == 0:
             return spast + srem, tpast + len(srem) * '_', '', '', cost + len(srem)
 
         addcost = 0
-        if srem[0] != trem[0]:
+        if srem[0] != trem[0]: # Cost of 'substituting' a character with itself is 0
             addcost = substcost
 
+        # Return the minimum of substituting, inserting, or deleting at the current character position
         return min((lrec(spast + srem[0], tpast + trem[0], srem[1:], trem[1:], cost + addcost),
                    lrec(spast + '_', tpast + trem[0], srem, trem[1:], cost + inscost),
                    lrec(spast + srem[0], tpast + '_', srem[1:], trem, cost + delcost)),
                    key = lambda x: x[4])
 
-    answer = lrec('', '', s, t, 0)
-    return answer[0],answer[1],answer[4]
+    answer = lrec('', '', s, t, 0) # Starting call to recursive function
+    return answer[0],answer[1],answer[4] # Indices 2 and 3 of the returned tuple are empty strings
 
 
 def memolrec(func):
-    """Memoizer for Levenshtein."""
-    cache = {}
+    """Wrapper function/memoizer for recursive levenshtein implementation. Returns 'decorated' version
+    of levenshtein."""
+    cache = {} # Initialize empty memoization dictionary
     @wraps(func)
     def wrap(sp, tp, sr, tr, cost):
-        if (sr,tr) not in cache:
-            res = func(sp, tp, sr, tr, cost)
-            cache[(sr,tr)] = (res[0][len(sp):], res[1][len(tp):], res[4] - cost)
+        if (sr,tr) not in cache: # Add new entry to cache dictionary if cost for sr and tr not previously calclated
+            result = func(sp, tp, sr, tr, cost)
+            cache[(sr,tr)] = (result[0][len(sp):], result[1][len(tp):], result[4] - cost)
+        # Use previously calculated 'sub-values' to get total cost
         return sp + cache[(sr,tr)][0], tp + cache[(sr,tr)][1], '', '', cost + cache[(sr,tr)][2]
     return wrap
 
 
 def alignprs(lemma, form):
-    """Break lemma/form into three parts:
-    IN:  1 | 2 | 3
-    OUT: 4 | 5 | 6
-    1/4 are assumed to be prefixes, 2/5 the stem, and 3/6 a suffix.
-    1/4 and 3/6 may be empty.
+    """
+    Arguments:
+        lemma -- string representing a 'root'/'basic' form of a word
+        form  -- string representing derived form of lemma with added morphological features
+    
+    Returns:
+        6 tuple of strings representing approximate breakdowns of lemma and form into prefix, suffix, and root
+
+              p   r   s
+              _________
+        lemma 0 | 1 | 2
+              ---------
+        form  3 | 4 | 5
+
+    Uses trailing and leading 'blank' characters in aligned lemma and form to approximately separate strings into
+    prefix, root, and suffix substrings
     """
 
-    al = levenshtein(lemma, form, substcost = 1.1) # Force preference of 0:x or x:0 by 1.1 cost
-    alemma, aform = al[0], al[1]
+    al = levenshtein(lemma, form, substcost = 1.1) # Slight preference for insertion/deletion over substitution
+    alemma, aform = al[0], al[1] # Only unpack aligned strings, not cost
     # leading spaces
     lspace = max(len(alemma) - len(alemma.lstrip('_')), len(aform) - len(aform.lstrip('_')))
     # trailing spaces
@@ -98,21 +149,35 @@ def alignprs(lemma, form):
 
 
 def prefix_suffix_rules_get(lemma, form):
-    """Extract a number of suffix-change and prefix-change rules
-    based on a given example lemma+inflected form."""
+    """
+    Arguments:
+        lemma -- string representing a 'root'/'basic' form of a word
+        form  -- string representing derived form of lemma with added morphological features
+    
+    Returns:
+        prules -- set of 2-tuples containing inputs and outputs for possible prefix rules used to
+            turn lemma into form
+        srules -- set of 2-tuples containing inputs and outputs for possible suffix rules used to
+            turn lemma into form
+    
+    Aligns lemma and form using alignprs, and identifies all possible prefixing/suffixing rules that
+    convert lemma to form. Assumes suffixing to be a slightly more complex/elaborate process than
+    prefixing (can be applied to reverse strings for languages which prefer prefixing).
+    """
     lp,lr,ls,fp,fr,fs = alignprs(lemma, form) # Get six parts, three for in three for out
 
     # Suffix rules
     ins  = lr + ls + ">"
     outs = fr + fs + ">"
+
     srules = set()
     for i in range(min(len(ins), len(outs))):
-        srules.add((ins[i:], outs[i:]))
-    srules = {(x[0].replace('_',''), x[1].replace('_','')) for x in srules}
+        srules.add((ins[i:], outs[i:])) # Each possible substring pair is added as a suffixing rule
+    srules = {(x[0].replace('_',''), x[1].replace('_','')) for x in srules} # Remove _ alignment characters
 
     # Prefix rules
     prules = set()
-    if len(lp) >= 0 or len(fp) >= 0:
+    if len(lp) >= 0 or len(fp) >= 0: # Assumes simple prefixing, does not attempt to loop over prefix substrings
         inp = "<" + lp
         outp = "<" + fp
         for i in range(0,len(fr)):
@@ -123,44 +188,57 @@ def prefix_suffix_rules_get(lemma, form):
 
 
 def apply_best_rule(lemma, msd, allprules, allsrules):
-    """Applies the longest-matching suffix-changing rule given an input
-    form and the MSD. Length ties in suffix rules are broken by frequency.
-    For prefix-changing rules, only the most frequent rule is chosen."""
+    """
+    Arguments:
+        lemma -- 'root' or 'base' form of word to transform
+        msd   -- unimorph string representing desired features in derived form of lemma
+        allprules -- dictionary mapping all msds to possible prefixing rules found in the language
+        allsrules -- dictionary mapping all msds to possible suffixing rules found in the language
 
-    bestrulelen = 0
+    Applies the longest-matching suffix-changing rule given an input
+    form and the MSD. Length ties in suffix rules are broken by frequency.
+    For prefix-changing rules, only the most frequent rule is chosen.
+    """
+
     base = "<" + lemma + ">"
     if msd not in allprules and msd not in allsrules:
         return lemma # Haven't seen this inflection, so bail out
 
     if msd in allsrules:
+        # One applicable rule is a 3-tuple containing the input, output, and frequency
         applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base]
-        if applicablerules:
+        if applicablerules: # If there are applicable rules, find the best one
             bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
-            base = base.replace(bestrule[0], bestrule[1])
+            base = base.replace(bestrule[0], bestrule[1]) # Apply best rule to base form
 
+    # Use above method to apply relevant prefixing rule to base form
     if msd in allprules:
         applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (x[2]))
             base = base.replace(bestrule[0], bestrule[1])
 
+    # Remove extra characters
     base = base.replace('<', '')
     base = base.replace('>', '')
     return base
 
 
 def numleadingsyms(s, symbol):
+    """Get number of leading symbol characters in s"""
     return len(s) - len(s.lstrip(symbol))
 
 
 def numtrailingsyms(s, symbol):
+    """Get number of trailing symbol characters in s"""
     return len(s) - len(s.rstrip(symbol))
 
 ###############################################################################
 
 
 def main(argv):
-    options, remainder = getopt.gnu_getopt(argv[1:], 'ohp:', ['output','help','path='])
+    # Had to add in 'test' option, seems like they forgot even though they included the structure for it
+    options, remainder = getopt.gnu_getopt(argv[1:], 'othp:', ['output','test','help','path='])
     TEST, OUTPUT, HELP, path = False,False, False, './Data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
