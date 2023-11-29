@@ -17,7 +17,7 @@ def hamming(s,t):
     """
     Arguments:
         s,t -- two strings to calculate hamming distance for
-    
+
     Returns:
         Hamming distance between input strings (int)
     """
@@ -29,14 +29,14 @@ def halign(s,t):
     """
     Arguments:
         s,t -- strings to align by hamming distance
-    
+
     Returns:
         Newly aligned strings with leading and trailing _ characters added as needed.
 
     Aligns two input strings by 'sliding' one along the other to find the alignment with
     the lowest hamming distance.
     """
-    
+
     minscore = len(s) + len(t) + 1 # Starting "minimum" score 1 above maximum possible score
 
     # 'Slide' forward string s along string t
@@ -74,11 +74,11 @@ def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
         inscost, delcost, substcost
             -- (default values 1.0) costs to use respectively for insertion, deletion and
                substitution (in input string s)
-    
+
     Returns:
         Newly aligned input s (str), newly aligned output t (str), cost required to make get
         from s to t (int)
-    
+
     Recursive implementation of the levenshtein algorithm to find the least expensive way to
     get from s to t using given costs for insertion, deletion, and substitution.
     """
@@ -125,7 +125,7 @@ def alignprs(lemma, form):
     Arguments:
         lemma -- string representing a 'root'/'basic' form of a word
         form  -- string representing derived form of lemma with added morphological features
-    
+
     Returns:
         6 tuple of strings representing approximate breakdowns of lemma and form into prefix, suffix, and root
 
@@ -153,13 +153,13 @@ def prefix_suffix_rules_get(lemma, form):
     Arguments:
         lemma -- string representing a 'root'/'basic' form of a word
         form  -- string representing derived form of lemma with added morphological features
-    
+
     Returns:
         prules -- set of 2-tuples containing inputs and outputs for possible prefix rules used to
             turn lemma into form
         srules -- set of 2-tuples containing inputs and outputs for possible suffix rules used to
             turn lemma into form
-    
+
     Aligns lemma and form using alignprs, and identifies all possible prefixing/suffixing rules that
     convert lemma to form. Assumes suffixing to be a slightly more complex/elaborate process than
     prefixing (can be applied to reverse strings for languages which prefer prefixing).
@@ -193,6 +193,7 @@ def apply_best_rule(lemma, msd, allprules, allsrules, debug=False):
         msd   -- unimorph string representing desired features in derived form of lemma
         allprules -- dictionary mapping all msds to possible prefixing rules found in the language
         allsrules -- dictionary mapping all msds to possible suffixing rules found in the language
+        debug -- boolean whether print statements should be run
 
     Applies the longest-matching suffix-changing rule given an input
     form and the MSD. Length ties in suffix rules are broken by frequency.
@@ -263,6 +264,7 @@ def main(argv):
             print("Options:")
             print(" -o         create output files with guesses (and don't just evaluate)")
             print(" -t         evaluate on test instead of dev")
+            print(" -d         evaluate on debug and print debug statements instead of dev")
             print(" -p [path]  data files path. Default is ../data/")
             quit()
 
