@@ -186,7 +186,7 @@ def prefix_suffix_rules_get(lemma, form):
 
     return prules, srules
 
-def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, sample=None):
+def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False, sample=None):
     """
     Arguments:
         lemma -- 'root' or 'base' form of word to transform
@@ -223,7 +223,7 @@ def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, sample=None):
         applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (x[2]))
-            if debug: print("\nApplicable prefix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
+            if debug and not no_pref: print("\nApplicable prefix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
             base = base.replace(bestrule[0], bestrule[1])
 
     # Remove extra characters
@@ -245,13 +245,15 @@ def numtrailingsyms(s, symbol):
 
 
 def main(argv):
-    options, remainder = getopt.gnu_getopt(argv[1:], 'ods:thp:', ['output','debug','subset=','test','help','path='])
-    DEBUG, SAMPLE, TEST, OUTPUT, HELP, path = False,None,False,False, False, './Data/'
+    options, remainder = getopt.gnu_getopt(argv[1:], 'odSs:thp:', ['output','debug','suffix-only','subset=','test','help','path='])
+    DEBUG, NO_PREF, SAMPLE, TEST, OUTPUT, HELP, path = False,False,None,False,False, False, './Data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
         if opt in ('-d', '--debug'):
             DEBUG = True
+        if opt in ('-S', '--suffix-only'):
+            NO_PREF = True
         if opt in ('-s', '--subset'):
             SAMPLE = arg
         if opt in ('-t', '--test'):
@@ -323,8 +325,8 @@ def main(argv):
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
-        if DEBUG:
-            devlines = [line.strip() for line in open(path + lang + ".dbg", "r", encoding='utf8') if line != '\n']
+        #if DEBUG:
+        #    devlines = [line.strip() for line in open(path + lang + ".dbg", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
         numguesses = 0
         if OUTPUT:
@@ -338,7 +340,7 @@ def main(argv):
 #                    lemma, msd, = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
-            outform = apply_best_rule(lemma, msd, allprules, allsrules, DEBUG, SAMPLE)
+            outform = apply_best_rule(lemma, msd, allprules, allsrules, DEBUG, NO_PREF, SAMPLE)
             if not outform is None:
                 if prefbias > suffbias:
                     outform = outform[::-1]

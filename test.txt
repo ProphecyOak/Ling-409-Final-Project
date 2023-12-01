@@ -1,0 +1,242 @@
+Lemma: décevoir
+Features: V.PTCP;PRS
+
+Applicable suffix rules:
+[('>', '>', 193), ('>', 't>', 180), ('r>', 'nt>', 159), ('ir>', 'ant>', 5), ('r>', 't>', 13), ('r>', 'ssant>', 7), ('>', 'sant>', 7), ('>', 'nt>', 18), ('ir>', 'issant>', 7), ('>', 'ant>', 7), ('r>', 'ant>', 8), ('oir>', 'ant>', 2), ('ir>', 'nt>', 2), ('voir>', 'vant>', 1)]
+Using: ('voir>', 'vant>', 1)
+Lemma: décevoir
+Features: V.PTCP;PST
+
+Applicable suffix rules:
+[('>', '>', 216), ('r>', '>', 207), ('ir>', 'u>', 2), ('ir>', 'i>', 6), ('>', 't>', 2), ('ir>', 'rt>', 2), ('r>', 'rt>', 2), ('ir>', '>', 2), ('oir>', '>', 1), ('voir>', '>', 1)]
+Using: ('voir>', '>', 1)
+Lemma: décevoir
+Features: V;COND;NOM(3,PL)
+
+Applicable suffix rules:
+[('r>', 'raient>', 167), ('>', 'ient>', 208), ('>', '>', 225), ('>', 'nt>', 216), ('>', 't>', 225), ('>', 'aient>', 167), ('>', 'ent>', 208), ('r>', 'roient>', 41), ('>', 'oient>', 41), ('ir>', 'draient>', 1), ('r>', 'nt>', 9), ('ir>', 'roient>', 1), ('ir>', 'ient>', 4), ('ir>', 'oient>', 1), ('r>', 'ent>', 4), ('ir>', 'iraient>', 9), ('ir>', 'iroient>', 1), ('oir>', 'oient>', 1), ('oir>', 'roient>', 1), ('oir>', 'raient>', 2), ('ir>', 'aient>', 1), ('voir>', 'vraient>', 1), ('oir>', 'draient>', 1), ('oir>', 'aient>', 1)]
+Using: ('voir>', 'vraient>', 1)
+Lemma: décevoir
+Features: V;COND;NOM(3,SG)
+
+Applicable suffix rules:
+[('>', 'it>', 206), ('>', '>', 210), ('r>', 'rait>', 154), ('>', 't>', 206), ('>', 'ait>', 154), ('r>', 'roit>', 44), ('>', 'oit>', 44), ('ir>', 'oit>', 3), ('ir>', 'it>', 4), ('r>', 't>', 4), ('ir>', 'roit>', 2), ('ir>', 'irait>', 10), ('ir>', 'iroit>', 1), ('ir>', 'eit>', 1)]
+Using: ('ir>', 'irait>', 10)
+Lemma: décevoir
+Features: V;IND;FUT;NOM(3,SG)
+
+Applicable suffix rules:
+[('>', 'a>', 202), ('>', '>', 213), ('r>', 'ra>', 202), ('ir>', 'dra>', 1), ('ir>', 'ra>', 4), ('ir>', 'ira>', 8), ('ir>', 'era>', 1), ('oir>', 'dra>', 1)]
+Using: ('oir>', 'dra>', 1)
+Lemma: décevoir
+Features: V;IND;PRS;NOM(1,PL)
+
+Applicable suffix rules:
+[('r>', 'ns>', 168), ('>', '>', 206), ('>', 's>', 193), ('r>', 'ons>', 10), ('>', 'ns>', 21), ('ir>', 'ons>', 4), ('>', 'ons>', 8), ('>', 'sons>', 8), ('ir>', 'issons>', 8), ('r>', 'ssons>', 8), ('r>', 's>', 9), ('ir>', 'ns>', 2), ('oir>', 'ons>', 2)]
+Using: ('oir>', 'ons>', 2)
+Lemma: décevoir
+Features: V;IND;PRS;NOM(2,SG)
+
+Applicable suffix rules:
+[('>', '>', 196), ('r>', 's>', 180), ('r>', '>', 4), ('ir>', 's>', 2), ('ir>', 'is>', 8), ('ir>', 'es>', 2), ('ir>', '>', 2), ('oir>', 'oiz>', 1), ('ir>', 'iz>', 1), ('r>', 'z>', 1), ('oir>', 'x>', 1)]
+Using: ('oir>', 'oiz>', 1)
+Lemma: décevoir
+Features: V;IND;PST;IPFV;NOM(1,PL)
+
+Applicable suffix rules:
+[('r>', 'ons>', 152), ('>', '>', 190), ('>', 'ns>', 164), ('>', 's>', 170), ('ir>', 'ions>', 1), ('r>', 'ns>', 18), ('>', 'ons>', 6), ('ir>', 'issions>', 6), ('>', 'ions>', 6), ('r>', 'ssions>', 6), ('>', 'sions>', 6), ('>', 'ens>', 1), ('r>', 'iens>', 1), ('ir>', 'iiens>', 1), ('r>', 's>', 14), ('ir>', 'ns>', 1), ('oir>', 'ons>', 1), ('voir>', 'vions>', 1), ('oir>', 'ions>', 1)]
+Using: ('voir>', 'vions>', 1)
+Lemma: décevoir
+Features: V;IND;PST;IPFV;NOM(2,SG)
+
+Applicable suffix rules:
+[('>', '>', 210), ('r>', 'is>', 157), ('>', 's>', 180), ('r>', 's>', 28), ('>', 'is>', 16), ('>', 'sais>', 5), ('>', 'ais>', 5), ('ir>', 'issais>', 5), ('r>', 'ssais>', 5), ('r>', 'ais>', 6), ('ir>', 'ies>', 2), ('ir>', 'oies>', 2), ('r>', 'es>', 2), ('r>', 'ois>', 1), ('r>', '>', 1), ('>', 'soies>', 1), ('ir>', 'issoies>', 1), ('>', 'es>', 1), ('>', 'oies>', 1), ('r>', 'ssoies>', 1), ('>', 'ies>', 1), ('ir>', 'is>', 2), ('ir>', 'ais>', 2)]
+Using: ('ir>', 'issais>', 5)
+Lemma: décevoir
+Features: V;IND;PST;IPFV;NOM(3,SG)
+
+Applicable suffix rules:
+[('>', '>', 206), ('>', 't>', 184), ('r>', 'it>', 168), ('>', 'it>', 14), ('r>', 'ait>', 6), ('ir>', 'oit>', 3), ('ir>', 'it>', 7), ('r>', 't>', 7), ('r>', '>', 12), ('r>', 'ssait>', 3), ('ir>', 'issait>', 3), ('>', 'ait>', 3), ('>', 'sait>', 3), ('r>', 'oit>', 1), ('ir>', 'eit>', 1), ('ir>', 'ait>', 1), ('oir>', 'oit>', 1), ('oir>', 'ait>', 1), ('voir>', 'vait>', 1)]
+Using: ('voir>', 'vait>', 1)
+Lemma: décevoir
+Features: V;IND;PST;PFV;NOM(3,SG)
+
+Applicable suffix rules:
+[('>', '>', 221), ('r>', 'a>', 11), ('r>', '>', 189), ('ir>', 't>', 2), ('ir>', 'i>', 3), ('ir>', 'u>', 1), ('ir>', 'it>', 9), ('r>', 't>', 10), ('>', 't>', 1), ('oir>', 'it>', 1)]
+Using: ('oir>', 'it>', 1)
+Lemma: décevoir
+Features: V;POS;IMP;NOM(2,SG)
+
+Applicable suffix rules:
+[('>', '>', 195), ('r>', '>', 179), ('ir>', '>', 3), ('ir>', 'is>', 6), ('r>', 's>', 7), ('>', 'oi>', 2), ('>', 'i>', 2), ('>', 'toi>', 2), ('r>', '-toi>', 2), ('ir>', 'e>', 1), ('ir>', 'i>', 1), ('oir>', 'oi>', 1), ('oir>', 's>', 1), ('voir>', 's>', 1), ('ir>', 's>', 1)]
+Using: ('voir>', 's>', 1)
+Lemma: décevoir
+Features: V;SBJV;PRS;NOM(1,PL)
+
+Applicable suffix rules:
+[('r>', 'ons>', 136), ('>', '>', 193), ('>', 's>', 182), ('>', 'ns>', 145), ('r>', 'ns>', 36), ('ir>', 'iens>', 2), ('r>', 'ens>', 2), ('ir>', 'ons>', 2), ('>', 'ons>', 6), ('>', 'ions>', 6), ('r>', 'ssions>', 6), ('>', 'sions>', 6), ('ir>', 'issions>', 6), ('r>', 's>', 5), ('ir>', 'ions>', 1), ('ir>', 'ns>', 1), ('oir>', 'ons>', 1), ('oir>', 'ions>', 1)]
+Using: ('oir>', 'ions>', 1)
+Lemma: décevoir
+Features: V;SBJV;PRS;NOM(2,PL)
+
+Applicable suffix rules:
+[('>', '>', 215), ('r>', 'z>', 191), ('>', 'z>', 24), ('r>', 'ez>', 5), ('ir>', 'iez>', 5), ('ir>', 'ez>', 1), ('ir>', 'issiez>', 7), ('r>', 'ssiez>', 7), ('>', 'siez>', 7), ('>', 'iez>', 7), ('>', 'ez>', 8), ('r>', 'ssez>', 1), ('>', 'sez>', 1), ('ir>', 'issez>', 1), ('oir>', 'iez>', 1), ('voir>', 'viez>', 1)]
+Using: ('voir>', 'viez>', 1)
+Lemma: décevoir
+Features: V;SBJV;PRS;NOM(2,SG)
+
+Applicable suffix rules:
+[('>', '>', 210), ('r>', 's>', 175), ('>', 's>', 14), ('ir>', 'es>', 3), ('r>', 'res>', 1), ('ir>', 'ires>', 1), ('>', 'es>', 9), ('ir>', 'isses>', 8), ('>', 'ses>', 8), ('r>', 'sses>', 8), ('r>', '>', 20), ('r>', 'z>', 1), ('voir>', 'ves>', 1), ('ir>', 's>', 1), ('oir>', 'es>', 1)]
+Using: ('voir>', 'ves>', 1)
+Lemma: décevoir
+Features: V;SBJV;PRS;NOM(3,PL)
+
+Applicable suffix rules:
+[('>', '>', 204), ('>', 't>', 202), ('r>', 'nt>', 189), ('>', 'nt>', 13), ('ir>', 'nent>', 1), ('r>', 'ent>', 1), ('>', 'sent>', 5), ('>', 'ent>', 5), ('ir>', 'issent>', 5), ('r>', 'ssent>', 5), ('ir>', 'ent>', 4), ('oir>', 'ent>', 1), ('ir>', 'nt>', 1), ('voir>', 'vent>', 1), ('r>', 't>', 1)]
+Using: ('voir>', 'vent>', 1)
+Lemma: décevoir
+Features: V;SBJV;PST;NOM(1,PL)
+
+Applicable suffix rules:
+[('r>', 'ons>', 192), ('r>', 'ions>', 164), ('>', '>', 223), ('r>', 'ssions>', 173), ('>', 's>', 215), ('>', 'ns>', 187), ('r>', 'sions>', 164), ('r>', 'ns>', 31), ('r>', 'sons>', 28), ('r>', 'ssons>', 25), ('>', 'ons>', 21), ('>', 'sons>', 2), ('ir>', 'issons>', 2), ('>', 'ions>', 19), ('>', 'sions>', 19), ('ir>', 'ussons>', 1), ('ir>', 'issions>', 5), ('>', 'ssions>', 10), ('r>', 'assions>', 10), ('r>', 's>', 6), ('ir>', 'ns>', 1), ('oir>', 'ssions>', 1), ('oir>', 'ons>', 1), ('oir>', 'ions>', 1), ('oir>', 'ussions>', 1), ('oir>', 'sions>', 1)]
+Using: ('oir>', 'ussions>', 1)
+Lemma: décevoir
+Features: V;SBJV;PST;NOM(2,SG)
+
+Applicable suffix rules:
+[('r>', 'asses>', 8), ('>', '>', 199), ('>', 'es>', 18), ('>', 'ses>', 17), ('>', 's>', 27), ('>', 'sses>', 8), ('r>', 's>', 171), ('ir>', 'isses>', 9), ('r>', 'sses>', 9), ('oir>', 'ses>', 1), ('ir>', 'es>', 1), ('voir>', 'sses>', 1), ('r>', 'ses>', 1), ('oir>', 'usses>', 1), ('ir>', 'sses>', 1)]
+Using: ('voir>', 'sses>', 1)
+Lemma: décevoir
+Features: V;SBJV;PST;NOM(3,PL)
+
+Applicable suffix rules:
+[('>', '>', 207), ('>', 't>', 206), ('r>', 'nt>', 182), ('>', 'nt>', 24), ('>', 'sent>', 17), ('>', 'ent>', 17), ('ir>', 'issent>', 9), ('r>', 'ssent>', 9), ('>', 'ssent>', 8), ('r>', 'assent>', 8), ('r>', 'n>', 1)]
+Using: ('ir>', 'issent>', 9)
+Lemma: décevoir
+Features: V;SBJV;PST;NOM(3,SG)
+
+Applicable suffix rules:
+[('>', '>', 213), ('r>', 't>', 156), ('>', 't>', 46), ('r>', 'ât>', 9), ('r>', 'st>', 36), ('ir>', 'ist>', 2), ('ir>', 'ît>', 11), ('r>', '>', 1), ('ir>', 't>', 1)]
+Using: ('ir>', 'ît>', 11)
+Lemma: réouvrir
+Features: V.PTCP;PRS
+
+Applicable suffix rules:
+[('>', '>', 193), ('>', 't>', 180), ('r>', 'nt>', 159), ('ir>', 'ant>', 5), ('rir>', 'rant>', 2), ('r>', 't>', 13), ('r>', 'ssant>', 7), ('>', 'sant>', 7), ('>', 'nt>', 18), ('ir>', 'issant>', 7), ('>', 'ant>', 7), ('r>', 'ant>', 8), ('rir>', 'rissant>', 2), ('ir>', 'nt>', 2)]
+Using: ('rir>', 'rissant>', 2)
+Lemma: réouvrir
+Features: V.PTCP;PST
+
+Applicable suffix rules:
+[('>', '>', 216), ('r>', '>', 207), ('rir>', 'ru>', 2), ('ir>', 'u>', 2), ('ir>', 'i>', 6), ('vrir>', 'vert>', 1), ('rir>', 'ert>', 2), ('>', 't>', 2), ('ir>', 'rt>', 2), ('r>', 'rt>', 2), ('rir>', 'ri>', 3), ('ir>', '>', 2)]
+Using: ('vrir>', 'vert>', 1)
+Lemma: réouvrir
+Features: V;COND;NOM(1,PL)
+
+Applicable suffix rules:
+[('>', 'ons>', 192), ('>', 'ions>', 185), ('>', '>', 219), ('r>', 'rions>', 185), ('>', 's>', 219), ('>', 'ns>', 213), ('r>', 'ns>', 6), ('ir>', 'irions>', 8), ('>', 'ens>', 18), ('>', 'iens>', 17), ('>', 'iiens>', 17), ('r>', 'riiens>', 17), ('rir>', 'ririons>', 2), ('r>', 'iens>', 1), ('ir>', 'iiens>', 1), ('r>', 'ons>', 1), ('ir>', 'ions>', 1)]
+Using: ('rir>', 'ririons>', 2)
+Lemma: réouvrir
+Features: V;COND;NOM(1,SG)
+
+Applicable suffix rules:
+[('>', 'is>', 162), ('>', '>', 195), ('r>', 'rais>', 141), ('>', 'ais>', 141), ('>', 's>', 162), ('>', 'e>', 29), ('r>', 'roie>', 29), ('>', 'oie>', 29), ('>', 'ie>', 29), ('ir>', 'drais>', 1), ('ir>', 'rais>', 1), ('ir>', 'is>', 1), ('ir>', 'ais>', 1), ('r>', 's>', 1), ('>', 'ois>', 14), ('r>', 'rois>', 14), ('ir>', 'irais>', 4), ('ir>', 'eroie>', 1), ('vrir>', 'vreroie>', 1), ('rir>', 'reroie>', 1), ('rir>', 'rirais>', 1)]
+Using: ('vrir>', 'vreroie>', 1)
+Lemma: réouvrir
+Features: V;COND;NOM(2,PL)
+
+Applicable suffix rules:
+[('>', '>', 197), ('>', 'z>', 188), ('r>', 'riez>', 160), ('>', 'iez>', 174), ('>', 'ez>', 176), ('r>', 'iez>', 3), ('r>', 'ez>', 2), ('ir>', 'riiez>', 1), ('ir>', 'iiez>', 3), ('r>', 'z>', 9), ('rir>', 'rriiez>', 1), ('>', 'iiez>', 14), ('r>', 'riiez>', 14), ('ir>', 'eriiez>', 1), ('vrir>', 'vreriiez>', 1), ('rir>', 'reriiez>', 1), ('ir>', 'iriez>', 7), ('rir>', 'ririez>', 4), ('ir>', 'iriiez>', 1), ('ir>', 'riez>', 1), ('ir>', 'iez>', 1)]
+Using: ('vrir>', 'vreriiez>', 1)
+Lemma: réouvrir
+Features: V;COND;NOM(3,SG)
+
+Applicable suffix rules:
+[('>', 'it>', 206), ('>', '>', 210), ('r>', 'rait>', 154), ('>', 't>', 206), ('>', 'ait>', 154), ('r>', 'roit>', 44), ('>', 'oit>', 44), ('rir>', 'rroit>', 2), ('ir>', 'oit>', 3), ('ir>', 'it>', 4), ('r>', 't>', 4), ('ir>', 'roit>', 2), ('ir>', 'irait>', 10), ('rir>', 'rirait>', 4), ('ir>', 'iroit>', 1), ('ir>', 'eit>', 1)]
+Using: ('rir>', 'rirait>', 4)
+Lemma: réouvrir
+Features: V;IND;FUT;NOM(1,SG)
+
+Applicable suffix rules:
+[('>', '>', 198), ('>', 'i>', 193), ('>', 'ai>', 186), ('r>', 'rai>', 186), ('ir>', 'drai>', 1), ('r>', '>', 4), ('ir>', 'i>', 4), ('ir>', 'rai>', 1), ('rir>', 'rrai>', 1), ('ir>', 'ai>', 4), ('ir>', 'irai>', 8), ('vrir>', 'vrerai>', 1), ('rir>', 'rerai>', 1), ('ir>', 'erai>', 1), ('r>', 'roi>', 1), ('>', 'oi>', 1), ('rir>', 'rirai>', 3)]
+Using: ('vrir>', 'vrerai>', 1)
+Lemma: réouvrir
+Features: V;IND;FUT;NOM(3,PL)
+
+Applicable suffix rules:
+[('r>', 'ront>', 200), ('>', '>', 209), ('>', 'nt>', 208), ('>', 't>', 208), ('>', 'ont>', 200), ('ir>', 'ront>', 1), ('rir>', 'rront>', 1), ('ir>', 'iront>', 9), ('rir>', 'riront>', 5), ('ir>', 'nt>', 1), ('r>', 't>', 1)]
+Using: ('rir>', 'riront>', 5)
+Lemma: réouvrir
+Features: V;IND;PRS;NOM(1,PL)
+
+Applicable suffix rules:
+[('r>', 'ns>', 168), ('>', '>', 206), ('>', 's>', 193), ('r>', 'ons>', 10), ('>', 'ns>', 21), ('ir>', 'ons>', 4), ('>', 'ons>', 8), ('>', 'sons>', 8), ('ir>', 'issons>', 8), ('r>', 'ssons>', 8), ('r>', 's>', 9), ('rir>', 'rissons>', 4), ('rir>', 'rons>', 2), ('ir>', 'ns>', 2)]
+Using: ('rir>', 'rissons>', 4)
+Lemma: réouvrir
+Features: V;IND;PST;IPFV;NOM(2,SG)
+
+Applicable suffix rules:
+[('>', '>', 210), ('r>', 'is>', 157), ('>', 's>', 180), ('r>', 's>', 28), ('>', 'is>', 16), ('>', 'sais>', 5), ('>', 'ais>', 5), ('ir>', 'issais>', 5), ('r>', 'ssais>', 5), ('r>', 'ais>', 6), ('ir>', 'ies>', 2), ('ir>', 'oies>', 2), ('rir>', 'roies>', 1), ('r>', 'es>', 2), ('vrir>', 'vroies>', 1), ('rir>', 'rissais>', 2), ('r>', 'ois>', 1), ('r>', '>', 1), ('>', 'soies>', 1), ('ir>', 'issoies>', 1), ('>', 'es>', 1), ('>', 'oies>', 1), ('r>', 'ssoies>', 1), ('>', 'ies>', 1), ('rir>', 'rais>', 2), ('ir>', 'is>', 2), ('ir>', 'ais>', 2)]
+Using: ('vrir>', 'vroies>', 1)
+Lemma: réouvrir
+Features: V;IND;PST;IPFV;NOM(3,SG)
+
+Applicable suffix rules:
+[('>', '>', 206), ('>', 't>', 184), ('r>', 'it>', 168), ('>', 'it>', 14), ('r>', 'ait>', 6), ('ir>', 'oit>', 3), ('ir>', 'it>', 7), ('rir>', 'roit>', 2), ('r>', 't>', 7), ('r>', '>', 12), ('r>', 'ssait>', 3), ('ir>', 'issait>', 3), ('>', 'ait>', 3), ('>', 'sait>', 3), ('vrir>', 'vroit>', 1), ('rir>', 'rissait>', 2), ('r>', 'oit>', 1), ('ir>', 'eit>', 1), ('rir>', 'rait>', 1), ('ir>', 'ait>', 1)]
+Using: ('vrir>', 'vroit>', 1)
+Lemma: réouvrir
+Features: V;IND;PST;PFV;NOM(1,PL)
+
+Applicable suffix rules:
+[('>', '>', 194), ('r>', 's>', 173), ('>', 's>', 21), ('r>', 'âmes>', 7), ('>', 'es>', 15), ('>', 'mes>', 8), ('ir>', 'mes>', 1), ('r>', 'es>', 1), ('r>', 'mes>', 7), ('rir>', 'rumes>', 1), ('ir>', 'umes>', 1), ('ir>', 'îmes>', 6), ('r>', 'asmes>', 1), ('>', 'smes>', 1), ('rir>', 'rîmes>', 3)]
+Using: ('rir>', 'rîmes>', 3)
+Lemma: réouvrir
+Features: V;NFIN
+
+Applicable suffix rules:
+[('>', '>', 203), ('r>', 'r>', 195), ('ir>', 'ir>', 14), ('rir>', 'rir>', 4), ('vrir>', 'vrir>', 1)]
+Using: ('vrir>', 'vrir>', 1)
+Lemma: réouvrir
+Features: V;SBJV;PRS;NOM(1,PL)
+
+Applicable suffix rules:
+[('r>', 'ons>', 136), ('>', '>', 193), ('>', 's>', 182), ('>', 'ns>', 145), ('r>', 'ns>', 36), ('rir>', 'riens>', 1), ('ir>', 'iens>', 2), ('r>', 'ens>', 2), ('ir>', 'ons>', 2), ('rir>', 'rons>', 2), ('>', 'ons>', 6), ('>', 'ions>', 6), ('r>', 'ssions>', 6), ('>', 'sions>', 6), ('ir>', 'issions>', 6), ('vrir>', 'vrons>', 1), ('rir>', 'rissions>', 3), ('r>', 's>', 5), ('rir>', 'rions>', 1), ('ir>', 'ions>', 1), ('ir>', 'ns>', 1)]
+Using: ('vrir>', 'vrons>', 1)
+Lemma: réouvrir
+Features: V;SBJV;PRS;NOM(1,SG)
+
+Applicable suffix rules:
+[('>', '>', 181), ('r>', '>', 159), ('rir>', 're>', 4), ('ir>', 'e>', 6), ('>', 'e>', 7), ('rir>', 'ire>', 1), ('r>', 're>', 1), ('ir>', 'ire>', 1), ('r>', 'sse>', 6), ('ir>', 'isse>', 6), ('>', 'se>', 6), ('vrir>', 'evre>', 1), ('vrir>', 'vre>', 1), ('r>', 'f>', 1), ('rir>', 'risse>', 1), ('r>', 'e>', 1), ('ir>', 'ie>', 1)]
+Using: ('vrir>', 'evre>', 1)
+Lemma: réouvrir
+Features: V;SBJV;PRS;NOM(2,SG)
+
+Applicable suffix rules:
+[('>', '>', 210), ('r>', 's>', 175), ('>', 's>', 14), ('rir>', 'res>', 3), ('ir>', 'es>', 3), ('rir>', 'ires>', 1), ('r>', 'res>', 1), ('ir>', 'ires>', 1), ('>', 'es>', 9), ('ir>', 'isses>', 8), ('>', 'ses>', 8), ('r>', 'sses>', 8), ('r>', '>', 20), ('vrir>', 'evres>', 1), ('vrir>', 'vres>', 1), ('r>', 'z>', 1), ('rir>', 'risses>', 3), ('ir>', 's>', 1)]
+Using: ('vrir>', 'evres>', 1)
+Lemma: réouvrir
+Features: V;SBJV;PRS;NOM(3,PL)
+
+Applicable suffix rules:
+[('>', '>', 204), ('>', 't>', 202), ('r>', 'nt>', 189), ('>', 'nt>', 13), ('ir>', 'nent>', 1), ('r>', 'ent>', 1), ('>', 'sent>', 5), ('>', 'ent>', 5), ('ir>', 'issent>', 5), ('r>', 'ssent>', 5), ('ir>', 'ent>', 4), ('rir>', 'rissent>', 1), ('rir>', 'rent>', 2), ('ir>', 'nt>', 1), ('r>', 't>', 1)]
+Using: ('rir>', 'rent>', 2)
+Lemma: réouvrir
+Features: V;SBJV;PST;NOM(1,PL)
+
+Applicable suffix rules:
+[('r>', 'ons>', 192), ('r>', 'ions>', 164), ('>', '>', 223), ('r>', 'ssions>', 173), ('>', 's>', 215), ('>', 'ns>', 187), ('r>', 'sions>', 164), ('r>', 'ns>', 31), ('r>', 'sons>', 28), ('r>', 'ssons>', 25), ('>', 'ons>', 21), ('rir>', 'rissons>', 2), ('>', 'sons>', 2), ('ir>', 'issons>', 2), ('>', 'ions>', 19), ('>', 'sions>', 19), ('rir>', 'russons>', 1), ('ir>', 'ussons>', 1), ('ir>', 'issions>', 5), ('>', 'ssions>', 10), ('r>', 'assions>', 10), ('vrir>', 'vrissons>', 1), ('r>', 's>', 6), ('rir>', 'rissions>', 1), ('ir>', 'ns>', 1)]
+Using: ('vrir>', 'vrissons>', 1)
+Lemma: réouvrir
+Features: V;SBJV;PST;NOM(2,PL)
+
+Applicable suffix rules:
+[('>', '>', 210), ('r>', 'z>', 173), ('r>', 'ez>', 2), ('ir>', 'ssiez>', 2), ('>', 'z>', 35), ('ir>', 'siez>', 2), ('ir>', 'iez>', 2), ('>', 'iz>', 1), ('rir>', 'rissoiz>', 1), ('>', 'soiz>', 1), ('r>', 'ssoiz>', 17), ('ir>', 'issoiz>', 1), ('>', 'oiz>', 1), ('r>', 'oiz>', 23), ('r>', 'soiz>', 23), ('r>', 'iz>', 23), ('ir>', 'issiez>', 6), ('r>', 'ssiez>', 6), ('>', 'siez>', 11), ('>', 'iez>', 11), ('>', 'ez>', 11), ('>', 'ssiez>', 5), ('r>', 'assiez>', 5), ('rir>', 'rissiez>', 3)]
+Using: ('rir>', 'rissiez>', 3)
+Lemma: réouvrir
+Features: V;SBJV;PST;NOM(3,SG)
+
+Applicable suffix rules:
+[('>', '>', 213), ('r>', 't>', 156), ('>', 't>', 46), ('r>', 'ât>', 9), ('r>', 'st>', 36), ('rir>', 'rist>', 2), ('ir>', 'ist>', 2), ('ir>', 'ît>', 11), ('vrir>', 'vrist>', 1), ('rir>', 'rît>', 5), ('r>', '>', 1), ('ir>', 't>', 1)]
+Using: ('vrir>', 'vrist>', 1)
+fra: 0.375
+Average accuracy 0.375
