@@ -1,0 +1,1000 @@
+abonder	V.PTCP;PRS	abondant	abondant	
+abonder	V;COND;NOM(1,PL)	abonderions	abonderions	
+abonder	V;COND;NOM(1,SG)	abonderais	abonderoie	BAD
+abonder	V;COND;NOM(3,PL)	abonderaient	abonderaient	
+abonder	V;IND;FUT;NOM(1,PL)	abonderons	abonderons	
+abonder	V;IND;FUT;NOM(1,SG)	abonderai	abonderai	
+abonder	V;IND;FUT;NOM(3,SG)	abondera	abondera	
+abonder	V;IND;PRS;NOM(1,SG)	abonde	abont	BAD
+abonder	V;IND;PST;IPFV;NOM(1,SG)	abondais	abondais	
+abonder	V;IND;PST;IPFV;NOM(2,PL)	abondiez	abondiez	
+abonder	V;IND;PST;IPFV;NOM(2,SG)	abondais	abondais	
+abonder	V;IND;PST;IPFV;NOM(3,PL)	abondaient	abondoient	BAD
+abonder	V;IND;PST;PFV;NOM(1,SG)	abondai	abondai	
+abonder	V;IND;PST;PFV;NOM(2,PL)	abondâtes	abondastes	BAD
+abonder	V;IND;PST;PFV;NOM(2,SG)	abondas	abondas	
+abonder	V;IND;PST;PFV;NOM(3,PL)	abondèrent	abondèrent	
+abonder	V;NFIN	abonder	abonder	
+abonder	V;POS;IMP;NOM(1,PL)	abondons	abondons	
+abonder	V;SBJV;PST;NOM(2,PL)	abondassiez	abondassiez	
+abonder	V;SBJV;PST;NOM(3,SG)	abondât	abondât	
+absoudre	V.CVB;PRS	en absolvant	en absouant	BAD
+absoudre	V;COND;NOM(2,SG)	absoudrais	absoudrais	
+absoudre	V;COND;NOM(3,SG)	absoudrait	absoudroit	BAD
+absoudre	V;IND;FUT;NOM(1,PL)	absoudrons	absoudrons	
+absoudre	V;IND;FUT;NOM(2,SG)	absoudras	absoudras	
+absoudre	V;IND;FUT;NOM(3,PL)	absoudront	absoudront	
+absoudre	V;IND;FUT;NOM(3,SG)	absoudra	absoudra	
+absoudre	V;IND;PRS;NOM(1,SG)	absous	absouds	BAD
+absoudre	V;IND;PRS;NOM(2,PL)	absolvez	absoudez	BAD
+absoudre	V;IND;PRS;NOM(3,PL)	absolvent	absoudent	BAD
+absoudre	V;IND;PRS;NOM(3,SG)	absout	absoud	BAD
+absoudre	V;IND;PST;IPFV;NOM(1,SG)	absolvais	absoudais	BAD
+absoudre	V;IND;PST;IPFV;NOM(2,SG)	absolvais	absoudais	BAD
+absoudre	V;IND;PST;PFV;NOM(1,PL)	absolûmes	absoudîmes	BAD
+absoudre	V;IND;PST;PFV;NOM(2,PL)	absolûtes	absouistes	BAD
+absoudre	V;IND;PST;PFV;NOM(2,SG)	absolus	absoudis	BAD
+absoudre	V;IND;PST;PFV;NOM(3,PL)	absolurent	absouierent	BAD
+absoudre	V;IND;PST;PFV;NOM(3,SG)	absolut	absoudit	BAD
+absoudre	V;SBJV;PRS;NOM(2,SG)	absolves	absoudes	BAD
+absoudre	V;SBJV;PRS;NOM(3,PL)	absolvent	absoudent	BAD
+adresser	V.PTCP;PRS	adressant	adressant	
+adresser	V.PTCP;PST	adressé	adressé	
+adresser	V;COND;NOM(1,PL)	adresserions	adresserions	
+adresser	V;COND;NOM(1,SG)	adresserais	adresserais	
+adresser	V;COND;NOM(2,SG)	adresserais	adresserais	
+adresser	V;COND;NOM(3,SG)	adresserait	adresserait	
+adresser	V;IND;FUT;NOM(2,SG)	adresseras	adresseras	
+adresser	V;IND;PRS;NOM(2,PL)	adressez	adressez	
+adresser	V;IND;PRS;NOM(2,SG)	adresses	adresses	
+adresser	V;IND;PRS;NOM(3,SG)	adresse	adresse	
+adresser	V;IND;PST;IPFV;NOM(1,PL)	adressions	adressions	
+adresser	V;IND;PST;IPFV;NOM(1,SG)	adressais	adressais	
+adresser	V;IND;PST;IPFV;NOM(2,SG)	adressais	adressais	
+adresser	V;IND;PST;IPFV;NOM(3,PL)	adressaient	adressaient	
+adresser	V;IND;PST;IPFV;NOM(3,SG)	adressait	adressait	
+adresser	V;IND;PST;PFV;NOM(1,SG)	adressai	adressai	
+adresser	V;POS;IMP;NOM(2,PL)	adressez	adressez	
+adresser	V;POS;IMP;NOM(2,SG)	adresse	adresse	
+adresser	V;SBJV;PRS;NOM(1,PL)	adressions	adressions	
+adresser	V;SBJV;PRS;NOM(3,PL)	adressent	adressent	
+amnistier	V.CVB;PRS	en amnistiant	en amnistiant	
+amnistier	V.PTCP;PST	amnistié	amnistié	
+amnistier	V;COND;NOM(1,PL)	amnistierions	amnistierions	
+amnistier	V;COND;NOM(2,SG)	amnistierais	amnisteroies	BAD
+amnistier	V;COND;NOM(3,SG)	amnistierait	amnistierait	
+amnistier	V;IND;FUT;NOM(1,SG)	amnistierai	amnistierai	
+amnistier	V;IND;FUT;NOM(2,SG)	amnistieras	amnistieras	
+amnistier	V;IND;FUT;NOM(3,SG)	amnistiera	amnistiera	
+amnistier	V;IND;PRS;NOM(2,PL)	amnistiez	amnistiez	
+amnistier	V;IND;PST;IPFV;NOM(1,SG)	amnistiais	amnistiais	
+amnistier	V;IND;PST;IPFV;NOM(2,SG)	amnistiais	amnistiais	
+amnistier	V;IND;PST;IPFV;NOM(3,PL)	amnistiaient	amnistoient	BAD
+amnistier	V;IND;PST;IPFV;NOM(3,SG)	amnistiait	amnistoit	BAD
+amnistier	V;IND;PST;PFV;NOM(2,PL)	amnistiâtes	amnistiâtes	
+amnistier	V;IND;PST;PFV;NOM(2,SG)	amnistias	amnistias	
+amnistier	V;SBJV;PRS;NOM(2,SG)	amnisties	amnisties	
+amnistier	V;SBJV;PRS;NOM(3,PL)	amnistient	amnistient	
+amnistier	V;SBJV;PST;NOM(1,PL)	amnistiassions	amnistiassions	
+amnistier	V;SBJV;PST;NOM(2,SG)	amnistiasses	amnistasses	BAD
+amnistier	V;SBJV;PST;NOM(3,PL)	amnistiassent	amnistiassent	
+anluminer	V.CVB;PRS	en anluminant	en an enluminant	BAD
+anluminer	V;COND;NOM(1,PL)	anlumineriiens	anluminerions	BAD
+anluminer	V;COND;NOM(2,PL)	anlumineriiez	anlumineriez	BAD
+anluminer	V;COND;NOM(3,SG)	anlumineroit	anluminerait	BAD
+anluminer	V;IND;FUT;NOM(1,PL)	anluminerons	anluminerons	
+anluminer	V;IND;FUT;NOM(1,SG)	anluminerai	anluminerai	
+anluminer	V;IND;FUT;NOM(2,PL)	anlumineroiz	anluminerez	BAD
+anluminer	V;IND;PRS;NOM(3,PL)	anluminent	anluminent	
+anluminer	V;IND;PST;IPFV;NOM(1,PL)	anluminiiens	anluminions	BAD
+anluminer	V;IND;PST;PFV;NOM(1,SG)	anluminai	anluminai	
+anluminer	V;IND;PST;PFV;NOM(2,SG)	anluminas	anluminas	
+anluminer	V;IND;PST;PFV;NOM(3,PL)	anluminerent	anluminèrent	BAD
+anluminer	V;POS;IMP;NOM(1,PL)	anluminons	anluminons	
+anluminer	V;POS;IMP;NOM(2,SG)	anlumine	anlumine	
+anluminer	V;SBJV;PRS;NOM(1,SG)	anlumin	anlumine	BAD
+anluminer	V;SBJV;PRS;NOM(2,SG)	anlumins	anlumines	BAD
+anluminer	V;SBJV;PST;NOM(1,PL)	anluminissons	anluminassions	BAD
+anluminer	V;SBJV;PST;NOM(1,SG)	anluminasse	anluminasse	
+anluminer	V;SBJV;PST;NOM(2,PL)	anluminissoiz	anluminassiez	BAD
+anluminer	V;SBJV;PST;NOM(3,SG)	anluminast	anluminât	BAD
+ardoiser	V.CVB;PRS	en ardoisant	en ardoisant	
+ardoiser	V;COND;NOM(1,SG)	ardoiserais	ardoiserais	
+ardoiser	V;COND;NOM(2,PL)	ardoiseriez	ardoiseriez	
+ardoiser	V;COND;NOM(2,SG)	ardoiserais	ardoiserais	
+ardoiser	V;IND;FUT;NOM(2,PL)	ardoiserez	ardoiserez	
+ardoiser	V;IND;FUT;NOM(2,SG)	ardoiseras	ardoiseras	
+ardoiser	V;IND;PRS;NOM(2,PL)	ardoisez	ardoisez	
+ardoiser	V;IND;PRS;NOM(3,PL)	ardoisent	ardoisent	
+ardoiser	V;IND;PST;IPFV;NOM(1,PL)	ardoisions	ardoisions	
+ardoiser	V;IND;PST;IPFV;NOM(2,PL)	ardoisiez	ardoisiez	
+ardoiser	V;IND;PST;IPFV;NOM(3,SG)	ardoisait	ardoisait	
+ardoiser	V;IND;PST;PFV;NOM(3,PL)	ardoisèrent	ardoisèrent	
+ardoiser	V;POS;IMP;NOM(2,SG)	ardoise	ardoise	
+ardoiser	V;SBJV;PRS;NOM(1,SG)	ardoise	ardoise	
+ardoiser	V;SBJV;PRS;NOM(2,SG)	ardoises	ardoises	
+ardoiser	V;SBJV;PRS;NOM(3,SG)	ardoise	ardoise	
+ardoiser	V;SBJV;PST;NOM(1,PL)	ardoisassions	ardoisassions	
+ardoiser	V;SBJV;PST;NOM(1,SG)	ardoisasse	ardoisasse	
+ardoiser	V;SBJV;PST;NOM(2,PL)	ardoisassiez	ardoisassiez	
+ardoiser	V;SBJV;PST;NOM(3,SG)	ardoisât	ardoisât	
+baptizer	V.PTCP;PST	baptizé	baptizé	
+baptizer	V;COND;NOM(1,PL)	baptizerions	baptizerions	
+baptizer	V;COND;NOM(1,SG)	baptizerois	baptizerais	BAD
+baptizer	V;COND;NOM(2,PL)	baptizeriez	baptizeriez	
+baptizer	V;COND;NOM(2,SG)	baptizerois	baptizerais	BAD
+baptizer	V;COND;NOM(3,PL)	baptizeroient	baptizeraient	BAD
+baptizer	V;IND;FUT;NOM(1,SG)	baptizerai	baptizerai	
+baptizer	V;IND;FUT;NOM(3,PL)	baptizeront	baptizeront	
+baptizer	V;IND;FUT;NOM(3,SG)	baptizera	baptizera	
+baptizer	V;IND;PRS;NOM(1,PL)	baptizons	baptizons	
+baptizer	V;IND;PRS;NOM(1,SG)	baptize	baptize	
+baptizer	V;IND;PRS;NOM(3,SG)	baptize	baptize	
+baptizer	V;IND;PST;IPFV;NOM(2,SG)	baptizois	baptizais	BAD
+baptizer	V;IND;PST;IPFV;NOM(3,SG)	baptizoit	baptizait	BAD
+baptizer	V;IND;PST;PFV;NOM(2,PL)	baptizastes	baptiztes	BAD
+baptizer	V;IND;PST;PFV;NOM(3,SG)	baptiza	baptiza	
+baptizer	V;POS;IMP;NOM(2,PL)	baptizez	baptizez	
+baptizer	V;SBJV;PRS;NOM(2,PL)	baptizez	baptizez	
+baptizer	V;SBJV;PRS;NOM(2,SG)	baptizes	baptizes	
+baptizer	V;SBJV;PST;NOM(2,PL)	baptizassiez	baptizez	BAD
+bourser	V.CVB;PRS	en boursant	en boursant	
+bourser	V.PTCP;PST	boursé	boursé	
+bourser	V;COND;NOM(1,PL)	bourserions	bourseriiens	BAD
+bourser	V;COND;NOM(2,SG)	bourserais	bourserais	
+bourser	V;COND;NOM(3,SG)	bourserait	bourserait	
+bourser	V;IND;FUT;NOM(2,PL)	bourserez	bourseroiz	BAD
+bourser	V;IND;FUT;NOM(2,SG)	bourseras	bourseras	
+bourser	V;IND;FUT;NOM(3,SG)	boursera	boursera	
+bourser	V;IND;PRS;NOM(1,PL)	boursons	boursons	
+bourser	V;IND;PST;IPFV;NOM(2,SG)	boursais	boursais	
+bourser	V;IND;PST;IPFV;NOM(3,SG)	boursait	boursoit	BAD
+bourser	V;IND;PST;PFV;NOM(1,SG)	boursai	boursai	
+bourser	V;IND;PST;PFV;NOM(2,SG)	boursas	boursas	
+bourser	V;IND;PST;PFV;NOM(3,SG)	boursa	boursa	
+bourser	V;SBJV;PRS;NOM(1,PL)	boursions	boursions	
+bourser	V;SBJV;PRS;NOM(1,SG)	bourse	bourse	
+bourser	V;SBJV;PRS;NOM(3,PL)	boursent	boursent	
+bourser	V;SBJV;PRS;NOM(3,SG)	bourse	bourst	BAD
+bourser	V;SBJV;PST;NOM(2,SG)	boursasses	boursasses	
+bourser	V;SBJV;PST;NOM(3,PL)	boursassent	boursassent	
+calibrer	V;COND;NOM(1,PL)	calibrerions	calibrerions	
+calibrer	V;COND;NOM(2,PL)	calibreriez	calibreriez	
+calibrer	V;COND;NOM(2,SG)	calibrerais	calibrerais	
+calibrer	V;COND;NOM(3,PL)	calibreraient	calibreraient	
+calibrer	V;COND;NOM(3,SG)	calibrerait	calibrerait	
+calibrer	V;IND;FUT;NOM(1,SG)	calibrerai	calibrerai	
+calibrer	V;IND;FUT;NOM(2,PL)	calibrerez	calibrerez	
+calibrer	V;IND;FUT;NOM(2,SG)	calibreras	calibreras	
+calibrer	V;IND;PRS;NOM(2,SG)	calibres	calibres	
+calibrer	V;IND;PRS;NOM(3,PL)	calibrent	calibrent	
+calibrer	V;IND;PST;IPFV;NOM(1,PL)	calibrions	calibrions	
+calibrer	V;IND;PST;PFV;NOM(1,PL)	calibrâmes	calibrâmes	
+calibrer	V;IND;PST;PFV;NOM(3,PL)	calibrèrent	calibrèrent	
+calibrer	V;IND;PST;PFV;NOM(3,SG)	calibra	calibra	
+calibrer	V;POS;IMP;NOM(2,PL)	calibrez	calibrez	
+calibrer	V;SBJV;PRS;NOM(1,SG)	calibre	calibre	
+calibrer	V;SBJV;PRS;NOM(2,PL)	calibriez	calibriez	
+calibrer	V;SBJV;PRS;NOM(2,SG)	calibres	calibres	
+calibrer	V;SBJV;PST;NOM(2,PL)	calibrassiez	calibrassiez	
+calibrer	V;SBJV;PST;NOM(2,SG)	calibrasses	calibrasses	
+carencer	V.CVB;PRS	en carençant	en carençant	
+carencer	V;COND;NOM(1,PL)	carencerions	carenceriiens	BAD
+carencer	V;COND;NOM(1,SG)	carencerais	carenceroie	BAD
+carencer	V;IND;FUT;NOM(2,PL)	carencerez	carencerez	
+carencer	V;IND;PRS;NOM(2,PL)	carencez	carencez	
+carencer	V;IND;PRS;NOM(2,SG)	carences	carences	
+carencer	V;IND;PRS;NOM(3,SG)	carence	carence	
+carencer	V;IND;PST;IPFV;NOM(2,PL)	carenciez	carenciez	
+carencer	V;IND;PST;IPFV;NOM(2,SG)	carençais	carençais	
+carencer	V;IND;PST;IPFV;NOM(3,PL)	carençaient	carençaient	
+carencer	V;IND;PST;IPFV;NOM(3,SG)	carençait	carençoit	BAD
+carencer	V;IND;PST;PFV;NOM(1,SG)	carençai	carençai	
+carencer	V;IND;PST;PFV;NOM(2,PL)	carençâtes	carençâtes	
+carencer	V;IND;PST;PFV;NOM(3,SG)	carença	carença	
+carencer	V;NFIN	carencer	carencer	
+carencer	V;POS;IMP;NOM(2,SG)	carence	carence	
+carencer	V;SBJV;PRS;NOM(1,PL)	carencions	carencions	
+carencer	V;SBJV;PST;NOM(1,PL)	carençassions	carençassions	
+carencer	V;SBJV;PST;NOM(2,SG)	carençasses	carençasses	
+carencer	V;SBJV;PST;NOM(3,SG)	carençât	carençast	BAD
+conclure	V.CVB;PRS	en concluant	en conclusant	BAD
+conclure	V.PTCP;PRS	concluant	conclusant	BAD
+conclure	V.PTCP;PST	conclu	conclut	BAD
+conclure	V;COND;NOM(2,PL)	concluriez	concluriez	
+conclure	V;COND;NOM(2,SG)	conclurais	conclurais	
+conclure	V;IND;FUT;NOM(3,PL)	concluront	concluront	
+conclure	V;IND;PRS;NOM(2,PL)	concluez	concluez	
+conclure	V;IND;PRS;NOM(3,PL)	concluent	conclusent	BAD
+conclure	V;IND;PST;IPFV;NOM(1,PL)	concluions	conclusions	BAD
+conclure	V;IND;PST;IPFV;NOM(2,PL)	concluiez	concluiez	
+conclure	V;IND;PST;IPFV;NOM(2,SG)	concluais	conclusais	BAD
+conclure	V;IND;PST;IPFV;NOM(3,PL)	concluaient	conclusaient	BAD
+conclure	V;IND;PST;IPFV;NOM(3,SG)	concluait	conclusait	BAD
+conclure	V;IND;PST;PFV;NOM(1,PL)	conclûmes	conclues	BAD
+conclure	V;IND;PST;PFV;NOM(2,PL)	conclûtes	conclustes	BAD
+conclure	V;POS;IMP;NOM(2,PL)	concluez	concluez	
+conclure	V;POS;IMP;NOM(2,SG)	conclus	conclus	
+conclure	V;SBJV;PRS;NOM(1,SG)	conclue	conclue	
+conclure	V;SBJV;PRS;NOM(3,SG)	conclue	concluse	BAD
+conclure	V;SBJV;PST;NOM(2,SG)	conclusses	conclusses	
+congeler	V.PTCP;PST	congelé	congelé	
+congeler	V;COND;NOM(2,PL)	congèleriez	congèleriez	
+congeler	V;COND;NOM(3,PL)	congèleraient	congeleraient	BAD
+congeler	V;IND;FUT;NOM(1,PL)	congèlerons	congèlerons	
+congeler	V;IND;FUT;NOM(2,SG)	congèleras	congèleras	
+congeler	V;IND;PRS;NOM(1,PL)	congelons	congelons	
+congeler	V;IND;PRS;NOM(3,PL)	congèlent	congèlent	
+congeler	V;IND;PRS;NOM(3,SG)	congèle	congèle	
+congeler	V;IND;PST;IPFV;NOM(1,PL)	congelions	congelions	
+congeler	V;IND;PST;IPFV;NOM(1,SG)	congelais	congelais	
+congeler	V;IND;PST;IPFV;NOM(2,PL)	congeliez	congeliez	
+congeler	V;IND;PST;IPFV;NOM(2,SG)	congelais	congelais	
+congeler	V;IND;PST;IPFV;NOM(3,PL)	congelaient	congelaient	
+congeler	V;IND;PST;IPFV;NOM(3,SG)	congelait	congelait	
+congeler	V;IND;PST;PFV;NOM(2,SG)	congelas	congelas	
+congeler	V;POS;IMP;NOM(2,SG)	congèle	congele	BAD
+congeler	V;SBJV;PRS;NOM(2,PL)	congeliez	congeliez	
+congeler	V;SBJV;PST;NOM(1,PL)	congelassions	congelassions	
+congeler	V;SBJV;PST;NOM(1,SG)	congelasse	congelasse	
+congeler	V;SBJV;PST;NOM(2,SG)	congelasses	congelasses	
+deviser	V;COND;NOM(1,SG)	deviserais	deviserais	
+deviser	V;COND;NOM(2,SG)	deviserais	deviserais	
+deviser	V;COND;NOM(3,SG)	deviserait	deviserait	
+deviser	V;IND;FUT;NOM(2,PL)	deviserez	deviserez	
+deviser	V;IND;FUT;NOM(2,SG)	deviseras	deviseras	
+deviser	V;IND;PRS;NOM(1,SG)	devise	devise	
+deviser	V;IND;PRS;NOM(3,SG)	devise	devise	
+deviser	V;IND;PST;IPFV;NOM(2,PL)	devisiez	devisiez	
+deviser	V;IND;PST;IPFV;NOM(2,SG)	devisais	devisais	
+deviser	V;IND;PST;IPFV;NOM(3,PL)	devisaient	devisaient	
+deviser	V;IND;PST;PFV;NOM(2,PL)	devisâtes	devisâtes	
+deviser	V;IND;PST;PFV;NOM(2,SG)	devisas	devisas	
+deviser	V;IND;PST;PFV;NOM(3,PL)	devisèrent	devisèrent	
+deviser	V;NFIN	deviser	deviser	
+deviser	V;POS;IMP;NOM(1,PL)	devisons	devisons	
+deviser	V;POS;IMP;NOM(2,SG)	devise	devise	
+deviser	V;SBJV;PRS;NOM(1,SG)	devise	devise	
+deviser	V;SBJV;PST;NOM(1,PL)	devisassions	devisassions	
+deviser	V;SBJV;PST;NOM(2,SG)	devisasses	devisasses	
+deviser	V;SBJV;PST;NOM(3,SG)	devisât	devisât	
+décevoir	V.PTCP;PRS	décevant	décevant	
+décevoir	V.PTCP;PST	déçu	déce	BAD
+décevoir	V;COND;NOM(3,PL)	décevraient	décevraient	
+décevoir	V;COND;NOM(3,SG)	décevrait	décevoirait	BAD
+décevoir	V;IND;FUT;NOM(3,SG)	décevra	décevdra	BAD
+décevoir	V;IND;PRS;NOM(1,PL)	décevons	décevons	
+décevoir	V;IND;PRS;NOM(2,SG)	déçois	décevoiz	BAD
+décevoir	V;IND;PST;IPFV;NOM(1,PL)	décevions	décevions	
+décevoir	V;IND;PST;IPFV;NOM(2,SG)	décevais	décevoissais	BAD
+décevoir	V;IND;PST;IPFV;NOM(3,SG)	décevait	décevait	
+décevoir	V;IND;PST;PFV;NOM(3,SG)	déçut	décevit	BAD
+décevoir	V;POS;IMP;NOM(2,SG)	déçois	déces	BAD
+décevoir	V;SBJV;PRS;NOM(1,PL)	décevions	décevions	
+décevoir	V;SBJV;PRS;NOM(2,PL)	déceviez	déceviez	
+décevoir	V;SBJV;PRS;NOM(2,SG)	déçoives	déceves	BAD
+décevoir	V;SBJV;PRS;NOM(3,PL)	déçoivent	décevent	BAD
+décevoir	V;SBJV;PST;NOM(1,PL)	déçussions	décevussions	BAD
+décevoir	V;SBJV;PST;NOM(2,SG)	déçusses	décesses	BAD
+décevoir	V;SBJV;PST;NOM(3,PL)	déçussent	décevoissent	BAD
+décevoir	V;SBJV;PST;NOM(3,SG)	déçût	décevoît	BAD
+dégoiser	V.PTCP;PRS	dégoisant	dégoisant	
+dégoiser	V.PTCP;PST	dégoisé	dégoisé	
+dégoiser	V;COND;NOM(1,SG)	dégoiserais	dégoiserais	
+dégoiser	V;COND;NOM(3,PL)	dégoiseraient	dégoiseraient	
+dégoiser	V;COND;NOM(3,SG)	dégoiserait	dégoiserait	
+dégoiser	V;IND;FUT;NOM(1,SG)	dégoiserai	dégoiserai	
+dégoiser	V;IND;FUT;NOM(2,PL)	dégoiserez	dégoiserez	
+dégoiser	V;IND;PRS;NOM(1,PL)	dégoisons	dégoisons	
+dégoiser	V;IND;PRS;NOM(2,SG)	dégoises	dégoises	
+dégoiser	V;IND;PRS;NOM(3,SG)	dégoise	dégoise	
+dégoiser	V;IND;PST;IPFV;NOM(1,PL)	dégoisions	dégoisions	
+dégoiser	V;IND;PST;IPFV;NOM(1,SG)	dégoisais	dégoisais	
+dégoiser	V;IND;PST;PFV;NOM(1,PL)	dégoisâmes	dégoisâmes	
+dégoiser	V;IND;PST;PFV;NOM(2,PL)	dégoisâtes	dégoisâtes	
+dégoiser	V;IND;PST;PFV;NOM(2,SG)	dégoisas	dégoisas	
+dégoiser	V;SBJV;PRS;NOM(1,PL)	dégoisions	dégoisions	
+dégoiser	V;SBJV;PRS;NOM(2,PL)	dégoisiez	dégoisiez	
+dégoiser	V;SBJV;PRS;NOM(3,SG)	dégoise	dégoise	
+dégoiser	V;SBJV;PST;NOM(1,PL)	dégoisassions	dégoisassions	
+dégoiser	V;SBJV;PST;NOM(2,PL)	dégoisassiez	dégoisassiez	
+dépoétiser	V.CVB;PRS	en dépoétisant	en dépoétisant	
+dépoétiser	V.PTCP;PRS	dépoétisant	dépoétisant	
+dépoétiser	V;COND;NOM(1,SG)	dépoétiserais	dépoétiserais	
+dépoétiser	V;COND;NOM(2,SG)	dépoétiserais	dépoétiserais	
+dépoétiser	V;COND;NOM(3,SG)	dépoétiserait	dépoétiserait	
+dépoétiser	V;IND;FUT;NOM(1,PL)	dépoétiserons	dépoétiserons	
+dépoétiser	V;IND;FUT;NOM(2,PL)	dépoétiserez	dépoétiserez	
+dépoétiser	V;IND;FUT;NOM(3,PL)	dépoétiseront	dépoétiseront	
+dépoétiser	V;IND;FUT;NOM(3,SG)	dépoétisera	dépoétisera	
+dépoétiser	V;IND;PST;IPFV;NOM(1,SG)	dépoétisais	dépoétisais	
+dépoétiser	V;IND;PST;IPFV;NOM(3,PL)	dépoétisaient	dépoétisaient	
+dépoétiser	V;IND;PST;PFV;NOM(2,PL)	dépoétisâtes	dépoétisâtes	
+dépoétiser	V;IND;PST;PFV;NOM(2,SG)	dépoétisas	dépoétisas	
+dépoétiser	V;IND;PST;PFV;NOM(3,PL)	dépoétisèrent	dépoétisèrent	
+dépoétiser	V;POS;IMP;NOM(2,PL)	dépoétisez	dépoétisez	
+dépoétiser	V;SBJV;PRS;NOM(1,SG)	dépoétise	dépoétise	
+dépoétiser	V;SBJV;PRS;NOM(2,PL)	dépoétisiez	dépoétisiez	
+dépoétiser	V;SBJV;PRS;NOM(3,SG)	dépoétise	dépoétise	
+dépoétiser	V;SBJV;PST;NOM(1,SG)	dépoétisasse	dépoétisasse	
+dépoétiser	V;SBJV;PST;NOM(2,PL)	dépoétisassiez	dépoétisassiez	
+désescalader	V.CVB;PRS	en désescaladant	en désescaladant	
+désescalader	V.PTCP;PRS	désescaladant	désescaladant	
+désescalader	V.PTCP;PST	désescaladé	désescaladé	
+désescalader	V;COND;NOM(2,PL)	désescaladeriez	désescaladeriez	
+désescalader	V;COND;NOM(3,PL)	désescaladeraient	désescaladeraient	
+désescalader	V;COND;NOM(3,SG)	désescaladerait	désescaladerait	
+désescalader	V;IND;FUT;NOM(2,SG)	désescaladeras	désescaladeras	
+désescalader	V;IND;FUT;NOM(3,SG)	désescaladera	désescaladera	
+désescalader	V;IND;PRS;NOM(1,PL)	désescaladons	désescaladons	
+désescalader	V;IND;PRS;NOM(1,SG)	désescalade	désescalade	
+désescalader	V;IND;PST;IPFV;NOM(1,PL)	désescaladions	désescaladions	
+désescalader	V;IND;PST;IPFV;NOM(2,PL)	désescaladiez	désescaladiez	
+désescalader	V;IND;PST;PFV;NOM(1,SG)	désescaladai	désescaladai	
+désescalader	V;IND;PST;PFV;NOM(2,PL)	désescaladâtes	désescaladâtes	
+désescalader	V;IND;PST;PFV;NOM(2,SG)	désescaladas	désescaladas	
+désescalader	V;IND;PST;PFV;NOM(3,SG)	désescalada	désescalada	
+désescalader	V;SBJV;PRS;NOM(1,PL)	désescaladions	désescaladions	
+désescalader	V;SBJV;PRS;NOM(2,SG)	désescalades	désescalades	
+désescalader	V;SBJV;PRS;NOM(3,SG)	désescalade	désescalade	
+désescalader	V;SBJV;PST;NOM(1,PL)	désescaladassions	désescaladassions	
+embraser	V.CVB;PRS	en embrasant	en embrasant	
+embraser	V.PTCP;PRS	embrasant	embrasant	
+embraser	V.PTCP;PST	embrasé	embrasé	
+embraser	V;COND;NOM(1,SG)	embraserais	embraserais	
+embraser	V;COND;NOM(2,PL)	embraseriez	embraseriez	
+embraser	V;COND;NOM(3,SG)	embraserait	embraserait	
+embraser	V;IND;FUT;NOM(2,SG)	embraseras	embraseras	
+embraser	V;IND;FUT;NOM(3,PL)	embraseront	embraseront	
+embraser	V;IND;PRS;NOM(1,PL)	embrasons	embrasons	
+embraser	V;IND;PRS;NOM(2,PL)	embrasez	embrasez	
+embraser	V;IND;PRS;NOM(3,PL)	embrasent	embrasent	
+embraser	V;IND;PST;IPFV;NOM(3,PL)	embrasaient	embrasaient	
+embraser	V;IND;PST;IPFV;NOM(3,SG)	embrasait	embrasait	
+embraser	V;IND;PST;PFV;NOM(2,PL)	embrasâtes	embrasâtes	
+embraser	V;POS;IMP;NOM(2,SG)	embrase	embrase	
+embraser	V;SBJV;PRS;NOM(2,PL)	embrasiez	embrasiez	
+embraser	V;SBJV;PRS;NOM(3,SG)	embrase	embrase	
+embraser	V;SBJV;PST;NOM(2,PL)	embrasassiez	embrasassiez	
+embraser	V;SBJV;PST;NOM(3,PL)	embrasassent	embrasassent	
+embraser	V;SBJV;PST;NOM(3,SG)	embrasât	embrasât	
+encenser	V.CVB;PRS	en encensant	en encensant	
+encenser	V.PTCP;PRS	encensant	encensant	
+encenser	V.PTCP;PST	encensé	encensé	
+encenser	V;COND;NOM(2,SG)	encenserais	encenseroies	BAD
+encenser	V;IND;FUT;NOM(1,SG)	encenserai	encenserai	
+encenser	V;IND;FUT;NOM(2,SG)	encenseras	encenseras	
+encenser	V;IND;FUT;NOM(3,PL)	encenseront	encenseront	
+encenser	V;IND;PRS;NOM(1,PL)	encensons	encensons	
+encenser	V;IND;PRS;NOM(1,SG)	encense	encens	BAD
+encenser	V;IND;PRS;NOM(3,PL)	encensent	encensent	
+encenser	V;IND;PRS;NOM(3,SG)	encense	encense	
+encenser	V;IND;PST;IPFV;NOM(2,PL)	encensiez	encensiez	
+encenser	V;IND;PST;IPFV;NOM(3,PL)	encensaient	encensaient	
+encenser	V;POS;IMP;NOM(1,PL)	encensons	encensons	
+encenser	V;SBJV;PRS;NOM(1,SG)	encense	encens	BAD
+encenser	V;SBJV;PRS;NOM(2,SG)	encenses	encenses	
+encenser	V;SBJV;PRS;NOM(3,PL)	encensent	encensent	
+encenser	V;SBJV;PST;NOM(1,PL)	encensassions	encensissons	BAD
+encenser	V;SBJV;PST;NOM(2,SG)	encensasses	encensasses	
+encenser	V;SBJV;PST;NOM(3,SG)	encensât	encensast	BAD
+ensabler	V.CVB;PRS	en ensablant	en ensablant	
+ensabler	V;COND;NOM(1,SG)	ensablerais	ensablerais	
+ensabler	V;IND;FUT;NOM(1,PL)	ensablerons	ensablerons	
+ensabler	V;IND;FUT;NOM(2,SG)	ensableras	ensableras	
+ensabler	V;IND;FUT;NOM(3,SG)	ensablera	ensablera	
+ensabler	V;IND;PRS;NOM(2,SG)	ensables	ensables	
+ensabler	V;IND;PRS;NOM(3,PL)	ensablent	ensablent	
+ensabler	V;IND;PRS;NOM(3,SG)	ensable	ensable	
+ensabler	V;IND;PST;IPFV;NOM(1,PL)	ensablions	ensablions	
+ensabler	V;IND;PST;IPFV;NOM(1,SG)	ensablais	ensablais	
+ensabler	V;IND;PST;IPFV;NOM(3,PL)	ensablaient	ensablaient	
+ensabler	V;IND;PST;IPFV;NOM(3,SG)	ensablait	ensablait	
+ensabler	V;IND;PST;PFV;NOM(1,SG)	ensablai	ensablai	
+ensabler	V;IND;PST;PFV;NOM(2,PL)	ensablâtes	ensablâtes	
+ensabler	V;IND;PST;PFV;NOM(2,SG)	ensablas	ensablas	
+ensabler	V;IND;PST;PFV;NOM(3,PL)	ensablèrent	ensablèrent	
+ensabler	V;SBJV;PRS;NOM(1,PL)	ensablions	ensablions	
+ensabler	V;SBJV;PRS;NOM(2,SG)	ensables	ensables	
+ensabler	V;SBJV;PST;NOM(2,PL)	ensablassiez	ensablassiez	
+ensabler	V;SBJV;PST;NOM(3,SG)	ensablât	ensablât	
+eriger	V.PTCP;PST	erigé	erigé	
+eriger	V;COND;NOM(2,PL)	erigeriez	erigeriez	
+eriger	V;COND;NOM(3,PL)	erigeroient	erigeraient	BAD
+eriger	V;IND;FUT;NOM(1,SG)	erigerai	erigerai	
+eriger	V;IND;FUT;NOM(2,SG)	erigeras	erigeras	
+eriger	V;IND;FUT;NOM(3,PL)	erigeront	erigeront	
+eriger	V;IND;PRS;NOM(2,PL)	erigez	erigez	
+eriger	V;IND;PRS;NOM(2,SG)	eriges	eriges	
+eriger	V;IND;PRS;NOM(3,PL)	erigent	erigent	
+eriger	V;IND;PST;IPFV;NOM(2,PL)	erigiez	erigiez	
+eriger	V;IND;PST;PFV;NOM(1,PL)	erigeasmes	erigeâmes	BAD
+eriger	V;IND;PST;PFV;NOM(2,PL)	erigeastes	erigeâtes	BAD
+eriger	V;IND;PST;PFV;NOM(3,PL)	erigerent	erigèrent	BAD
+eriger	V;IND;PST;PFV;NOM(3,SG)	erigea	erigea	
+eriger	V;POS;IMP;NOM(1,PL)	erigeons	erigeons	
+eriger	V;POS;IMP;NOM(2,PL)	erigez	erigez	
+eriger	V;POS;IMP;NOM(2,SG)	erige	erige	
+eriger	V;SBJV;PRS;NOM(1,SG)	erige	erige	
+eriger	V;SBJV;PRS;NOM(2,SG)	eriges	eriges	
+eriger	V;SBJV;PRS;NOM(3,SG)	erige	erige	
+farter	V.CVB;PRS	en fartant	en fartant	
+farter	V;COND;NOM(1,SG)	farterais	farterais	
+farter	V;COND;NOM(2,PL)	farteriez	farteriez	
+farter	V;COND;NOM(2,SG)	farterais	farterais	
+farter	V;COND;NOM(3,PL)	farteraient	farteraient	
+farter	V;COND;NOM(3,SG)	farterait	farterait	
+farter	V;IND;FUT;NOM(1,SG)	farterai	farterai	
+farter	V;IND;FUT;NOM(2,PL)	farterez	farterez	
+farter	V;IND;PRS;NOM(1,PL)	fartons	fartons	
+farter	V;IND;PRS;NOM(1,SG)	farte	farte	
+farter	V;IND;PRS;NOM(2,SG)	fartes	fartes	
+farter	V;IND;PST;IPFV;NOM(3,SG)	fartait	fartait	
+farter	V;IND;PST;PFV;NOM(1,PL)	fartâmes	fartâmes	
+farter	V;POS;IMP;NOM(1,PL)	fartons	fartons	
+farter	V;SBJV;PRS;NOM(1,PL)	fartions	fartions	
+farter	V;SBJV;PRS;NOM(1,SG)	farte	farte	
+farter	V;SBJV;PRS;NOM(2,SG)	fartes	fartes	
+farter	V;SBJV;PST;NOM(2,PL)	fartassiez	fartassiez	
+farter	V;SBJV;PST;NOM(2,SG)	fartasses	fartasses	
+farter	V;SBJV;PST;NOM(3,PL)	fartassent	fartassent	
+fissionner	V.CVB;PRS	en fissionnant	en fissionnant	
+fissionner	V.PTCP;PRS	fissionnant	fissionnant	
+fissionner	V;COND;NOM(1,PL)	fissionnerions	fissionnerions	
+fissionner	V;IND;FUT;NOM(2,PL)	fissionnerez	fissionnerez	
+fissionner	V;IND;FUT;NOM(3,SG)	fissionnera	fissionnera	
+fissionner	V;IND;PRS;NOM(2,PL)	fissionnez	fissionnez	
+fissionner	V;IND;PST;IPFV;NOM(1,PL)	fissionnions	fissionnions	
+fissionner	V;IND;PST;IPFV;NOM(1,SG)	fissionnais	fissionnais	
+fissionner	V;IND;PST;IPFV;NOM(2,PL)	fissionniez	fissionniez	
+fissionner	V;IND;PST;PFV;NOM(1,PL)	fissionnâmes	fissionnâmes	
+fissionner	V;IND;PST;PFV;NOM(1,SG)	fissionnai	fissionnai	
+fissionner	V;IND;PST;PFV;NOM(2,SG)	fissionnas	fissionnas	
+fissionner	V;IND;PST;PFV;NOM(3,SG)	fissionna	fissionna	
+fissionner	V;POS;IMP;NOM(1,PL)	fissionnons	fissionnons	
+fissionner	V;POS;IMP;NOM(2,SG)	fissionne	fissionne	
+fissionner	V;SBJV;PRS;NOM(1,PL)	fissionnions	fissionnions	
+fissionner	V;SBJV;PRS;NOM(1,SG)	fissionne	fissionne	
+fissionner	V;SBJV;PRS;NOM(3,PL)	fissionnent	fissionnent	
+fissionner	V;SBJV;PRS;NOM(3,SG)	fissionne	fissionne	
+fissionner	V;SBJV;PST;NOM(2,PL)	fissionnassiez	fissionnassiez	
+grattouiller	V.CVB;PRS	en grattouillant	en grattouillant	
+grattouiller	V;COND;NOM(1,PL)	grattouillerions	grattouillerions	
+grattouiller	V;COND;NOM(1,SG)	grattouillerais	grattouillerais	
+grattouiller	V;COND;NOM(3,PL)	grattouilleraient	grattouilleraient	
+grattouiller	V;COND;NOM(3,SG)	grattouillerait	grattouillerait	
+grattouiller	V;IND;FUT;NOM(3,PL)	grattouilleront	grattouilleront	
+grattouiller	V;IND;FUT;NOM(3,SG)	grattouillera	grattouillera	
+grattouiller	V;IND;PRS;NOM(2,SG)	grattouilles	grattouilles	
+grattouiller	V;IND;PST;IPFV;NOM(1,SG)	grattouillais	grattouillais	
+grattouiller	V;IND;PST;PFV;NOM(1,SG)	grattouillai	grattouillai	
+grattouiller	V;IND;PST;PFV;NOM(2,PL)	grattouillâtes	grattouillâtes	
+grattouiller	V;IND;PST;PFV;NOM(2,SG)	grattouillas	grattouillas	
+grattouiller	V;POS;IMP;NOM(1,PL)	grattouillons	grattouillons	
+grattouiller	V;POS;IMP;NOM(2,SG)	grattouille	grattouille	
+grattouiller	V;SBJV;PRS;NOM(1,PL)	grattouillions	grattouillions	
+grattouiller	V;SBJV;PRS;NOM(3,SG)	grattouille	grattouille	
+grattouiller	V;SBJV;PST;NOM(1,PL)	grattouillassions	grattouillassions	
+grattouiller	V;SBJV;PST;NOM(1,SG)	grattouillasse	grattouillasse	
+grattouiller	V;SBJV;PST;NOM(2,PL)	grattouillassiez	grattouillassiez	
+grattouiller	V;SBJV;PST;NOM(3,SG)	grattouillât	grattouillast	BAD
+génuflexionner	V;COND;NOM(1,PL)	génuflexionnerions	génuflexionnerions	
+génuflexionner	V;COND;NOM(1,SG)	génuflexionnerais	génuflexionnerais	
+génuflexionner	V;IND;FUT;NOM(1,PL)	génuflexionnerons	génuflexionnerons	
+génuflexionner	V;IND;FUT;NOM(3,SG)	génuflexionnera	génuflexionnera	
+génuflexionner	V;IND;PRS;NOM(1,SG)	génuflexionne	génuflexionne	
+génuflexionner	V;IND;PRS;NOM(2,PL)	génuflexionnez	génuflexionnez	
+génuflexionner	V;IND;PRS;NOM(2,SG)	génuflexionnes	génuflexionnes	
+génuflexionner	V;IND;PRS;NOM(3,PL)	génuflexionnent	génuflexionnent	
+génuflexionner	V;IND;PST;IPFV;NOM(3,PL)	génuflexionnaient	génuflexionnaient	
+génuflexionner	V;IND;PST;PFV;NOM(1,PL)	génuflexionnâmes	génuflexionnâmes	
+génuflexionner	V;IND;PST;PFV;NOM(2,PL)	génuflexionnâtes	génuflexionnâtes	
+génuflexionner	V;IND;PST;PFV;NOM(3,SG)	génuflexionna	génuflexionna	
+génuflexionner	V;POS;IMP;NOM(1,PL)	génuflexionnons	génuflexionnons	
+génuflexionner	V;POS;IMP;NOM(2,PL)	génuflexionnez	génuflexionnez	
+génuflexionner	V;SBJV;PRS;NOM(1,PL)	génuflexionnions	génuflexionnions	
+génuflexionner	V;SBJV;PRS;NOM(2,SG)	génuflexionnes	génuflexionnes	
+génuflexionner	V;SBJV;PST;NOM(1,PL)	génuflexionnassions	génuflexionnassions	
+génuflexionner	V;SBJV;PST;NOM(2,PL)	génuflexionnassiez	génuflexionnassiez	
+génuflexionner	V;SBJV;PST;NOM(3,PL)	génuflexionnassent	génuflexionnassent	
+génuflexionner	V;SBJV;PST;NOM(3,SG)	génuflexionnât	génuflexionnât	
+haitier	V.PTCP;PRS	haitant	haitant	
+haitier	V.PTCP;PST	haitié	haitié	
+haitier	V;COND;NOM(2,PL)	haiteriiez	haiteriiez	
+haitier	V;COND;NOM(3,PL)	haiteroient	haiteroient	
+haitier	V;IND;FUT;NOM(1,SG)	haiterai	haitierai	BAD
+haitier	V;IND;FUT;NOM(2,PL)	haiteroiz	haitierez	BAD
+haitier	V;IND;PRS;NOM(1,PL)	haitons	haitions	BAD
+haitier	V;IND;PRS;NOM(2,SG)	haites	haites	
+haitier	V;IND;PST;IPFV;NOM(3,SG)	haitoit	haitoit	
+haitier	V;IND;PST;PFV;NOM(1,SG)	haitai	haitiai	BAD
+haitier	V;IND;PST;PFV;NOM(2,SG)	haitas	haitias	BAD
+haitier	V;IND;PST;PFV;NOM(3,SG)	haita	haitia	BAD
+haitier	V;NFIN	haitier	haitier	
+haitier	V;POS;IMP;NOM(2,PL)	haitiez	haitiez	
+haitier	V;SBJV;PRS;NOM(1,SG)	hait	haitie	BAD
+haitier	V;SBJV;PRS;NOM(3,SG)	hait	haitie	BAD
+haitier	V;SBJV;PST;NOM(1,PL)	haitissons	haitiassions	BAD
+haitier	V;SBJV;PST;NOM(1,SG)	haitasse	haitiasse	BAD
+haitier	V;SBJV;PST;NOM(3,PL)	haitassent	haitiassent	BAD
+haitier	V;SBJV;PST;NOM(3,SG)	haitast	haitast	
+hyperlier	V.CVB;PRS	en hyperliant	en hyperliant	
+hyperlier	V.PTCP;PST	hyperlié	hyperlié	
+hyperlier	V;COND;NOM(1,PL)	hyperlierions	hyperlïeriiens	BAD
+hyperlier	V;COND;NOM(2,SG)	hyperlierais	hyperleroies	BAD
+hyperlier	V;COND;NOM(3,PL)	hyperlieraient	hyperleroient	BAD
+hyperlier	V;IND;FUT;NOM(1,SG)	hyperlierai	hyperlïerai	BAD
+hyperlier	V;IND;FUT;NOM(2,PL)	hyperlierez	hyperleroiz	BAD
+hyperlier	V;IND;FUT;NOM(3,PL)	hyperlieront	hyperleront	BAD
+hyperlier	V;IND;PRS;NOM(2,PL)	hyperliez	hyperliez	
+hyperlier	V;IND;PRS;NOM(2,SG)	hyperlies	hyperles	BAD
+hyperlier	V;IND;PST;IPFV;NOM(1,SG)	hyperliais	hyperloie	BAD
+hyperlier	V;IND;PST;PFV;NOM(1,SG)	hyperliai	hyperlai	BAD
+hyperlier	V;IND;PST;PFV;NOM(2,SG)	hyperlias	hyperlias	
+hyperlier	V;IND;PST;PFV;NOM(3,PL)	hyperlièrent	hyperlierent	BAD
+hyperlier	V;NFIN	hyperlier	hyperlier	
+hyperlier	V;POS;IMP;NOM(2,SG)	hyperlie	hyperlïe	BAD
+hyperlier	V;SBJV;PRS;NOM(2,PL)	hyperliiez	hyperlïez	BAD
+hyperlier	V;SBJV;PRS;NOM(3,PL)	hyperlient	hyperlent	BAD
+hyperlier	V;SBJV;PST;NOM(1,PL)	hyperliassions	hyperlissons	BAD
+hyperlier	V;SBJV;PST;NOM(3,PL)	hyperliassent	hyperlassent	BAD
+induire	V.CVB;PRS	en induisant	en induisant	
+induire	V.PTCP;PRS	induisant	induisant	
+induire	V;COND;NOM(1,PL)	induirions	induirions	
+induire	V;COND;NOM(2,SG)	induirais	induirais	
+induire	V;IND;FUT;NOM(1,PL)	induirons	indurons	BAD
+induire	V;IND;FUT;NOM(1,SG)	induirai	induirai	
+induire	V;IND;FUT;NOM(2,SG)	induiras	induiras	
+induire	V;IND;FUT;NOM(3,PL)	induiront	induiront	
+induire	V;IND;PRS;NOM(3,SG)	induit	induit	
+induire	V;IND;PST;IPFV;NOM(1,PL)	induisions	induisions	
+induire	V;IND;PST;IPFV;NOM(2,PL)	induisiez	induissiez	BAD
+induire	V;IND;PST;IPFV;NOM(3,SG)	induisait	induisait	
+induire	V;IND;PST;PFV;NOM(2,PL)	induisîtes	induîtes	BAD
+induire	V;IND;PST;PFV;NOM(2,SG)	induisis	induisis	
+induire	V;POS;IMP;NOM(2,PL)	induisez	induisez	
+induire	V;POS;IMP;NOM(2,SG)	induis	induis	
+induire	V;SBJV;PRS;NOM(1,PL)	induisions	induisions	
+induire	V;SBJV;PRS;NOM(3,PL)	induisent	induisent	
+induire	V;SBJV;PRS;NOM(3,SG)	induise	induisse	BAD
+induire	V;SBJV;PST;NOM(2,PL)	induisissiez	induisissiez	
+lesser	V.PTCP;PST	lessé	lessé	
+lesser	V;COND;NOM(2,PL)	lesseriiez	lesseriez	BAD
+lesser	V;COND;NOM(2,SG)	lesseroies	lesserais	BAD
+lesser	V;COND;NOM(3,PL)	lesseroient	lesseraient	BAD
+lesser	V;COND;NOM(3,SG)	lesseroit	lesserait	BAD
+lesser	V;IND;FUT;NOM(1,PL)	lesserons	lesserons	
+lesser	V;IND;FUT;NOM(2,PL)	lesseroiz	lesserez	BAD
+lesser	V;IND;FUT;NOM(2,SG)	lesseras	lesseras	
+lesser	V;IND;FUT;NOM(3,PL)	lesseront	lesseront	
+lesser	V;IND;FUT;NOM(3,SG)	lessera	lessera	
+lesser	V;IND;PRS;NOM(3,PL)	lessent	lessent	
+lesser	V;IND;PRS;NOM(3,SG)	lesse	lesse	
+lesser	V;IND;PST;IPFV;NOM(1,SG)	lessoie	lessais	BAD
+lesser	V;IND;PST;IPFV;NOM(3,PL)	lessoient	lessaient	BAD
+lesser	V;IND;PST;IPFV;NOM(3,SG)	lessoit	lessait	BAD
+lesser	V;IND;PST;PFV;NOM(2,PL)	lessastes	lessâtes	BAD
+lesser	V;IND;PST;PFV;NOM(3,SG)	lessa	lessa	
+lesser	V;SBJV;PRS;NOM(2,SG)	les	lesses	BAD
+lesser	V;SBJV;PST;NOM(2,SG)	lessasses	lessasses	
+lesser	V;SBJV;PST;NOM(3,PL)	lessassent	lessassent	
+lyncher	V;COND;NOM(1,SG)	lyncherais	lyncherais	
+lyncher	V;COND;NOM(3,SG)	lyncherait	lyncherait	
+lyncher	V;IND;FUT;NOM(3,SG)	lynchera	lynchera	
+lyncher	V;IND;PRS;NOM(1,SG)	lynche	lynche	
+lyncher	V;IND;PRS;NOM(2,PL)	lynchez	lynchez	
+lyncher	V;IND;PRS;NOM(3,PL)	lynchent	lynchent	
+lyncher	V;IND;PRS;NOM(3,SG)	lynche	lynche	
+lyncher	V;IND;PST;IPFV;NOM(1,PL)	lynchions	lynchions	
+lyncher	V;IND;PST;IPFV;NOM(2,PL)	lynchiez	lynchiez	
+lyncher	V;IND;PST;IPFV;NOM(2,SG)	lynchais	lynchais	
+lyncher	V;IND;PST;IPFV;NOM(3,SG)	lynchait	lynchait	
+lyncher	V;IND;PST;PFV;NOM(1,PL)	lynchâmes	lynchâmes	
+lyncher	V;IND;PST;PFV;NOM(2,PL)	lynchâtes	lynchâtes	
+lyncher	V;IND;PST;PFV;NOM(2,SG)	lynchas	lynchas	
+lyncher	V;IND;PST;PFV;NOM(3,SG)	lyncha	lyncha	
+lyncher	V;NFIN	lyncher	lyncher	
+lyncher	V;POS;IMP;NOM(2,PL)	lynchez	lynchez	
+lyncher	V;POS;IMP;NOM(2,SG)	lynche	lynche	
+lyncher	V;SBJV;PST;NOM(1,PL)	lynchassions	lynchassions	
+lyncher	V;SBJV;PST;NOM(2,PL)	lynchassiez	lynchassiez	
+maillocher	V;COND;NOM(1,SG)	maillocherais	maillocherais	
+maillocher	V;COND;NOM(2,SG)	maillocherais	maillocherais	
+maillocher	V;COND;NOM(3,PL)	maillocheraient	maillocheraient	
+maillocher	V;IND;FUT;NOM(3,SG)	maillochera	maillochera	
+maillocher	V;IND;PST;IPFV;NOM(1,SG)	maillochais	maillochais	
+maillocher	V;IND;PST;IPFV;NOM(3,SG)	maillochait	maillochait	
+maillocher	V;IND;PST;PFV;NOM(2,SG)	maillochas	maillochas	
+maillocher	V;IND;PST;PFV;NOM(3,PL)	maillochèrent	maillochèrent	
+maillocher	V;IND;PST;PFV;NOM(3,SG)	maillocha	maillocha	
+maillocher	V;NFIN	maillocher	maillocher	
+maillocher	V;POS;IMP;NOM(1,PL)	maillochons	maillochons	
+maillocher	V;POS;IMP;NOM(2,PL)	maillochez	maillochez	
+maillocher	V;POS;IMP;NOM(2,SG)	mailloche	mailloche	
+maillocher	V;SBJV;PRS;NOM(1,SG)	mailloche	mailloche	
+maillocher	V;SBJV;PRS;NOM(2,PL)	maillochiez	maillochiez	
+maillocher	V;SBJV;PRS;NOM(2,SG)	mailloches	mailloches	
+maillocher	V;SBJV;PRS;NOM(3,PL)	maillochent	maillochent	
+maillocher	V;SBJV;PST;NOM(1,PL)	maillochassions	maillochassions	
+maillocher	V;SBJV;PST;NOM(2,PL)	maillochassiez	maillochassiez	
+maillocher	V;SBJV;PST;NOM(3,SG)	maillochât	maillochât	
+mercyer	V.PTCP;PRS	mercyant	mercyant	
+mercyer	V.PTCP;PST	mercyé	mercyé	
+mercyer	V;IND;FUT;NOM(2,PL)	mercyerez	mercierez	BAD
+mercyer	V;IND;FUT;NOM(2,SG)	mercyeras	mercyeras	
+mercyer	V;IND;FUT;NOM(3,PL)	mercyeront	mercyeront	
+mercyer	V;IND;FUT;NOM(3,SG)	mercyera	merciera	BAD
+mercyer	V;IND;PRS;NOM(1,SG)	mercye	mercie	BAD
+mercyer	V;IND;PRS;NOM(2,SG)	mercyes	mercyes	
+mercyer	V;IND;PRS;NOM(3,SG)	mercye	mercye	
+mercyer	V;IND;PST;IPFV;NOM(1,SG)	mercyois	mercyois	
+mercyer	V;IND;PST;IPFV;NOM(2,PL)	mercyiez	mercyiez	
+mercyer	V;IND;PST;PFV;NOM(3,PL)	mercyerent	mercyerent	
+mercyer	V;IND;PST;PFV;NOM(3,SG)	mercya	mercya	
+mercyer	V;POS;IMP;NOM(2,SG)	mercye	mercye	
+mercyer	V;SBJV;PRS;NOM(1,PL)	mercyons	mercyions	BAD
+mercyer	V;SBJV;PRS;NOM(2,SG)	mercyes	mercyes	
+mercyer	V;SBJV;PRS;NOM(3,PL)	mercyent	mercient	BAD
+mercyer	V;SBJV;PST;NOM(2,SG)	mercyasses	mercyasses	
+mercyer	V;SBJV;PST;NOM(3,PL)	mercyassent	mercyassent	
+mercyer	V;SBJV;PST;NOM(3,SG)	mercyast	mercyast	
+mithridatiser	V;COND;NOM(2,PL)	mithridatiseriez	mithridatiseriez	
+mithridatiser	V;COND;NOM(2,SG)	mithridatiserais	mithridatiserais	
+mithridatiser	V;COND;NOM(3,PL)	mithridatiseraient	mithridatiseraient	
+mithridatiser	V;COND;NOM(3,SG)	mithridatiserait	mithridatiserait	
+mithridatiser	V;IND;FUT;NOM(1,PL)	mithridatiserons	mithridatiserons	
+mithridatiser	V;IND;PRS;NOM(1,SG)	mithridatise	mithridatise	
+mithridatiser	V;IND;PST;IPFV;NOM(1,PL)	mithridatisions	mithridatisions	
+mithridatiser	V;IND;PST;IPFV;NOM(1,SG)	mithridatisais	mithridatisais	
+mithridatiser	V;IND;PST;IPFV;NOM(2,SG)	mithridatisais	mithridatisais	
+mithridatiser	V;IND;PST;IPFV;NOM(3,PL)	mithridatisaient	mithridatisaient	
+mithridatiser	V;IND;PST;PFV;NOM(1,SG)	mithridatisai	mithridatisai	
+mithridatiser	V;IND;PST;PFV;NOM(2,PL)	mithridatisâtes	mithridatisâtes	
+mithridatiser	V;IND;PST;PFV;NOM(3,PL)	mithridatisèrent	mithridatisèrent	
+mithridatiser	V;IND;PST;PFV;NOM(3,SG)	mithridatisa	mithridatisa	
+mithridatiser	V;NFIN	mithridatiser	mithridatiser	
+mithridatiser	V;POS;IMP;NOM(2,PL)	mithridatisez	mithridatisez	
+mithridatiser	V;SBJV;PRS;NOM(1,SG)	mithridatise	mithridatise	
+mithridatiser	V;SBJV;PRS;NOM(3,SG)	mithridatise	mithridatise	
+mithridatiser	V;SBJV;PST;NOM(1,SG)	mithridatisasse	mithridatisasse	
+mithridatiser	V;SBJV;PST;NOM(2,PL)	mithridatisassiez	mithridatisassiez	
+narrer	V.CVB;PRS	en narrant	en narrant	
+narrer	V.PTCP;PRS	narrant	narrant	
+narrer	V;COND;NOM(2,SG)	narrerais	narrerais	
+narrer	V;COND;NOM(3,SG)	narrerait	narrerait	
+narrer	V;IND;FUT;NOM(1,SG)	narrerai	narrerai	
+narrer	V;IND;FUT;NOM(3,PL)	narreront	narreront	
+narrer	V;IND;PRS;NOM(1,SG)	narre	narre	
+narrer	V;IND;PRS;NOM(2,PL)	narrez	narrez	
+narrer	V;IND;PRS;NOM(3,PL)	narrent	narrent	
+narrer	V;IND;PST;IPFV;NOM(3,PL)	narraient	narraient	
+narrer	V;IND;PST;IPFV;NOM(3,SG)	narrait	narrait	
+narrer	V;IND;PST;PFV;NOM(1,PL)	narrâmes	narrâmes	
+narrer	V;IND;PST;PFV;NOM(1,SG)	narrai	narrai	
+narrer	V;IND;PST;PFV;NOM(3,PL)	narrèrent	narrèrent	
+narrer	V;POS;IMP;NOM(2,PL)	narrez	narrez	
+narrer	V;SBJV;PRS;NOM(1,PL)	narrions	narrions	
+narrer	V;SBJV;PRS;NOM(1,SG)	narre	narre	
+narrer	V;SBJV;PRS;NOM(2,PL)	narriez	narriez	
+narrer	V;SBJV;PST;NOM(1,PL)	narrassions	narrassions	
+narrer	V;SBJV;PST;NOM(3,PL)	narrassent	narrassent	
+parachever	V.PTCP;PST	parachevé	parachevé	
+parachever	V;COND;NOM(1,SG)	parachèverais	paracheverais	BAD
+parachever	V;COND;NOM(3,SG)	parachèverait	paracheverait	BAD
+parachever	V;IND;FUT;NOM(1,PL)	parachèverons	paracheverons	BAD
+parachever	V;IND;FUT;NOM(3,PL)	parachèveront	paracheveront	BAD
+parachever	V;IND;FUT;NOM(3,SG)	parachèvera	parachevera	BAD
+parachever	V;IND;PRS;NOM(3,PL)	parachèvent	parachevent	BAD
+parachever	V;IND;PST;IPFV;NOM(3,PL)	parachevaient	parachevoient	BAD
+parachever	V;IND;PST;IPFV;NOM(3,SG)	parachevait	parachevoit	BAD
+parachever	V;IND;PST;PFV;NOM(1,PL)	parachevâmes	parachevames	BAD
+parachever	V;IND;PST;PFV;NOM(1,SG)	parachevai	parachevai	
+parachever	V;IND;PST;PFV;NOM(2,PL)	parachevâtes	parachevâtes	
+parachever	V;NFIN	parachever	parachever	
+parachever	V;POS;IMP;NOM(2,PL)	parachevez	parachevez	
+parachever	V;SBJV;PRS;NOM(1,PL)	parachevions	parachevions	
+parachever	V;SBJV;PRS;NOM(2,PL)	paracheviez	parachevez	BAD
+parachever	V;SBJV;PRS;NOM(3,SG)	parachève	paracheve	BAD
+parachever	V;SBJV;PST;NOM(2,PL)	parachevassiez	parachevissoiz	BAD
+parachever	V;SBJV;PST;NOM(2,SG)	parachevasses	parachevasses	
+parachever	V;SBJV;PST;NOM(3,SG)	parachevât	parachevast	BAD
+rembourser	V.PTCP;PRS	remboursant	remboursant	
+rembourser	V;COND;NOM(1,PL)	rembourserions	rembourseriiens	BAD
+rembourser	V;COND;NOM(1,SG)	rembourserais	rembourseroie	BAD
+rembourser	V;COND;NOM(2,SG)	rembourserais	rembourserais	
+rembourser	V;IND;FUT;NOM(1,PL)	rembourserons	rembourserons	
+rembourser	V;IND;FUT;NOM(1,SG)	rembourserai	rembourserai	
+rembourser	V;IND;FUT;NOM(2,PL)	rembourserez	rembourseroiz	BAD
+rembourser	V;IND;PRS;NOM(2,PL)	remboursez	remboursez	
+rembourser	V;IND;PRS;NOM(3,SG)	rembourse	rembourse	
+rembourser	V;IND;PST;IPFV;NOM(3,SG)	remboursait	remboursoit	BAD
+rembourser	V;IND;PST;PFV;NOM(1,PL)	remboursâmes	remboursâmes	
+rembourser	V;IND;PST;PFV;NOM(1,SG)	remboursai	remboursai	
+rembourser	V;IND;PST;PFV;NOM(2,SG)	remboursas	remboursas	
+rembourser	V;IND;PST;PFV;NOM(3,SG)	remboursa	remboursa	
+rembourser	V;POS;IMP;NOM(2,PL)	remboursez	remboursez	
+rembourser	V;SBJV;PRS;NOM(1,PL)	remboursions	remboursions	
+rembourser	V;SBJV;PRS;NOM(2,SG)	rembourses	rembours	BAD
+rembourser	V;SBJV;PRS;NOM(3,PL)	remboursent	remboursent	
+rembourser	V;SBJV;PRS;NOM(3,SG)	rembourse	rembourst	BAD
+rembourser	V;SBJV;PST;NOM(2,SG)	remboursasses	remboursasses	
+repeter	V.CVB;PRS	en repetant	en repetant	
+repeter	V.PTCP;PRS	repetant	repetant	
+repeter	V.PTCP;PST	repeté	repeté	
+repeter	V;COND;NOM(1,SG)	repeteroie	repèterais	BAD
+repeter	V;COND;NOM(2,PL)	repeteriiez	repèteriez	BAD
+repeter	V;COND;NOM(2,SG)	repeteroies	repeterais	BAD
+repeter	V;COND;NOM(3,PL)	repeteroient	repèteraient	BAD
+repeter	V;IND;FUT;NOM(1,PL)	repeterons	repeterons	
+repeter	V;IND;FUT;NOM(1,SG)	repeterai	repèterai	BAD
+repeter	V;IND;PRS;NOM(2,SG)	repetes	repetes	
+repeter	V;IND;PRS;NOM(3,SG)	repete	repète	BAD
+repeter	V;IND;PST;PFV;NOM(1,SG)	repetai	repetai	
+repeter	V;IND;PST;PFV;NOM(2,PL)	repetastes	repetâtes	BAD
+repeter	V;IND;PST;PFV;NOM(2,SG)	repetas	repetas	
+repeter	V;IND;PST;PFV;NOM(3,SG)	repeta	repeta	
+repeter	V;NFIN	repeter	repeter	
+repeter	V;POS;IMP;NOM(2,SG)	repete	repete	
+repeter	V;SBJV;PRS;NOM(1,PL)	repetons	repetions	BAD
+repeter	V;SBJV;PRS;NOM(2,PL)	repetez	repetiez	BAD
+repeter	V;SBJV;PST;NOM(1,PL)	repetissons	repetassions	BAD
+reverser	V;COND;NOM(1,PL)	reverserions	reverseriiens	BAD
+reverser	V;COND;NOM(2,PL)	reverseriez	reverseriiez	BAD
+reverser	V;COND;NOM(2,SG)	reverserais	reverserais	
+reverser	V;IND;FUT;NOM(2,PL)	reverserez	reverseroiz	BAD
+reverser	V;IND;FUT;NOM(3,PL)	reverseront	reverseront	
+reverser	V;IND;FUT;NOM(3,SG)	reversera	reversera	
+reverser	V;IND;PRS;NOM(1,SG)	reverse	reverse	
+reverser	V;IND;PRS;NOM(2,PL)	reversez	reversez	
+reverser	V;IND;PRS;NOM(2,SG)	reverses	reverses	
+reverser	V;IND;PST;IPFV;NOM(2,PL)	reversiez	reversiiez	BAD
+reverser	V;IND;PST;IPFV;NOM(3,PL)	reversaient	reversoient	BAD
+reverser	V;IND;PST;IPFV;NOM(3,SG)	reversait	reversoit	BAD
+reverser	V;IND;PST;PFV;NOM(1,PL)	reversâmes	reversâmes	
+reverser	V;IND;PST;PFV;NOM(1,SG)	reversai	reversai	
+reverser	V;NFIN	reverser	reverser	
+reverser	V;POS;IMP;NOM(2,PL)	reversez	reversez	
+reverser	V;SBJV;PRS;NOM(3,PL)	reversent	reversent	
+reverser	V;SBJV;PRS;NOM(3,SG)	reverse	reverst	BAD
+reverser	V;SBJV;PST;NOM(1,PL)	reversassions	reversassions	
+reverser	V;SBJV;PST;NOM(3,SG)	reversât	reversât	
+revisser	V.CVB;PRS	en revissant	en revissant	
+revisser	V.PTCP;PRS	revissant	revissant	
+revisser	V.PTCP;PST	revissé	revissé	
+revisser	V;COND;NOM(1,PL)	revisserions	revisserions	
+revisser	V;COND;NOM(2,SG)	revisserais	revisserais	
+revisser	V;COND;NOM(3,PL)	revisseraient	revisseroient	BAD
+revisser	V;IND;PRS;NOM(1,PL)	revissons	revissons	
+revisser	V;IND;PRS;NOM(2,SG)	revisses	revisses	
+revisser	V;IND;PST;IPFV;NOM(1,PL)	revissions	revissions	
+revisser	V;IND;PST;IPFV;NOM(1,SG)	revissais	revissois	BAD
+revisser	V;IND;PST;IPFV;NOM(2,PL)	revissiez	revissiez	
+revisser	V;IND;PST;PFV;NOM(2,PL)	revissâtes	revissâtes	
+revisser	V;IND;PST;PFV;NOM(3,SG)	revissa	revissa	
+revisser	V;NFIN	revisser	revisser	
+revisser	V;POS;IMP;NOM(1,PL)	revissons	revissons	
+revisser	V;SBJV;PRS;NOM(1,SG)	revisse	revisse	
+revisser	V;SBJV;PST;NOM(1,PL)	revissassions	revissassions	
+revisser	V;SBJV;PST;NOM(1,SG)	revissasse	revissasse	
+revisser	V;SBJV;PST;NOM(2,PL)	revissassiez	revissassiez	
+revisser	V;SBJV;PST;NOM(3,SG)	revissât	revissast	BAD
+rimailler	V.CVB;PRS	en rimaillant	en rimaillant	
+rimailler	V.PTCP;PST	rimaillé	rimaillé	
+rimailler	V;COND;NOM(1,PL)	rimaillerions	rimaillerions	
+rimailler	V;COND;NOM(2,PL)	rimailleriez	rimailleriez	
+rimailler	V;IND;FUT;NOM(2,SG)	rimailleras	rimailleras	
+rimailler	V;IND;PRS;NOM(1,PL)	rimaillons	rimaillons	
+rimailler	V;IND;PRS;NOM(2,PL)	rimaillez	rimaillez	
+rimailler	V;IND;PRS;NOM(2,SG)	rimailles	rimailles	
+rimailler	V;IND;PRS;NOM(3,SG)	rimaille	rimaille	
+rimailler	V;IND;PST;IPFV;NOM(1,PL)	rimaillions	rimaillions	
+rimailler	V;IND;PST;IPFV;NOM(1,SG)	rimaillais	rimaillais	
+rimailler	V;IND;PST;PFV;NOM(2,SG)	rimaillas	rimaillas	
+rimailler	V;IND;PST;PFV;NOM(3,PL)	rimaillèrent	rimaillèrent	
+rimailler	V;NFIN	rimailler	rimailler	
+rimailler	V;POS;IMP;NOM(2,PL)	rimaillez	rimaillez	
+rimailler	V;POS;IMP;NOM(2,SG)	rimaille	rimaille	
+rimailler	V;SBJV;PRS;NOM(2,PL)	rimailliez	rimailliez	
+rimailler	V;SBJV;PRS;NOM(3,PL)	rimaillent	rimaillent	
+rimailler	V;SBJV;PST;NOM(1,SG)	rimaillasse	rimaillasse	
+rimailler	V;SBJV;PST;NOM(2,PL)	rimaillassiez	rimaillassiez	
+réouvrir	V.PTCP;PRS	réouvrant	réouvrissant	BAD
+réouvrir	V.PTCP;PST	réouvert	réouvert	
+réouvrir	V;COND;NOM(1,PL)	réouvririons	réouvririons	
+réouvrir	V;COND;NOM(1,SG)	réouvrirais	réouvreroie	BAD
+réouvrir	V;COND;NOM(2,PL)	réouvririez	réouvreriiez	BAD
+réouvrir	V;COND;NOM(3,SG)	réouvrirait	réouvrirait	
+réouvrir	V;IND;FUT;NOM(1,SG)	réouvrirai	réouvrerai	BAD
+réouvrir	V;IND;FUT;NOM(3,PL)	réouvriront	réouvriront	
+réouvrir	V;IND;PRS;NOM(1,PL)	réouvrons	réouvrissons	BAD
+réouvrir	V;IND;PST;IPFV;NOM(2,SG)	réouvrais	réouvroies	BAD
+réouvrir	V;IND;PST;IPFV;NOM(3,SG)	réouvrait	réouvroit	BAD
+réouvrir	V;IND;PST;PFV;NOM(1,PL)	réouvrîmes	réouvrîmes	
+réouvrir	V;NFIN	réouvrir	réouvrir	
+réouvrir	V;SBJV;PRS;NOM(1,PL)	réouvrions	réouvrons	BAD
+réouvrir	V;SBJV;PRS;NOM(1,SG)	réouvre	réouevre	BAD
+réouvrir	V;SBJV;PRS;NOM(2,SG)	réouvres	réouevres	BAD
+réouvrir	V;SBJV;PRS;NOM(3,PL)	réouvrent	réouvrent	
+réouvrir	V;SBJV;PST;NOM(1,PL)	réouvrissions	réouvrissons	BAD
+réouvrir	V;SBJV;PST;NOM(2,PL)	réouvrissiez	réouvrissiez	
+réouvrir	V;SBJV;PST;NOM(3,SG)	réouvrît	réouvrist	BAD
+sapurer	V.CVB;PRS	en sapurant	en sapurant	
+sapurer	V.PTCP;PST	sapuré	sapuré	
+sapurer	V;COND;NOM(3,PL)	sapureroient	sapureraient	BAD
+sapurer	V;COND;NOM(3,SG)	sapureroit	sapureroit	
+sapurer	V;IND;FUT;NOM(1,SG)	sapurerai	sapurerai	
+sapurer	V;IND;FUT;NOM(2,PL)	sapureroiz	sapurerez	BAD
+sapurer	V;IND;FUT;NOM(2,SG)	sapureras	sapureras	
+sapurer	V;IND;PRS;NOM(1,SG)	sapur	sapure	BAD
+sapurer	V;IND;PST;IPFV;NOM(1,PL)	sapuriiens	sapurions	BAD
+sapurer	V;IND;PST;IPFV;NOM(2,PL)	sapuriiez	sapuriez	BAD
+sapurer	V;IND;PST;IPFV;NOM(2,SG)	sapuroies	sapurais	BAD
+sapurer	V;IND;PST;PFV;NOM(2,PL)	sapurastes	sapurâtes	BAD
+sapurer	V;IND;PST;PFV;NOM(3,SG)	sapura	sapura	
+sapurer	V;NFIN	sapurer	sapurer	
+sapurer	V;POS;IMP;NOM(2,PL)	sapurez	sapurez	
+sapurer	V;SBJV;PRS;NOM(1,PL)	sapurons	sapurions	BAD
+sapurer	V;SBJV;PRS;NOM(2,PL)	sapurez	sapuriez	BAD
+sapurer	V;SBJV;PRS;NOM(3,SG)	sapurt	sapure	BAD
+sapurer	V;SBJV;PST;NOM(2,PL)	sapurissoiz	sapurassiez	BAD
+sapurer	V;SBJV;PST;NOM(3,SG)	sapurast	sapurât	BAD
+satisfaire	V;COND;NOM(1,PL)	satisferions	satisfairions	BAD
+satisfaire	V;COND;NOM(1,SG)	satisferais	satisferais	
+satisfaire	V;IND;FUT;NOM(1,SG)	satisferai	satisferai	
+satisfaire	V;IND;FUT;NOM(2,PL)	satisferez	satisferez	
+satisfaire	V;IND;FUT;NOM(3,PL)	satisferont	satisferont	
+satisfaire	V;IND;FUT;NOM(3,SG)	satisfera	satisfera	
+satisfaire	V;IND;PRS;NOM(2,PL)	satisfaites	satisfaites	
+satisfaire	V;IND;PRS;NOM(2,SG)	satisfais	satisfais	
+satisfaire	V;IND;PRS;NOM(3,SG)	satisfait	satisfait	
+satisfaire	V;IND;PST;IPFV;NOM(1,PL)	satisfaisions	satisfaisions	
+satisfaire	V;IND;PST;IPFV;NOM(2,PL)	satisfaisiez	satisfaisiez	
+satisfaire	V;IND;PST;IPFV;NOM(3,PL)	satisfaisaient	satisfaisaient	
+satisfaire	V;IND;PST;IPFV;NOM(3,SG)	satisfaisait	satisfaisait	
+satisfaire	V;IND;PST;PFV;NOM(3,SG)	satisfit	satisfit	
+satisfaire	V;POS;IMP;NOM(1,PL)	satisfaisons	satisfaisons	
+satisfaire	V;POS;IMP;NOM(2,PL)	satisfaites	satisfaites	
+satisfaire	V;SBJV;PRS;NOM(1,SG)	satisfasse	satisfasse	
+satisfaire	V;SBJV;PRS;NOM(3,SG)	satisfasse	satisfasse	
+satisfaire	V;SBJV;PST;NOM(1,PL)	satisfissions	satisfissions	
+satisfaire	V;SBJV;PST;NOM(3,PL)	satisfissent	satisfissent	
+seiner	V.CVB;PRS	en seinant	en seinant	
+seiner	V.PTCP;PRS	seinant	seinant	
+seiner	V;COND;NOM(1,SG)	seinerais	seinerais	
+seiner	V;IND;FUT;NOM(2,PL)	seinerez	seinerez	
+seiner	V;IND;FUT;NOM(3,PL)	seineront	seineront	
+seiner	V;IND;PRS;NOM(1,SG)	seine	seine	
+seiner	V;IND;PRS;NOM(2,PL)	seinez	seinez	
+seiner	V;IND;PRS;NOM(3,SG)	seine	seine	
+seiner	V;IND;PST;IPFV;NOM(1,SG)	seinais	seinais	
+seiner	V;IND;PST;IPFV;NOM(2,SG)	seinais	seinais	
+seiner	V;IND;PST;IPFV;NOM(3,PL)	seinaient	seinaient	
+seiner	V;IND;PST;IPFV;NOM(3,SG)	seinait	seinait	
+seiner	V;IND;PST;PFV;NOM(2,SG)	seinas	seinas	
+seiner	V;IND;PST;PFV;NOM(3,SG)	seina	seina	
+seiner	V;POS;IMP;NOM(2,PL)	seinez	seinez	
+seiner	V;SBJV;PRS;NOM(2,PL)	seiniez	seiniez	
+seiner	V;SBJV;PRS;NOM(3,PL)	seinent	seinent	
+seiner	V;SBJV;PST;NOM(2,PL)	seinassiez	seinassiez	
+seiner	V;SBJV;PST;NOM(2,SG)	seinasses	seinasses	
+seiner	V;SBJV;PST;NOM(3,SG)	seinât	seinât	
+sevrer	V.CVB;PRS	en sevrant	en sevrant	
+sevrer	V;COND;NOM(1,PL)	sèvrerions	sevrerions	BAD
+sevrer	V;COND;NOM(1,SG)	sèvrerais	sevrerais	BAD
+sevrer	V;COND;NOM(3,PL)	sèvreraient	sevreraient	BAD
+sevrer	V;COND;NOM(3,SG)	sèvrerait	sevrerait	BAD
+sevrer	V;IND;FUT;NOM(2,PL)	sèvrerez	sevrerez	BAD
+sevrer	V;IND;PRS;NOM(1,SG)	sèvre	sevre	BAD
+sevrer	V;IND;PRS;NOM(2,PL)	sevrez	sevrez	
+sevrer	V;IND;PRS;NOM(3,PL)	sèvrent	sevrent	BAD
+sevrer	V;IND;PRS;NOM(3,SG)	sèvre	sevre	BAD
+sevrer	V;IND;PST;IPFV;NOM(2,SG)	sevrais	sevrais	
+sevrer	V;IND;PST;IPFV;NOM(3,SG)	sevrait	sevrait	
+sevrer	V;IND;PST;PFV;NOM(1,PL)	sevrâmes	sevrâmes	
+sevrer	V;IND;PST;PFV;NOM(3,SG)	sevra	sevra	
+sevrer	V;POS;IMP;NOM(2,PL)	sevrez	sevrez	
+sevrer	V;SBJV;PRS;NOM(1,PL)	sevrions	sevrions	
+sevrer	V;SBJV;PRS;NOM(3,PL)	sèvrent	sevrent	BAD
+sevrer	V;SBJV;PST;NOM(1,PL)	sevrassions	sevrassions	
+sevrer	V;SBJV;PST;NOM(2,SG)	sevrasses	sevrasses	
+sevrer	V;SBJV;PST;NOM(3,PL)	sevrassent	sevrassent	
+surabonder	V;COND;NOM(1,PL)	surabonderions	surabonderions	
+surabonder	V;COND;NOM(1,SG)	surabonderais	surabonderoie	BAD
+surabonder	V;IND;FUT;NOM(1,PL)	surabonderons	surabonderons	
+surabonder	V;IND;FUT;NOM(2,PL)	surabonderez	surabonderez	
+surabonder	V;IND;FUT;NOM(2,SG)	surabonderas	surabonderas	
+surabonder	V;IND;PRS;NOM(1,PL)	surabondons	surabondons	
+surabonder	V;IND;PRS;NOM(3,PL)	surabondent	surabondent	
+surabonder	V;IND;PST;IPFV;NOM(1,PL)	surabondions	surabondions	
+surabonder	V;IND;PST;IPFV;NOM(2,PL)	surabondiez	surabondiez	
+surabonder	V;IND;PST;PFV;NOM(1,PL)	surabondâmes	surabondâmes	
+surabonder	V;IND;PST;PFV;NOM(1,SG)	surabondai	surabondai	
+surabonder	V;IND;PST;PFV;NOM(3,PL)	surabondèrent	surabondèrent	
+surabonder	V;NFIN	surabonder	surabonder	
+surabonder	V;POS;IMP;NOM(1,PL)	surabondons	surabondons	
+surabonder	V;POS;IMP;NOM(2,SG)	surabonde	surabonde	
+surabonder	V;SBJV;PRS;NOM(1,PL)	surabondions	surabondons	BAD
+surabonder	V;SBJV;PRS;NOM(1,SG)	surabonde	surabonde	
+surabonder	V;SBJV;PRS;NOM(3,PL)	surabondent	surabondent	
+surabonder	V;SBJV;PST;NOM(1,PL)	surabondassions	surabondassions	
+surabonder	V;SBJV;PST;NOM(2,PL)	surabondassiez	surabondassiez	
+tocquer	V.CVB;PRS	en tocquant	en tocquant	
+tocquer	V.PTCP;PRS	tocquant	tocquant	
+tocquer	V;COND;NOM(1,SG)	tocquerois	tocquerais	BAD
+tocquer	V;IND;FUT;NOM(1,PL)	tocquerons	tocquerons	
+tocquer	V;IND;FUT;NOM(1,SG)	tocquerai	tocquerai	
+tocquer	V;IND;FUT;NOM(3,PL)	tocqueront	tocqueront	
+tocquer	V;IND;FUT;NOM(3,SG)	tocquera	tocquera	
+tocquer	V;IND;PRS;NOM(3,PL)	tocquent	tocquent	
+tocquer	V;IND;PST;IPFV;NOM(1,PL)	tocquions	tocquions	
+tocquer	V;IND;PST;IPFV;NOM(1,SG)	tocquois	tocquais	BAD
+tocquer	V;IND;PST;IPFV;NOM(2,SG)	tocquois	tocquais	BAD
+tocquer	V;IND;PST;IPFV;NOM(3,SG)	tocquoit	tocquait	BAD
+tocquer	V;IND;PST;PFV;NOM(1,SG)	tocqua	tocquai	BAD
+tocquer	V;IND;PST;PFV;NOM(3,PL)	tocquerent	tocquèrent	BAD
+tocquer	V;SBJV;PRS;NOM(1,PL)	tocquons	tocquions	BAD
+tocquer	V;SBJV;PST;NOM(1,PL)	tocquassions	tocquassions	
+tocquer	V;SBJV;PST;NOM(1,SG)	tocquasse	tocquasse	
+tocquer	V;SBJV;PST;NOM(2,PL)	tocquassiez	tocquassiez	
+tocquer	V;SBJV;PST;NOM(2,SG)	tocquasses	tocquasses	
+tocquer	V;SBJV;PST;NOM(3,SG)	tocquast	tocquât	BAD
+transmettre	V.PTCP;PST	transmis	transmet	BAD
+transmettre	V;COND;NOM(3,SG)	transmettrait	transmettrait	
+transmettre	V;IND;FUT;NOM(3,SG)	transmettra	transmettra	
+transmettre	V;IND;PRS;NOM(2,SG)	transmets	transmets	
+transmettre	V;IND;PST;IPFV;NOM(1,PL)	transmettions	transmettions	
+transmettre	V;IND;PST;IPFV;NOM(1,SG)	transmettais	transmetssais	BAD
+transmettre	V;IND;PST;IPFV;NOM(2,SG)	transmettais	transmettais	
+transmettre	V;IND;PST;IPFV;NOM(3,SG)	transmettait	transmetssait	BAD
+transmettre	V;IND;PST;PFV;NOM(1,PL)	transmîmes	transmetes	BAD
+transmettre	V;IND;PST;PFV;NOM(3,SG)	transmit	transmit	
+transmettre	V;POS;IMP;NOM(1,PL)	transmettons	transmettons	
+transmettre	V;POS;IMP;NOM(2,PL)	transmettez	transmettez	
+transmettre	V;POS;IMP;NOM(2,SG)	transmets	transmets	
+transmettre	V;SBJV;PRS;NOM(1,PL)	transmettions	transmettions	
+transmettre	V;SBJV;PRS;NOM(1,SG)	transmette	transmette	
+transmettre	V;SBJV;PRS;NOM(2,PL)	transmettiez	transmettiez	
+transmettre	V;SBJV;PRS;NOM(3,SG)	transmette	transmetsse	BAD
+transmettre	V;SBJV;PST;NOM(1,PL)	transmissions	transmetons	BAD
+transmettre	V;SBJV;PST;NOM(3,PL)	transmissent	transmetsent	BAD
+transmettre	V;SBJV;PST;NOM(3,SG)	transmît	transmett	BAD
+vociférer	V.CVB;PRS	en vociférant	en vociférant	
+vociférer	V.PTCP;PST	vociféré	vociféré	
+vociférer	V;COND;NOM(1,PL)	vocifèrerions	vocifèrerions	
+vociférer	V;COND;NOM(2,SG)	vocifèrerais	vocifèrerais	
+vociférer	V;COND;NOM(3,SG)	vocifèrerait	vocifèrerait	
+vociférer	V;IND;FUT;NOM(1,PL)	vocifèrerons	vocifèrerons	
+vociférer	V;IND;FUT;NOM(2,SG)	vocifèreras	vocifèreras	
+vociférer	V;IND;PRS;NOM(1,SG)	vocifère	vocifère	
+vociférer	V;IND;PRS;NOM(3,SG)	vocifère	vocifère	
+vociférer	V;IND;PST;IPFV;NOM(2,SG)	vociférais	vociférais	
+vociférer	V;IND;PST;IPFV;NOM(3,PL)	vociféraient	vociféraient	
+vociférer	V;IND;PST;PFV;NOM(1,PL)	vociférâmes	vociférâmes	
+vociférer	V;IND;PST;PFV;NOM(1,SG)	vociférai	vociférai	
+vociférer	V;IND;PST;PFV;NOM(2,SG)	vociféras	vociféras	
+vociférer	V;IND;PST;PFV;NOM(3,PL)	vociférèrent	vociférèrent	
+vociférer	V;POS;IMP;NOM(1,PL)	vociférons	vociférons	
+vociférer	V;SBJV;PRS;NOM(2,PL)	vocifériez	vocifériez	
+vociférer	V;SBJV;PST;NOM(1,PL)	vociférassions	vociférassions	
+vociférer	V;SBJV;PST;NOM(3,PL)	vociférassent	vociférassent	
+vociférer	V;SBJV;PST;NOM(3,SG)	vociférât	vociférât	
+ébruiter	V;COND;NOM(1,PL)	ébruiterions	ébruiterions	
+ébruiter	V;COND;NOM(2,PL)	ébruiteriez	ébruiteriez	
+ébruiter	V;COND;NOM(2,SG)	ébruiterais	ébruiterais	
+ébruiter	V;IND;FUT;NOM(1,SG)	ébruiterai	ébruiterai	
+ébruiter	V;IND;PRS;NOM(1,SG)	ébruite	ébruite	
+ébruiter	V;IND;PRS;NOM(3,SG)	ébruite	ébruite	
+ébruiter	V;IND;PST;IPFV;NOM(1,SG)	ébruitais	ébruitais	
+ébruiter	V;IND;PST;IPFV;NOM(2,PL)	ébruitiez	ébruitiiez	BAD
+ébruiter	V;IND;PST;IPFV;NOM(3,PL)	ébruitaient	ébruitaient	
+ébruiter	V;IND;PST;IPFV;NOM(3,SG)	ébruitait	ébruitait	
+ébruiter	V;POS;IMP;NOM(2,PL)	ébruitez	ébruitez	
+ébruiter	V;POS;IMP;NOM(2,SG)	ébruite	ébruite	
+ébruiter	V;SBJV;PRS;NOM(1,PL)	ébruitions	ébruitions	
+ébruiter	V;SBJV;PRS;NOM(2,PL)	ébruitiez	ébruitiez	
+ébruiter	V;SBJV;PRS;NOM(3,PL)	ébruitent	ébruitent	
+ébruiter	V;SBJV;PRS;NOM(3,SG)	ébruite	ébruite	
+ébruiter	V;SBJV;PST;NOM(1,PL)	ébruitassions	ébruitassions	
+ébruiter	V;SBJV;PST;NOM(2,SG)	ébruitasses	ébruitasses	
+ébruiter	V;SBJV;PST;NOM(3,PL)	ébruitassent	ébruitassent	
+ébruiter	V;SBJV;PST;NOM(3,SG)	ébruitât	ébruitât	
