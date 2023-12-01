@@ -1,0 +1,60 @@
+graver	V.PTCP;PRS	gravant	gravant	
+graver	V;COND;NOM(1,PL)	graverions	graverions	
+graver	V;COND;NOM(1,SG)	graverais	graverais	
+graver	V;IND;FUT;NOM(1,PL)	graverons	graverons	
+graver	V;IND;FUT;NOM(1,SG)	graverai	graverai	
+graver	V;IND;FUT;NOM(2,SG)	graveras	graveras	
+graver	V;IND;FUT;NOM(3,PL)	graveront	graveront	
+graver	V;IND;PRS;NOM(2,PL)	gravez	gravez	
+graver	V;IND;PST;IPFV;NOM(1,SG)	gravais	gravais	
+graver	V;IND;PST;IPFV;NOM(2,PL)	graviez	graviez	
+graver	V;IND;PST;IPFV;NOM(3,SG)	gravait	gravait	
+graver	V;IND;PST;PFV;NOM(2,PL)	gravâtes	gravâtes	
+graver	V;IND;PST;PFV;NOM(3,PL)	gravèrent	gravèrent	
+graver	V;IND;PST;PFV;NOM(3,SG)	grava	grava	
+graver	V;NFIN	graver	graver	
+graver	V;POS;IMP;NOM(1,PL)	gravons	gravons	
+graver	V;POS;IMP;NOM(2,PL)	gravez	gravez	
+graver	V;POS;IMP;NOM(2,SG)	grave	grave	
+graver	V;SBJV;PRS;NOM(1,PL)	gravions	gravions	
+graver	V;SBJV;PST;NOM(2,PL)	gravassiez	gravassiez	
+objectiver	V.CVB;PRS	en objectivant	en objectivant	
+objectiver	V.PTCP;PRS	objectivant	objectivant	
+objectiver	V.PTCP;PST	objectivé	objectivé	
+objectiver	V;COND;NOM(1,PL)	objectiverions	objectiverions	
+objectiver	V;COND;NOM(1,SG)	objectiverais	objectiverais	
+objectiver	V;COND;NOM(3,SG)	objectiverait	objectiverait	
+objectiver	V;IND;FUT;NOM(1,PL)	objectiverons	objectiverons	
+objectiver	V;IND;FUT;NOM(1,SG)	objectiverai	objectiverai	
+objectiver	V;IND;PRS;NOM(3,SG)	objective	objective	
+objectiver	V;IND;PST;IPFV;NOM(1,SG)	objectivais	objectivais	
+objectiver	V;IND;PST;IPFV;NOM(3,SG)	objectivait	objectivait	
+objectiver	V;IND;PST;PFV;NOM(1,PL)	objectivâmes	objectivâmes	
+objectiver	V;IND;PST;PFV;NOM(1,SG)	objectivai	objectivai	
+objectiver	V;IND;PST;PFV;NOM(3,PL)	objectivèrent	objectivèrent	
+objectiver	V;NFIN	objectiver	objectiver	
+objectiver	V;POS;IMP;NOM(1,PL)	objectivons	objectivons	
+objectiver	V;POS;IMP;NOM(2,SG)	objective	objective	
+objectiver	V;SBJV;PRS;NOM(2,PL)	objectiviez	objectivez	BAD
+objectiver	V;SBJV;PRS;NOM(2,SG)	objectives	objectives	
+objectiver	V;SBJV;PST;NOM(2,SG)	objectivasses	objectivasses	
+prélever	V.PTCP;PRS	prélevant	prélevant	
+prélever	V;COND;NOM(1,SG)	prélèverais	préleverais	BAD
+prélever	V;COND;NOM(3,SG)	prélèverait	préleverait	BAD
+prélever	V;IND;FUT;NOM(1,SG)	prélèverai	préleverai	BAD
+prélever	V;IND;FUT;NOM(2,SG)	prélèveras	préleveras	BAD
+prélever	V;IND;PRS;NOM(1,PL)	prélevons	prélevons	
+prélever	V;IND;PRS;NOM(2,SG)	prélèves	préleves	BAD
+prélever	V;IND;PRS;NOM(3,PL)	prélèvent	prélevent	BAD
+prélever	V;IND;PST;IPFV;NOM(1,PL)	prélevions	préleviiens	BAD
+prélever	V;IND;PST;IPFV;NOM(2,PL)	préleviez	préleviez	
+prélever	V;IND;PST;PFV;NOM(1,PL)	prélevâmes	prélevames	BAD
+prélever	V;IND;PST;PFV;NOM(1,SG)	prélevai	prélevai	
+prélever	V;NFIN	prélever	prélever	
+prélever	V;POS;IMP;NOM(1,PL)	prélevons	prélevons	
+prélever	V;SBJV;PRS;NOM(2,PL)	préleviez	prélevez	BAD
+prélever	V;SBJV;PST;NOM(1,PL)	prélevassions	prélevissons	BAD
+prélever	V;SBJV;PST;NOM(2,PL)	prélevassiez	prélevissoiz	BAD
+prélever	V;SBJV;PST;NOM(2,SG)	prélevasses	prélevasses	
+prélever	V;SBJV;PST;NOM(3,PL)	prélevassent	prélevassent	
+prélever	V;SBJV;PST;NOM(3,SG)	prélevât	prélevast	BAD

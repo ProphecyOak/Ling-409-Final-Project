@@ -222,7 +222,7 @@ def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False
     if msd in allprules:
         applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
         if applicablerules:
-            bestrule = max(applicablerules, key = lambda x: (x[2]))
+            bestrule = max(applicablerules, key = lambda x: (x[2])) 
             if debug and not no_pref: print("\nApplicable prefix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
             base = base.replace(bestrule[0], bestrule[1])
 
