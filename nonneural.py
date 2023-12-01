@@ -246,7 +246,7 @@ def numtrailingsyms(s, symbol):
 
 def main(argv):
     options, remainder = getopt.gnu_getopt(argv[1:], 'odSs:thp:', ['output','debug','suffix-only','subset=','test','help','path='])
-    DEBUG, NO_PREF, SAMPLE, TEST, OUTPUT, HELP, path = False,False,None,False,False, False, './Data/'
+    DEBUG, NO_PREF, SUBSET, TEST, OUTPUT, HELP, path = False,False,None,False,False, False, './Data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
@@ -255,7 +255,7 @@ def main(argv):
         if opt in ('-S', '--suffix-only'):
             NO_PREF = True
         if opt in ('-s', '--subset'):
-            SAMPLE = arg
+            SUBSET = arg
         if opt in ('-t', '--test'):
             TEST = True
         if opt in ('-h', '--help'):
@@ -317,8 +317,8 @@ def main(argv):
                     allsrules[msd][(r[0],r[1])] = 1
 
         # Run eval on dev
-        if not SAMPLE is None:
-            filename = lang + '-' + SAMPLE
+        if not SUBSET is None:
+            filename = lang + '-' + SUBSET
         else:
             filename = lang
         
@@ -340,7 +340,7 @@ def main(argv):
 #                    lemma, msd, = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
-            outform = apply_best_rule(lemma, msd, allprules, allsrules, DEBUG, NO_PREF, SAMPLE)
+            outform = apply_best_rule(lemma, msd, allprules, allsrules, DEBUG, NO_PREF, SUBSET)
             if not outform is None:
                 if prefbias > suffbias:
                     outform = outform[::-1]
