@@ -216,7 +216,7 @@ def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False
 
     if msd in allsrules:
         # One applicable rule is a 3-tuple containing the input, output, and frequency
-        applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base and (x[0] == base[1:] or y > 1)]
+        applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base]
         if base[-4] not in 'aâeéèêiïîoôuû':
             for x,y in allsrules[msd].items():
                 if len(x[0]) == 5 and x[0] == base[-5] + 'C' + base[-3:]:
@@ -423,7 +423,7 @@ def main(argv):
                                           subset=SUBSET,
                                           wordmap=wordmap)
             else:
-                outform = apply_best_rule(lemma, msd, allprules, allsrules)
+                outform = apply_best_rule(lemma, msd, allprules, allsrules, debug=DEBUG)
 
             if not outform is None:
                 if prefbias > suffbias:

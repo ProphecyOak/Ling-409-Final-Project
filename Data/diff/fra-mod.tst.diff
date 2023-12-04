@@ -180,18 +180,18 @@ conclure	V;SBJV;PRS;NOM(3,SG)	conclue	concluse	BAD
 conclure	V;SBJV;PST;NOM(2,SG)	conclusses	conclusses	
 congeler	V.PTCP;PST	congelé	congelé	
 congeler	V;COND;NOM(2,PL)	congèleriez	congèleriez	
-congeler	V;COND;NOM(3,PL)	congèleraient	congèleraienl	BAD
+congeler	V;COND;NOM(3,PL)	congèleraient	congèleraient	
 congeler	V;IND;FUT;NOM(1,PL)	congèlerons	congèlerons	
 congeler	V;IND;FUT;NOM(2,SG)	congèleras	congèleras	
 congeler	V;IND;PRS;NOM(1,PL)	congelons	congelons	
-congeler	V;IND;PRS;NOM(3,PL)	congèlent	congèlenl	BAD
+congeler	V;IND;PRS;NOM(3,PL)	congèlent	congèlent	
 congeler	V;IND;PRS;NOM(3,SG)	congèle	congèle	
 congeler	V;IND;PST;IPFV;NOM(1,PL)	congelions	congelions	
 congeler	V;IND;PST;IPFV;NOM(1,SG)	congelais	congelais	
 congeler	V;IND;PST;IPFV;NOM(2,PL)	congeliez	congeliez	
 congeler	V;IND;PST;IPFV;NOM(2,SG)	congelais	congelais	
-congeler	V;IND;PST;IPFV;NOM(3,PL)	congelaient	congelaienl	BAD
-congeler	V;IND;PST;IPFV;NOM(3,SG)	congelait	congelail	BAD
+congeler	V;IND;PST;IPFV;NOM(3,PL)	congelaient	congelaient	
+congeler	V;IND;PST;IPFV;NOM(3,SG)	congelait	congelait	
 congeler	V;IND;PST;PFV;NOM(2,SG)	congelas	congelas	
 congeler	V;POS;IMP;NOM(2,SG)	congèle	congele	BAD
 congeler	V;SBJV;PRS;NOM(2,PL)	congeliez	congeliez	
@@ -564,12 +564,12 @@ parachever	V;COND;NOM(3,SG)	parachèverait	parachèverait
 parachever	V;IND;FUT;NOM(1,PL)	parachèverons	parachèverons	
 parachever	V;IND;FUT;NOM(3,PL)	parachèveront	parachèveront	
 parachever	V;IND;FUT;NOM(3,SG)	parachèvera	parachèvera	
-parachever	V;IND;PRS;NOM(3,PL)	parachèvent	parachèvenv	BAD
-parachever	V;IND;PST;IPFV;NOM(3,PL)	parachevaient	parachevaienv	BAD
-parachever	V;IND;PST;IPFV;NOM(3,SG)	parachevait	parachevaiv	BAD
+parachever	V;IND;PRS;NOM(3,PL)	parachèvent	parachèvent	
+parachever	V;IND;PST;IPFV;NOM(3,PL)	parachevaient	parachevaient	
+parachever	V;IND;PST;IPFV;NOM(3,SG)	parachevait	parachevait	
 parachever	V;IND;PST;PFV;NOM(1,PL)	parachevâmes	parachevâmes	
 parachever	V;IND;PST;PFV;NOM(1,SG)	parachevai	parachevai	
-parachever	V;IND;PST;PFV;NOM(2,PL)	parachevâtes	parachevâves	BAD
+parachever	V;IND;PST;PFV;NOM(2,PL)	parachevâtes	parachevâtes	
 parachever	V;NFIN	parachever	parachever	
 parachever	V;POS;IMP;NOM(2,PL)	parachevez	parachevez	
 parachever	V;SBJV;PRS;NOM(1,PL)	parachevions	parachevions	
@@ -577,7 +577,7 @@ parachever	V;SBJV;PRS;NOM(2,PL)	paracheviez	parachevez	BAD
 parachever	V;SBJV;PRS;NOM(3,SG)	parachève	parachève	
 parachever	V;SBJV;PST;NOM(2,PL)	parachevassiez	parachevassiez	
 parachever	V;SBJV;PST;NOM(2,SG)	parachevasses	parachevasses	
-parachever	V;SBJV;PST;NOM(3,SG)	parachevât	parachevâv	BAD
+parachever	V;SBJV;PST;NOM(3,SG)	parachevât	parachevât	
 rembourser	V.PTCP;PRS	remboursant	remboursant	
 rembourser	V;COND;NOM(1,PL)	rembourserions	rembourserions	
 rembourser	V;COND;NOM(1,SG)	rembourserais	rembourserais	
