@@ -173,6 +173,9 @@ def prefix_suffix_rules_get(lemma, form):
 
     srules = set()
     for i in range(min(len(ins), len(outs))):
+        clean = ins[i:].replace('_', '')
+        if len(clean) == 5 and clean[-3:] == 'er>' and clean[-5] in 'eé' and clean[-4] not in 'aâeéèêiïîoôuû':
+            srules.add((clean[:-4]+'C'+clean[-3:], replace_first_inst(outs[i:],clean[-4],'C')))
         srules.add((ins[i:], outs[i:])) # Each possible substring pair is added as a suffixing rule
     srules = {(x[0].replace('_',''), x[1].replace('_','')) for x in srules} # Remove _ alignment characters
 
@@ -214,9 +217,14 @@ def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False
     if msd in allsrules:
         # One applicable rule is a 3-tuple containing the input, output, and frequency
         applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base and (x[0] == base[1:] or y > 1)]
+        if base[-4] not in 'aâeéèêiïîoôuû':
+            for x,y in allsrules[msd].items():
+                if len(x[0]) == 5 and x[0] == base[-5] + 'C' + base[-3:]:
+                    applicablerules.append((x[0].replace('C',base[-4]), x[1].replace('C',base[-4]), y))
+
         if applicablerules: # If there are applicable rules, find the best one
             bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
-            if debug: print("\nApplicable suffix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
+            if debug: print("Applicable suffix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
             base = base.replace(bestrule[0], bestrule[1]) # Apply best rule to base form
 
     # Use above method to apply relevant prefixing rule to base form
@@ -224,8 +232,10 @@ def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False
         applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
         if applicablerules:
             bestrule = max(applicablerules, key = lambda x: (x[2])) 
-            if debug and not no_pref: print("\nApplicable prefix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
+            if debug and not no_pref: print("Applicable prefix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
             base = base.replace(bestrule[0], bestrule[1])
+    
+    if debug: print()
 
     # Remove extra characters
     base = base.replace('<', '')
@@ -284,6 +294,18 @@ def load_word_map():
             print('File {} not yet generated.'.format(f))
     
     return wordmap
+
+def replace_first_inst(s, to_replace, replace_with):
+    t = ''
+    for c in s:
+        if c == to_replace:
+            t += replace_with
+            rem = len(s)-len(t)
+            t += s[-rem:]
+            return t
+        else:
+            t += c
+    return t
 
 ###############################################################################
 
@@ -379,7 +401,7 @@ def main(argv):
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
-        if DEBUG and not SUBSET is None:
+        if DEBUG and SUBSET is None:
             devlines = [line.strip() for line in open(path + lang + ".dbg", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
         numguesses = 0
