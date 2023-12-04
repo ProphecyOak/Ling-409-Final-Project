@@ -29,7 +29,7 @@ approximer,-
 arrimer,-
 assassiner,-
 aterminer,M
-aymer,M-O
+aymer,M+O
 badigeonner,-
 balocher,-
 barouder,-
@@ -75,7 +75,7 @@ compiler,-
 comprehendre,obs
 concrétiser,-
 conférer,-
-confermer,M-O
+confermer,M+O
 confier,-
 configurer,-
 contempler,-
@@ -140,8 +140,8 @@ détoxifier,-
 développer,-
 déverrouiller,-
 dévider,-
-devourer,M-O
-disner,M-O
+devourer,M+O
+disner,M+O
 distraire,-
 divorcer,-
 dodeliner,-
@@ -189,16 +189,16 @@ entroublier,O
 ériger,-
 eriter,O
 escapper,M
-eschauffer,M-O
+eschauffer,M+O
 escouiller,M
-escrier,M-O
+escrier,M+O
 escryer,M
 espionner,-
 esposer,obs
 esternuer,M
 estiquier,M
 estirer,M
-estoffer,M-O
+estoffer,M+O
 estormir,O
 estouffler,O
 estropier,-
@@ -227,7 +227,7 @@ franchiser,-
 fronder,dtd
 frouiller,-
 fureter,-
-gaimenter,M-O
+gaimenter,M+O
 giveer,O
 glamouriser,-
 goinfrer,-

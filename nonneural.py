@@ -11,6 +11,7 @@ Last Update: 22/03/2021
 import sys, os, getopt, re
 from functools import wraps
 from glob import glob
+from warnings import warn
 
 
 def hamming(s,t):
@@ -186,7 +187,7 @@ def prefix_suffix_rules_get(lemma, form):
 
     return prules, srules
 
-def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False, sample=None):
+def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False, subset=None, wordmap=None):
     """
     Arguments:
         lemma -- 'root' or 'base' form of word to transform
@@ -200,7 +201,7 @@ def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False
     For prefix-changing rules, only the most frequent rule is chosen.
     """
 
-    if not sample is None and sample + '>' not in lemma + '>':
+    if not subset is None and not is_in_subset(lemma, subset, wordmap):
         return
 
     if debug: print("Lemma: %s\nFeatures: %s" % (lemma, msd))
@@ -212,7 +213,7 @@ def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False
 
     if msd in allsrules:
         # One applicable rule is a 3-tuple containing the input, output, and frequency
-        applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base]
+        applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base and (x[0] == base[1:] or y > 1)]
         if applicablerules: # If there are applicable rules, find the best one
             bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
             if debug: print("\nApplicable suffix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
@@ -241,12 +242,55 @@ def numtrailingsyms(s, symbol):
     """Get number of trailing symbol characters in s"""
     return len(s) - len(s.rstrip(symbol))
 
+def is_in_subset(lemma, subset, wordmap):
+    subset_opts_map = {
+        'mod': ['-', 'dtd', 'obs'],
+        'no_old': ['-', 'dtd', 'obs', 'M'],
+        'no_dtd': ['-', 'obs'],
+        'no_obs': ['-', 'dtd'],
+        'mod_strict': ['-']
+    }
+
+    if subset is None:
+        return True
+    
+    if '.' in subset:
+        fix, substr = subset.split('.', maxsplit=1)
+        if fix == 'pre':
+            return lemma[:len(substr)] == substr
+        if fix == 'suf':
+            return lemma[-len(substr):] == substr
+        warn('{} is not a valid affix type. Running script on unfiltered data set.'.format(fix))
+        return True
+    
+    if subset in subset_opts_map.keys():
+        return wordmap[lemma] in subset_opts_map[subset]
+    
+    warn('Invalid argument passed to --subset option. Running script on unfiltered data set.')
+    return True
+
+def load_word_map():
+    files = [ 'marked-fra.{}.csv'.format(x) for x in ('dev', 'trn', 'tst') ]
+
+    wordmap = {}
+    for f in files:
+        try:
+            with open(os.path.join('data', f)) as mapfile:
+                for line in mapfile:
+                    if line.strip() != '':
+                        word, fam = line.strip().split(',')
+                        wordmap[word] = fam
+        except FileNotFoundError:
+            print('File {} not yet generated.'.format(f))
+    
+    return wordmap
+
 ###############################################################################
 
 
 def main(argv):
-    options, remainder = getopt.gnu_getopt(argv[1:], 'odSs:thp:', ['output','debug','suffix-only','subset=','test','help','path='])
-    DEBUG, NO_PREF, SUBSET, TEST, OUTPUT, HELP, path = False,False,None,False,False, False, './Data/'
+    options, remainder = getopt.gnu_getopt(argv[1:], 'odSs:g:thp:', ['output','debug','suffix-only','subset=','ignore=','test','help','path='])
+    DEBUG, NO_PREF, SUBSET, IGNORE, TEST, OUTPUT, HELP, path = False,False,None,None,False,False, False, './Data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
@@ -256,6 +300,8 @@ def main(argv):
             NO_PREF = True
         if opt in ('-s', '--subset'):
             SUBSET = arg
+        if opt in ('-g', '--ignore'):
+            IGNORE = arg
         if opt in ('-t', '--test'):
             TEST = True
         if opt in ('-h', '--help'):
@@ -271,12 +317,16 @@ def main(argv):
             print("Options:")
             print(" -o         create output files with guesses (and don't just evaluate)")
             print(" -t         evaluate on test instead of dev")
-            print(" -d         evaluate on debug and print debug statements instead of dev")
-            print(" -s         runs on subset of data where lemma has the given ending.")
+            print(" -d         evaluate on debug (or subset when specified) and print debug statements instead of dev")
+            print(" -S         when -d flag is set, only print information for suffixing rules")
+            print(" -s         runs on subset of data. Must specify one of the following: mod, no_old,")
+            print("            no_obs, no_dtd, pre.<prefix string>, suf.<suffix string>")
             print(" -p [path]  data files path. Default is ../data/")
             quit()
 
     totalavg, numlang = 0.0, 0
+    wordmap = load_word_map()
+
     for lang in [os.path.splitext(d)[0] for d in os.listdir(path) if '.trn' in d]:
         allprules, allsrules = {}, {}
         if not os.path.isfile(path + lang +  ".trn"):
@@ -292,55 +342,67 @@ def main(argv):
             if ' ' not in aligned[0] and ' ' not in aligned[1] and '-' not in aligned[0] and '-' not in aligned[1]:
                 prefbias += numleadingsyms(aligned[0],'_') + numleadingsyms(aligned[1],'_')
                 suffbias += numtrailingsyms(aligned[0],'_') + numtrailingsyms(aligned[1],'_')
+
         for l in lines: # Read in lines and extract transformation rules from pairs
             lemma, msd, form = l.split(u'\t')
-            if prefbias > suffbias:
-                lemma = lemma[::-1]
-                form = form[::-1]
-            prules, srules = prefix_suffix_rules_get(lemma, form)
 
-            if msd not in allprules and len(prules) > 0:
-                allprules[msd] = {}
-            if msd not in allsrules and len(srules) > 0:
-                allsrules[msd] = {}
+            if IGNORE not in ('trn', 'all') or is_in_subset(lemma, SUBSET, wordmap):
+                if prefbias > suffbias:
+                    lemma = lemma[::-1]
+                    form = form[::-1]
+                prules, srules = prefix_suffix_rules_get(lemma, form)
 
-            for r in prules:
-                if (r[0],r[1]) in allprules[msd]:
-                    allprules[msd][(r[0],r[1])] = allprules[msd][(r[0],r[1])] + 1
-                else:
-                    allprules[msd][(r[0],r[1])] = 1
+                if msd not in allprules and len(prules) > 0:
+                    allprules[msd] = {}
+                if msd not in allsrules and len(srules) > 0:
+                    allsrules[msd] = {}
 
-            for r in srules:
-                if (r[0],r[1]) in allsrules[msd]:
-                    allsrules[msd][(r[0],r[1])] = allsrules[msd][(r[0],r[1])] + 1
-                else:
-                    allsrules[msd][(r[0],r[1])] = 1
+                for r in prules:
+                    if (r[0],r[1]) in allprules[msd]:
+                        allprules[msd][(r[0],r[1])] = allprules[msd][(r[0],r[1])] + 1
+                    else:
+                        allprules[msd][(r[0],r[1])] = 1
+
+                for r in srules:
+                    if (r[0],r[1]) in allsrules[msd]:
+                        allsrules[msd][(r[0],r[1])] = allsrules[msd][(r[0],r[1])] + 1
+                    else:
+                        allsrules[msd][(r[0],r[1])] = 1
+
+        if not SUBSET is None:
+            outname = lang + '-' + SUBSET.replace('.', '-').replace('_', '-')
+        else:
+            outname = lang
 
         # Run eval on dev
-        if not SUBSET is None:
-            filename = lang + '-' + SUBSET
-        else:
-            filename = lang
         
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
-        #if DEBUG:
-        #    devlines = [line.strip() for line in open(path + lang + ".dbg", "r", encoding='utf8') if line != '\n']
+        if DEBUG and not SUBSET is None:
+            devlines = [line.strip() for line in open(path + lang + ".dbg", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
         numguesses = 0
         if OUTPUT:
             if TEST:
-                outfile = open(path + filename + ".tst.out", 'w', encoding='utf8')
+                outfile = open(path + outname + ".tst.out", 'w', encoding='utf8')
             else:
-                outfile = open(path + filename + ".dev.out", "w", encoding='utf8')
+                outfile = open(path + outname + ".dev.out", "w", encoding='utf8')
         
         for l in devlines:
             lemma, msd, correct = l.split(u'\t')
 #                    lemma, msd, = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
-            outform = apply_best_rule(lemma, msd, allprules, allsrules, DEBUG, NO_PREF, SUBSET)
+            if IGNORE in ('tst', 'all'):
+                outform = apply_best_rule(lemma, msd, allprules, allsrules,
+                                          debug=DEBUG,
+                                          no_pref=NO_PREF,
+                                          subset=SUBSET,
+                                          wordmap=wordmap)
+            else:
+                outform = apply_best_rule(lemma, msd, allprules, allsrules)
+
             if not outform is None:
                 if prefbias > suffbias:
                     outform = outform[::-1]
