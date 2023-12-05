@@ -20,7 +20,7 @@ cut -f 1 $1 | sort | uniq | while read -r line ; do
         fi
     else
         if [[ $(grep 'Middle French' tmp2) ]] && [[ $(grep 'Old French' tmp2) ]] ; then
-            echo "$line,M+O" >> "tmp-marked.csv"
+            echo "$line,M-O" >> "tmp-marked.csv"
         elif [[ $(grep 'Middle French' tmp2) ]] ; then
             echo "$line,M" >> "tmp-marked.csv"
         else

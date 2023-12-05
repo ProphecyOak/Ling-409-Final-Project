@@ -18,7 +18,7 @@ abonder	V;NFIN	abonder	abonder
 abonder	V;POS;IMP;NOM(1,PL)	abondons	abondons	
 abonder	V;SBJV;PST;NOM(2,PL)	abondassiez	abondassiez	
 abonder	V;SBJV;PST;NOM(3,SG)	abondât	abondât	
-absoudre	V.CVB;PRS	en absolvant	en absoudsant	BAD
+absoudre	V.CVB;PRS	en absolvant	en absoudant	BAD
 absoudre	V;COND;NOM(2,SG)	absoudrais	absoudrais	
 absoudre	V;COND;NOM(3,SG)	absoudrait	absoudrait	
 absoudre	V;IND;FUT;NOM(1,PL)	absoudrons	absoudrons	
@@ -27,16 +27,16 @@ absoudre	V;IND;FUT;NOM(3,PL)	absoudront	absoudront
 absoudre	V;IND;FUT;NOM(3,SG)	absoudra	absoudra	
 absoudre	V;IND;PRS;NOM(1,SG)	absous	absouds	BAD
 absoudre	V;IND;PRS;NOM(2,PL)	absolvez	absoudez	BAD
-absoudre	V;IND;PRS;NOM(3,PL)	absolvent	absoudsent	BAD
-absoudre	V;IND;PRS;NOM(3,SG)	absout	absoudt	BAD
-absoudre	V;IND;PST;IPFV;NOM(1,SG)	absolvais	absoudsais	BAD
+absoudre	V;IND;PRS;NOM(3,PL)	absolvent	absoudent	BAD
+absoudre	V;IND;PRS;NOM(3,SG)	absout	absoud	BAD
+absoudre	V;IND;PST;IPFV;NOM(1,SG)	absolvais	absoudais	BAD
 absoudre	V;IND;PST;IPFV;NOM(2,SG)	absolvais	absoudais	BAD
-absoudre	V;IND;PST;PFV;NOM(1,PL)	absolûmes	absoudes	BAD
-absoudre	V;IND;PST;PFV;NOM(2,PL)	absolûtes	absoudes	BAD
-absoudre	V;IND;PST;PFV;NOM(2,SG)	absolus	absouds	BAD
-absoudre	V;IND;PST;PFV;NOM(3,PL)	absolurent	absoudrent	BAD
-absoudre	V;IND;PST;PFV;NOM(3,SG)	absolut	absoudt	BAD
-absoudre	V;SBJV;PRS;NOM(2,SG)	absolves	absoudses	BAD
+absoudre	V;IND;PST;PFV;NOM(1,PL)	absolûmes	absoudîmes	BAD
+absoudre	V;IND;PST;PFV;NOM(2,PL)	absolûtes	absoudîtes	BAD
+absoudre	V;IND;PST;PFV;NOM(2,SG)	absolus	absoudis	BAD
+absoudre	V;IND;PST;PFV;NOM(3,PL)	absolurent	absouirent	BAD
+absoudre	V;IND;PST;PFV;NOM(3,SG)	absolut	absoudit	BAD
+absoudre	V;SBJV;PRS;NOM(2,SG)	absolves	absoudes	BAD
 absoudre	V;SBJV;PRS;NOM(3,PL)	absolvent	absoudent	BAD
 adresser	V.PTCP;PRS	adressant	adressant	
 adresser	V.PTCP;PST	adressé	adressé	
@@ -218,24 +218,24 @@ deviser	V;SBJV;PRS;NOM(1,SG)	devise	devise
 deviser	V;SBJV;PST;NOM(1,PL)	devisassions	devisassions	
 deviser	V;SBJV;PST;NOM(2,SG)	devisasses	devisasses	
 deviser	V;SBJV;PST;NOM(3,SG)	devisât	devisât	
-décevoir	V.PTCP;PRS	décevant	décevoissant	BAD
-décevoir	V.PTCP;PST	déçu	décevoi	BAD
+décevoir	V.PTCP;PRS	décevant	décevant	
+décevoir	V.PTCP;PST	déçu	déce	BAD
 décevoir	V;COND;NOM(3,PL)	décevraient	décevraient	
 décevoir	V;COND;NOM(3,SG)	décevrait	décevoirait	BAD
-décevoir	V;IND;FUT;NOM(3,SG)	décevra	décevoira	BAD
-décevoir	V;IND;PRS;NOM(1,PL)	décevons	décevoissons	BAD
-décevoir	V;IND;PRS;NOM(2,SG)	déçois	décevois	BAD
-décevoir	V;IND;PST;IPFV;NOM(1,PL)	décevions	décevoissions	BAD
+décevoir	V;IND;FUT;NOM(3,SG)	décevra	décevdra	BAD
+décevoir	V;IND;PRS;NOM(1,PL)	décevons	décevons	
+décevoir	V;IND;PRS;NOM(2,SG)	déçois	décevx	BAD
+décevoir	V;IND;PST;IPFV;NOM(1,PL)	décevions	décevions	
 décevoir	V;IND;PST;IPFV;NOM(2,SG)	décevais	décevoissais	BAD
-décevoir	V;IND;PST;IPFV;NOM(3,SG)	décevait	décevoissait	BAD
+décevoir	V;IND;PST;IPFV;NOM(3,SG)	décevait	décevait	
 décevoir	V;IND;PST;PFV;NOM(3,SG)	déçut	décevoit	BAD
-décevoir	V;POS;IMP;NOM(2,SG)	déçois	décevois	BAD
-décevoir	V;SBJV;PRS;NOM(1,PL)	décevions	décevoissions	BAD
-décevoir	V;SBJV;PRS;NOM(2,PL)	déceviez	décevoissiez	BAD
-décevoir	V;SBJV;PRS;NOM(2,SG)	déçoives	décevoisses	BAD
-décevoir	V;SBJV;PRS;NOM(3,PL)	déçoivent	décevoissent	BAD
-décevoir	V;SBJV;PST;NOM(1,PL)	déçussions	décevoissions	BAD
-décevoir	V;SBJV;PST;NOM(2,SG)	déçusses	décevoisses	BAD
+décevoir	V;POS;IMP;NOM(2,SG)	déçois	déces	BAD
+décevoir	V;SBJV;PRS;NOM(1,PL)	décevions	décevions	
+décevoir	V;SBJV;PRS;NOM(2,PL)	déceviez	déceviez	
+décevoir	V;SBJV;PRS;NOM(2,SG)	déçoives	déceves	BAD
+décevoir	V;SBJV;PRS;NOM(3,PL)	déçoivent	décevent	BAD
+décevoir	V;SBJV;PST;NOM(1,PL)	déçussions	décevussions	BAD
+décevoir	V;SBJV;PST;NOM(2,SG)	déçusses	décesses	BAD
 décevoir	V;SBJV;PST;NOM(3,PL)	déçussent	décevoissent	BAD
 décevoir	V;SBJV;PST;NOM(3,SG)	déçût	décevoît	BAD
 dégoiser	V.PTCP;PRS	dégoisant	dégoisant	
@@ -462,22 +462,22 @@ induire	V.CVB;PRS	en induisant	en induisant
 induire	V.PTCP;PRS	induisant	induisant	
 induire	V;COND;NOM(1,PL)	induirions	induirions	
 induire	V;COND;NOM(2,SG)	induirais	induirais	
-induire	V;IND;FUT;NOM(1,PL)	induirons	induirons	
+induire	V;IND;FUT;NOM(1,PL)	induirons	indurons	BAD
 induire	V;IND;FUT;NOM(1,SG)	induirai	induirai	
 induire	V;IND;FUT;NOM(2,SG)	induiras	induiras	
 induire	V;IND;FUT;NOM(3,PL)	induiront	induiront	
 induire	V;IND;PRS;NOM(3,SG)	induit	induit	
 induire	V;IND;PST;IPFV;NOM(1,PL)	induisions	induisions	
-induire	V;IND;PST;IPFV;NOM(2,PL)	induisiez	induisiez	
+induire	V;IND;PST;IPFV;NOM(2,PL)	induisiez	induissiez	BAD
 induire	V;IND;PST;IPFV;NOM(3,SG)	induisait	induisait	
-induire	V;IND;PST;PFV;NOM(2,PL)	induisîtes	induies	BAD
-induire	V;IND;PST;PFV;NOM(2,SG)	induisis	induis	BAD
-induire	V;POS;IMP;NOM(2,PL)	induisez	induiez	BAD
+induire	V;IND;PST;PFV;NOM(2,PL)	induisîtes	induîtes	BAD
+induire	V;IND;PST;PFV;NOM(2,SG)	induisis	induisis	
+induire	V;POS;IMP;NOM(2,PL)	induisez	induisez	
 induire	V;POS;IMP;NOM(2,SG)	induis	induis	
-induire	V;SBJV;PRS;NOM(1,PL)	induisions	induions	BAD
+induire	V;SBJV;PRS;NOM(1,PL)	induisions	induisions	
 induire	V;SBJV;PRS;NOM(3,PL)	induisent	induisent	
-induire	V;SBJV;PRS;NOM(3,SG)	induise	induise	
-induire	V;SBJV;PST;NOM(2,PL)	induisissiez	induiissiez	BAD
+induire	V;SBJV;PRS;NOM(3,SG)	induise	induisse	BAD
+induire	V;SBJV;PST;NOM(2,PL)	induisissiez	induisissiez	
 lyncher	V;COND;NOM(1,SG)	lyncherais	lyncherais	
 lyncher	V;COND;NOM(3,SG)	lyncherait	lyncherait	
 lyncher	V;IND;FUT;NOM(3,SG)	lynchera	lynchera	
@@ -679,12 +679,12 @@ réouvrir	V;SBJV;PST;NOM(1,PL)	réouvrissions	réouvrissions
 réouvrir	V;SBJV;PST;NOM(2,PL)	réouvrissiez	réouvrissiez	
 réouvrir	V;SBJV;PST;NOM(3,SG)	réouvrît	réouvrît	
 satisfaire	V;COND;NOM(1,PL)	satisferions	satisfairions	BAD
-satisfaire	V;COND;NOM(1,SG)	satisferais	satisfairais	BAD
-satisfaire	V;IND;FUT;NOM(1,SG)	satisferai	satisfairai	BAD
-satisfaire	V;IND;FUT;NOM(2,PL)	satisferez	satisfairez	BAD
-satisfaire	V;IND;FUT;NOM(3,PL)	satisferont	satisfairont	BAD
+satisfaire	V;COND;NOM(1,SG)	satisferais	satisferais	
+satisfaire	V;IND;FUT;NOM(1,SG)	satisferai	satisferai	
+satisfaire	V;IND;FUT;NOM(2,PL)	satisferez	satisferez	
+satisfaire	V;IND;FUT;NOM(3,PL)	satisferont	satisferont	
 satisfaire	V;IND;FUT;NOM(3,SG)	satisfera	satisfera	
-satisfaire	V;IND;PRS;NOM(2,PL)	satisfaites	satisfaiez	BAD
+satisfaire	V;IND;PRS;NOM(2,PL)	satisfaites	satisfaites	
 satisfaire	V;IND;PRS;NOM(2,SG)	satisfais	satisfais	
 satisfaire	V;IND;PRS;NOM(3,SG)	satisfait	satisfait	
 satisfaire	V;IND;PST;IPFV;NOM(1,PL)	satisfaisions	satisfaisions	
@@ -692,12 +692,12 @@ satisfaire	V;IND;PST;IPFV;NOM(2,PL)	satisfaisiez	satisfaisiez
 satisfaire	V;IND;PST;IPFV;NOM(3,PL)	satisfaisaient	satisfaisaient	
 satisfaire	V;IND;PST;IPFV;NOM(3,SG)	satisfaisait	satisfaisait	
 satisfaire	V;IND;PST;PFV;NOM(3,SG)	satisfit	satisfit	
-satisfaire	V;POS;IMP;NOM(1,PL)	satisfaisons	satisfaions	BAD
-satisfaire	V;POS;IMP;NOM(2,PL)	satisfaites	satisfaiez	BAD
-satisfaire	V;SBJV;PRS;NOM(1,SG)	satisfasse	satisfaise	BAD
-satisfaire	V;SBJV;PRS;NOM(3,SG)	satisfasse	satisfaise	BAD
-satisfaire	V;SBJV;PST;NOM(1,PL)	satisfissions	satisfaiissions	BAD
-satisfaire	V;SBJV;PST;NOM(3,PL)	satisfissent	satisfaissent	BAD
+satisfaire	V;POS;IMP;NOM(1,PL)	satisfaisons	satisfaisons	
+satisfaire	V;POS;IMP;NOM(2,PL)	satisfaites	satisfaites	
+satisfaire	V;SBJV;PRS;NOM(1,SG)	satisfasse	satisfasse	
+satisfaire	V;SBJV;PRS;NOM(3,SG)	satisfasse	satisfasse	
+satisfaire	V;SBJV;PST;NOM(1,PL)	satisfissions	satisfissions	
+satisfaire	V;SBJV;PST;NOM(3,PL)	satisfissent	satisfissent	
 seiner	V.CVB;PRS	en seinant	en seinant	
 seiner	V.PTCP;PRS	seinant	seinant	
 seiner	V;COND;NOM(1,SG)	seinerais	seinerais	
@@ -758,25 +758,25 @@ surabonder	V;SBJV;PRS;NOM(1,SG)	surabonde	surabonde
 surabonder	V;SBJV;PRS;NOM(3,PL)	surabondent	surabondent	
 surabonder	V;SBJV;PST;NOM(1,PL)	surabondassions	surabondassions	
 surabonder	V;SBJV;PST;NOM(2,PL)	surabondassiez	surabondassiez	
-transmettre	V.PTCP;PST	transmis	transmettt	BAD
+transmettre	V.PTCP;PST	transmis	transmet	BAD
 transmettre	V;COND;NOM(3,SG)	transmettrait	transmettrait	
 transmettre	V;IND;FUT;NOM(3,SG)	transmettra	transmettra	
 transmettre	V;IND;PRS;NOM(2,SG)	transmets	transmets	
-transmettre	V;IND;PST;IPFV;NOM(1,PL)	transmettions	transmetssions	BAD
-transmettre	V;IND;PST;IPFV;NOM(1,SG)	transmettais	transmettsais	BAD
-transmettre	V;IND;PST;IPFV;NOM(2,SG)	transmettais	transmetssais	BAD
+transmettre	V;IND;PST;IPFV;NOM(1,PL)	transmettions	transmettions	
+transmettre	V;IND;PST;IPFV;NOM(1,SG)	transmettais	transmetssais	BAD
+transmettre	V;IND;PST;IPFV;NOM(2,SG)	transmettais	transmettais	
 transmettre	V;IND;PST;IPFV;NOM(3,SG)	transmettait	transmetssait	BAD
-transmettre	V;IND;PST;PFV;NOM(1,PL)	transmîmes	transmettes	BAD
-transmettre	V;IND;PST;PFV;NOM(3,SG)	transmit	transmettt	BAD
+transmettre	V;IND;PST;PFV;NOM(1,PL)	transmîmes	transmetes	BAD
+transmettre	V;IND;PST;PFV;NOM(3,SG)	transmit	transmit	
 transmettre	V;POS;IMP;NOM(1,PL)	transmettons	transmettons	
 transmettre	V;POS;IMP;NOM(2,PL)	transmettez	transmettez	
-transmettre	V;POS;IMP;NOM(2,SG)	transmets	transmetts	BAD
-transmettre	V;SBJV;PRS;NOM(1,PL)	transmettions	transmetssions	BAD
-transmettre	V;SBJV;PRS;NOM(1,SG)	transmette	transmetsse	BAD
-transmettre	V;SBJV;PRS;NOM(2,PL)	transmettiez	transmetssiez	BAD
-transmettre	V;SBJV;PRS;NOM(3,SG)	transmette	transmettse	BAD
-transmettre	V;SBJV;PST;NOM(1,PL)	transmissions	transmettissions	BAD
-transmettre	V;SBJV;PST;NOM(3,PL)	transmissent	transmettissent	BAD
+transmettre	V;POS;IMP;NOM(2,SG)	transmets	transmets	
+transmettre	V;SBJV;PRS;NOM(1,PL)	transmettions	transmettions	
+transmettre	V;SBJV;PRS;NOM(1,SG)	transmette	transmette	
+transmettre	V;SBJV;PRS;NOM(2,PL)	transmettiez	transmettiez	
+transmettre	V;SBJV;PRS;NOM(3,SG)	transmette	transmetsse	BAD
+transmettre	V;SBJV;PST;NOM(1,PL)	transmissions	transmetons	BAD
+transmettre	V;SBJV;PST;NOM(3,PL)	transmissent	transmetsent	BAD
 transmettre	V;SBJV;PST;NOM(3,SG)	transmît	transmett	BAD
 vociférer	V.CVB;PRS	en vociférant	en vociférant	
 vociférer	V.PTCP;PST	vociféré	vociféré	
