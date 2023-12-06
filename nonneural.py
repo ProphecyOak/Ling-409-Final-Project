@@ -312,7 +312,7 @@ def replace_first_inst(s, to_replace, replace_with):
 
 def main(argv):
     options, remainder = getopt.gnu_getopt(argv[1:], 'odSX:Y:thp:', ['output','debug','suffix-only','x-set=','y-set=','test','help','path='])
-    DEBUG, NO_PREF, XSET, YSET, TEST, OUTPUT, HELP, path = False,False,None,None,False,False, False, './Data/'
+    DEBUG, NO_PREF, XSET, YSET, TEST, OUTPUT, HELP, path = False,False,None,None,False,False, False, './data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
