@@ -311,8 +311,8 @@ def replace_first_inst(s, to_replace, replace_with):
 
 
 def main(argv):
-    options, remainder = getopt.gnu_getopt(argv[1:], 'odSs:g:thp:', ['output','debug','suffix-only','subset=','ignore=','test','help','path='])
-    DEBUG, NO_PREF, SUBSET, IGNORE, TEST, OUTPUT, HELP, path = False,False,None,None,False,False, False, './Data/'
+    options, remainder = getopt.gnu_getopt(argv[1:], 'odSX:Y:thp:', ['output','debug','suffix-only','x-set=','y-set=','test','help','path='])
+    DEBUG, NO_PREF, XSET, YSET, TEST, OUTPUT, HELP, path = False,False,None,None,False,False, False, './Data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
@@ -320,10 +320,10 @@ def main(argv):
             DEBUG = True
         if opt in ('-S', '--suffix-only'):
             NO_PREF = True
-        if opt in ('-s', '--subset'):
-            SUBSET = arg
-        if opt in ('-g', '--ignore'):
-            IGNORE = arg
+        if opt in ('-X', '--x-set'):
+            XSET = arg
+        if opt in ('-Y', '--y-set'):
+            YSET = arg
         if opt in ('-t', '--test'):
             TEST = True
         if opt in ('-h', '--help'):
@@ -341,7 +341,9 @@ def main(argv):
             print(" -t         evaluate on test instead of dev")
             print(" -d         evaluate on debug (or subset when specified) and print debug statements instead of dev")
             print(" -S         when -d flag is set, only print information for suffixing rules")
-            print(" -s         runs on subset of data. Must specify one of the following: mod, no_old,")
+            print(" -X [set]   trains on subset of data. Must specify one of the following: mod, no_old,")
+            print("            no_obs, no_dtd, pre.<prefix string>, suf.<suffix string>")
+            print(" -Y [set]   tests on subset of data. Must specify one of the following: mod, no_old,")
             print("            no_obs, no_dtd, pre.<prefix string>, suf.<suffix string>")
             print(" -p [path]  data files path. Default is ../data/")
             quit()
@@ -368,7 +370,7 @@ def main(argv):
         for l in lines: # Read in lines and extract transformation rules from pairs
             lemma, msd, form = l.split(u'\t')
 
-            if IGNORE not in ('trn', 'all') or is_in_subset(lemma, SUBSET, wordmap):
+            if XSET is None or is_in_subset(lemma, XSET, wordmap):
                 if prefbias > suffbias:
                     lemma = lemma[::-1]
                     form = form[::-1]
@@ -391,8 +393,8 @@ def main(argv):
                     else:
                         allsrules[msd][(r[0],r[1])] = 1
 
-        if not SUBSET is None:
-            outname = lang + '-' + SUBSET.replace('.', '-').replace('_', '-')
+        if not YSET is None:
+            outname = lang + '-' + YSET.replace('.', '-').replace('_', '-')
         else:
             outname = lang
 
@@ -401,7 +403,7 @@ def main(argv):
         devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
         if TEST:
             devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
-        if DEBUG and SUBSET is None:
+        if DEBUG and ('pre' not in YSET or 'suf' not in YSET):
             devlines = [line.strip() for line in open(path + lang + ".dbg", "r", encoding='utf8') if line != '\n']
         numcorrect = 0
         numguesses = 0
@@ -416,11 +418,11 @@ def main(argv):
 #                    lemma, msd, = l.split(u'\t')
             if prefbias > suffbias:
                 lemma = lemma[::-1]
-            if IGNORE in ('tst', 'all'):
+            if not YSET is None:
                 outform = apply_best_rule(lemma, msd, allprules, allsrules,
                                           debug=DEBUG,
                                           no_pref=NO_PREF,
-                                          subset=SUBSET,
+                                          subset=YSET,
                                           wordmap=wordmap)
             else:
                 outform = apply_best_rule(lemma, msd, allprules, allsrules, debug=DEBUG)
