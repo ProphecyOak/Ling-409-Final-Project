@@ -253,18 +253,18 @@ def numtrailingsyms(s, symbol):
     return len(s) - len(s.rstrip(symbol))
 
 def is_in_subset(lemma, subset, wordmap):
-    subset_opts_map = {             # Use dictionary to define which categories are included
-        'mod': ['-', 'dtd', 'obs'], # in which subsets
+    subset_opts_map = {
+        'mod': ['-', 'dtd', 'obs'],
         'no_old': ['-', 'dtd', 'obs', 'M'],
         'no_dtd': ['-', 'obs'],
         'no_obs': ['-', 'dtd'],
         'mod_strict': ['-']
     }
 
-    if subset is None: # If there was no subset argument, the 'subset' is the full data set
+    if subset is None:
         return True
     
-    if '.' in subset: # Include option to run on certain prefixes or suffixes
+    if '.' in subset:
         fix, substr = subset.split('.', maxsplit=1)
         if fix == 'pre':
             return lemma[:len(substr)] == substr
@@ -277,21 +277,20 @@ def is_in_subset(lemma, subset, wordmap):
         return wordmap[lemma] in subset_opts_map[subset]
     
     warn('Invalid argument passed to --subset option. Running script on unfiltered data set.')
-    return True # Run as though no subset was passed if the subset arg invalid
+    return True
 
 def load_word_map():
-    # programmatically generate list of CSVs
     files = [ 'marked-fra.{}.csv'.format(x) for x in ('dev', 'trn', 'tst') ]
 
-    wordmap = {} # Initialize empty dictionary
-    for f in files: # Loop through all the files
+    wordmap = {}
+    for f in files:
         try:
             with open(os.path.join('data', f)) as mapfile:
                 for line in mapfile:
-                    if line.strip() != '': # Lines are all <word>,<category>
+                    if line.strip() != '':
                         word, fam = line.strip().split(',')
-                        wordmap[word] = fam # Dictionary maps words to their categories
-        except FileNotFoundError: # Handle error if one of the files does not exist
+                        wordmap[word] = fam
+        except FileNotFoundError:
             print('File {} not yet generated.'.format(f))
     
     return wordmap
@@ -313,7 +312,7 @@ def replace_first_inst(s, to_replace, replace_with):
 
 def main(argv):
     options, remainder = getopt.gnu_getopt(argv[1:], 'odSX:Y:thp:', ['output','debug','suffix-only','x-set=','y-set=','test','help','path='])
-    DEBUG, NO_PREF, XSET, YSET, TEST, OUTPUT, HELP, path = False,False,None,None,False,False, False, './data/'
+    DEBUG, NO_PREF, XSET, YSET, TEST, OUTPUT, HELP, path = False,False,None,None,False,False, False, './Data/'
     for opt, arg in options:
         if opt in ('-o', '--output'):
             OUTPUT = True
