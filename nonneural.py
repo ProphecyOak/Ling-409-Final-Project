@@ -367,7 +367,7 @@ def main(parsed):
         numcorrect = 0
         numguesses = 0
 
-        if out: outfile = open(lang_fname+'.out', 'w', encoding='utf8')
+        if not out is None: outfile = open(os.path.join(out,lang+'-'+eval_set+evl_ext+'.out'), 'w', encoding='utf8')
 
         for lemma,msd,correct in evallines:
             if is_in_subset(lemma, eval_set, wordmap):
@@ -381,10 +381,10 @@ def main(parsed):
                     numcorrect += 1
                 numguesses += 1
             
-                if out:
+                if not out is None:
                     outfile.write('\t'.join((lemma,msd,correct,outform))+'\n')
         
-        if out: outfile.close()
+        if not out is None: outfile.close()
         
         pctcorrect = numcorrect / float(numguesses)
         print(f'{lang} accuracy: {pctcorrect:.2%}')
@@ -396,7 +396,7 @@ def main(parsed):
     print(f'average accuracy: {totalavg:.2%}')
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(prog='NonNeuralMyTeam',
+    parser = argparse.ArgumentParser(prog='nonneural.py',
                                      description='Our cleaned and very slightly edited version'
                                         + ' of the original nonneural.py code.',
                                      epilog='Generating this help message was done with the argparse library'
@@ -404,36 +404,40 @@ if __name__ == '__main__':
     
     parser.add_argument('-o', '--output',
                         dest='out',
-                        action='store_true',
-                        help='generate output files with guesses. files are written to the same place as'
-                            + ' the path argument (or default value if no path was specified) under <lang>.out')
+                        metavar='out_path',
+                        nargs='?',
+                        const=os.path.join('data','out'),
+                        default=None,
+                        help='generate output files with guesses. files are written to data/out by default'
+                            + ' if path to outfile directory not specified under'
+                            + '<lang>-<subset>.<eval_file_ext>.out')
     parser.add_argument('-t', '--test',
                         dest='eval',
                         action='store_const',
                         const='.tst',
                         default='.dev',
-                        help='evaluate models on test instead of dev data.')
+                        help='evaluate models on test instead of dev data.\n')
     parser.add_argument('-d', '--debug',
                         dest='debug',
                         action='store_true',
-                        help='evaluate on debug (or subset when specified) instead of dev and print debug statements')
+                        help='evaluate on debug (or subset when specified) instead of dev and print debug statements\n')
     parser.add_argument('-T', '--trn-set',
                         dest='trn_set',
                         default='all',
                         help='subset of data to train on. must specify one of the following: all, mod, no_old,'
-                        + 'no_obs, no_dtd, pre.<prefix string>, suf.<suffix string>. defaults to \'all\'.')
+                        + 'no_obs, no_dtd, pre.<prefix string>, suf.<suffix string>. defaults to \'all\'.\n')
     parser.add_argument('-V', '--eval-set',
                         dest='eval_set',
                         help='subset of data to evaluate on. categories are the same as for the -T arg.'
-                        + ' defaults to \'all\'')
+                        + ' defaults to \'all\'\n')
     parser.add_argument('-S', '--subset',
                         dest='subset',
                         help='subset of data to work with for both training and evaluation. overwrites arguments passed'
                         + ' to -T and -V. when nothing is passed, uses the values of -T and -V, so default behavior is'
-                        + ' to run on the unfiltered data, but \'mod\' is recommended for the best results.')
+                        + ' to run on the unfiltered data, but \'mod\' is recommended for the best results.\n')
     parser.add_argument('-p', '--path',
                         dest='path',
                         default='data',
-                        help='path to the directory containing data files. defaults to \'data\'.')
+                        help='path to the directory containing data files. defaults to \'data\'.\n')
     
     main(parser.parse_args())
