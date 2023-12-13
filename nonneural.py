@@ -8,13 +8,15 @@ Modified by: Omer Goldman
 Last Update: 22/03/2021
 """
 
-import sys, os, getopt, re
+import os, argparse
 from functools import wraps
-from glob import glob
 from warnings import warn
 
+# global constants
+PRE = 'pre'
+SUF = 'suf'
 
-def hamming(s,t):
+def hamming(s, t):
     """
     Arguments:
         s,t -- two strings to calculate hamming distance for
@@ -25,8 +27,7 @@ def hamming(s,t):
 
     return sum(1 for x,y in zip(s,t) if x != y)
 
-
-def halign(s,t):
+def halign(s, t):
     """
     Arguments:
         s,t -- strings to align by hamming distance
@@ -38,34 +39,25 @@ def halign(s,t):
     the lowest hamming distance.
     """
 
-    minscore = len(s) + len(t) + 1 # Starting "minimum" score 1 above maximum possible score
+    mindist = len(s) + len(t) + 1 # init mindist high enough to ensure best_s and best_t are set
 
-    # 'Slide' forward string s along string t
-    for upad in range(0, len(t)+1):
-        upper = '_' * upad + s + (len(t) - upad) * '_'
-        lower = len(s) * '_' + t
-        score = hamming(upper, lower) # Calculate hamming distance between current alignment
-        if score < minscore: # Save best alignment so far if lower score is found
-            best_upper = upper
-            best_lower = lower
-            minscore = score
+    for i in range(len(s)+len(t)+1): # loop through all alignments using one variable
+        left_pad = min(i, len(t)) # increase left pad of s until i >= len(t)
+        right_pad = max(0, i-len(t)) # increase right pad of t once i >= len(t)
 
-    # Repeat above algorithm 'sliding' t backwards along s
-    for lpad in range(0, len(s)+1):
-        upper = len(t) * '_' + s
-        lower = (len(s) - lpad) * '_' + t + '_' * lpad
-        score = hamming(upper, lower)
-        if score < minscore:
-            best_upper = upper
-            best_lower = lower
-            minscore = score
+        padded_s = '_'*left_pad + s + '_'*(len(t)-left_pad) # pad strings
+        padded_t = '_'*(len(s)-right_pad) + t + '_'*right_pad
 
-    # Remove unnecessary trailing and leading _ characters from both strings
-    zipped = list(zip(best_upper,best_lower))
-    newin  = ''.join(i for i,o in zipped if i != '_' or o != '_')
-    newout = ''.join(o for i,o in zipped if i != '_' or o != '_')
-    return newin, newout
-
+        curdist = hamming(padded_s, padded_t) # check hamming dist of current alignment
+        if curdist < mindist: # save it if better than previous ones
+            best_s = padded_s
+            best_t = padded_t
+            mindist = curdist
+    
+    zipped = [z for z in zip(best_s, best_t) if z != ('_', '_')] # remove extra leading/trailing pads
+    new_s = ''.join([z[0] for z in zipped]) # join tuple elements back into strings
+    new_t = ''.join([z[1] for z in zipped])
+    return new_s, new_t
 
 def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
     """
@@ -83,43 +75,52 @@ def levenshtein(s, t, inscost = 1.0, delcost = 1.0, substcost = 1.0):
     Recursive implementation of the levenshtein algorithm to find the least expensive way to
     get from s to t using given costs for insertion, deletion, and substitution.
     """
+
     @memolrec
     def lrec(spast, tpast, srem, trem, cost):
-        # Base cases:
-        #     If either s or t has been fully 'processed', the remaining distance is simply
-        #     the cost of inserting/deleting remaining characters in the input string.
+        # Base case:
+        #   either s or t has been fully processed, insert/delete remaining characters and return
         if len(srem) == 0:
-            return spast + len(trem) * '_', tpast + trem, '', '', cost + len(trem) * inscost
+            return spast + '_'*len(trem), tpast + trem, '', '', cost + len(trem)*inscost
         if len(trem) == 0:
-            return spast + srem, tpast + len(srem) * '_', '', '', cost + len(srem)
+            return spast + srem, tpast + '_'*len(srem), '', '', cost + len(srem)*delcost
+        
+        # Recursive case:
 
-        addcost = 0
-        if srem[0] != trem[0]: # Cost of 'substituting' a character with itself is 0
-            addcost = substcost
-
-        # Return the minimum of substituting, inserting, or deleting at the current character position
-        return min((lrec(spast + srem[0], tpast + trem[0], srem[1:], trem[1:], cost + addcost),
-                   lrec(spast + '_', tpast + trem[0], srem, trem[1:], cost + inscost),
-                   lrec(spast + srem[0], tpast + '_', srem[1:], trem, cost + delcost)),
-                   key = lambda x: x[4])
-
-    answer = lrec('', '', s, t, 0) # Starting call to recursive function
-    return answer[0],answer[1],answer[4] # Indices 2 and 3 of the returned tuple are empty strings
-
+        curcharcost = 0.0 # 'substitution' cost 0 if chars at current pos are the same
+        if srem[0] != trem[0]:
+            curcharcost = substcost
+        
+        # Return minimum cost of substitution, inserting, and deleting at current position
+        return min(
+            (
+                lrec(spast+srem[0], tpast+trem[0], srem[1:], trem[1:], cost+curcharcost),
+                lrec(spast+'_', tpast+trem[0], srem, trem[1:], cost+inscost),
+                lrec(spast+srem[0], tpast+'_', srem[1:], trem, cost+delcost)
+            ),
+            key=lambda x: x[4]
+        )
+    
+    res = lrec('', '', s, t, 0) # make starting call to recursive function
+    return res[0], res[1], res[4] # only need aligned strings + cost
 
 def memolrec(func):
     """Wrapper function/memoizer for recursive levenshtein implementation. Returns 'decorated' version
     of levenshtein."""
-    cache = {} # Initialize empty memoization dictionary
-    @wraps(func)
-    def wrap(sp, tp, sr, tr, cost):
-        if (sr,tr) not in cache: # Add new entry to cache dictionary if cost for sr and tr not previously calclated
-            result = func(sp, tp, sr, tr, cost)
-            cache[(sr,tr)] = (result[0][len(sp):], result[1][len(tp):], result[4] - cost)
-        # Use previously calculated 'sub-values' to get total cost
-        return sp + cache[(sr,tr)][0], tp + cache[(sr,tr)][1], '', '', cost + cache[(sr,tr)][2]
-    return wrap
 
+    cache = {} # dictionary to keep track of previously calculated values
+
+    @wraps(func)
+    def wrap(spast, tpast, srem, trem, cost):
+        # check whether values for aligning srem and trem previously cached
+        if (srem, trem) not in cache: # if not, calculate and add to dictionary
+            res = func('', '', srem, trem, 0)
+            cache[(srem, trem)] = (res[0], res[1], res[4])
+        
+        aln_srem, aln_trem, rem_cost = cache[(srem, trem)] # retrieve values for srem and trem from dictionary
+        return spast+aln_srem, tpast+aln_trem, '', '', cost + rem_cost # add them to previous values + return
+    
+    return wrap # return decorated function
 
 def alignprs(lemma, form):
     """
@@ -140,14 +141,16 @@ def alignprs(lemma, form):
     prefix, root, and suffix substrings
     """
 
-    al = levenshtein(lemma, form, substcost = 1.1) # Slight preference for insertion/deletion over substitution
-    alemma, aform = al[0], al[1] # Only unpack aligned strings, not cost
-    # leading spaces
-    lspace = max(len(alemma) - len(alemma.lstrip('_')), len(aform) - len(aform.lstrip('_')))
-    # trailing spaces
-    tspace = max(len(alemma[::-1]) - len(alemma[::-1].lstrip('_')), len(aform[::-1]) - len(aform[::-1].lstrip('_')))
-    return alemma[0:lspace], alemma[lspace:len(alemma)-tspace], alemma[len(alemma)-tspace:], aform[0:lspace], aform[lspace:len(alemma)-tspace], aform[len(alemma)-tspace:]
+    # align with preference for insertion/deletion
+    aln_lemma, aln_form, _ = levenshtein(lemma, form, substcost=1.1) # unpack only aligned forms
 
+    pre_len = max(numleadingsyms(aln_lemma), numleadingsyms(aln_form))
+    suf_len = max(numtrailingsyms(aln_lemma), numtrailingsyms(aln_form))
+
+    lem_pr, lem_rt, lem_sf = aln_lemma[:pre_len], aln_lemma[pre_len:len(aln_lemma)-suf_len], aln_lemma[len(aln_lemma)-suf_len:]
+    frm_pr, frm_rt, frm_sf = aln_form[:pre_len], aln_form[pre_len:len(aln_form)-suf_len], aln_form[len(aln_form)-suf_len:]
+
+    return lem_pr, lem_rt, lem_sf, frm_pr, frm_rt, frm_sf
 
 def prefix_suffix_rules_get(lemma, form):
     """
@@ -156,101 +159,90 @@ def prefix_suffix_rules_get(lemma, form):
         form  -- string representing derived form of lemma with added morphological features
 
     Returns:
-        prules -- set of 2-tuples containing inputs and outputs for possible prefix rules used to
-            turn lemma into form
-        srules -- set of 2-tuples containing inputs and outputs for possible suffix rules used to
-            turn lemma into form
+        rules -- length-2 list of sets, where index 0 is the prefix rule set and 1 is the suffix set.
+                 the rule sets are sets of 2-tupes containing inputs and outputs for possible affix
+                 rules used to turn lemma into form
 
     Aligns lemma and form using alignprs, and identifies all possible prefixing/suffixing rules that
     convert lemma to form. Assumes suffixing to be a slightly more complex/elaborate process than
     prefixing (can be applied to reverse strings for languages which prefer prefixing).
     """
-    lp,lr,ls,fp,fr,fs = alignprs(lemma, form) # Get six parts, three for in three for out
 
-    # Suffix rules
-    ins  = lr + ls + ">"
-    outs = fr + fs + ">"
+    lp, lr, ls, fp, fr, fs = alignprs(lemma, form) # get approximate prefix, root, and suffix of lemma+form
 
-    srules = set()
-    for i in range(min(len(ins), len(outs))):
-        clean = ins[i:].replace('_', '')
-        if len(clean) == 5 and clean[-3:] == 'er>' and clean[-5] in 'eé' and clean[-4] not in 'aâeéèêiïîoôuû':
-            srules.add((clean[:-4]+'C'+clean[-3:], replace_first_inst(outs[i:],clean[-4],'C')))
-        srules.add((ins[i:], outs[i:])) # Each possible substring pair is added as a suffixing rule
-    srules = {(x[0].replace('_',''), x[1].replace('_','')) for x in srules} # Remove _ alignment characters
+    rules = {PRE: set(), SUF: set()} # store rules in dictionary so redundant code can be in for-loops later on
+    
+    inpre = '<' + lp.replace('_', '') # removed if-statement checking whether prefix strings were at least
+    outpre = '<' + fp.replace('_', '') # length 0, seemed unnecessary
+    for i in range(len(lr)):
+        rules[PRE].add((inpre + lr[:i].replace('_',''), outpre + fr[:i].replace('_','')))
+    
+    insuf = lr + ls + '>' # suffixing rules loop through entire string, not just the root
+    outsuf = fr + fs + '>'
+    for i in range(len(insuf)):
+        in_clean = insuf[i:].replace('_','')
+        out_clean = outsuf[i:].replace('_','')
 
-    # Prefix rules
-    prules = set()
-    if len(lp) >= 0 or len(fp) >= 0: # Assumes simple prefixing, does not attempt to loop over prefix substrings
-        inp = "<" + lp
-        outp = "<" + fp
-        for i in range(0,len(fr)):
-            prules.add((inp + fr[:i],outp + fr[:i]))
-            prules = {(x[0].replace('_',''), x[1].replace('_','')) for x in prules}
+        if len(in_clean) == 5 and is_ecer(lemma):
+            rules[SUF].add((in_clean[0] + 'C' + in_clean[2:], replace_first_inst(out_clean, in_clean[1], 'C')))
 
-    return prules, srules
+        rules[SUF].add((in_clean, out_clean))
+    
+    return rules
 
-def apply_best_rule(lemma, msd, allprules, allsrules, debug=False, no_pref=False, subset=None, wordmap=None):
+def apply_best_rule(lemma, msd, allrules, keys=None, debug=False):
     """
     Arguments:
         lemma -- 'root' or 'base' form of word to transform
-        msd   -- unimorph string representing desired features in derived form of lemma
-        allprules -- dictionary mapping all msds to possible prefixing rules found in the language
-        allsrules -- dictionary mapping all msds to possible suffixing rules found in the language
-        debug -- boolean whether print statements should be run
 
-    Applies the longest-matching suffix-changing rule given an input
-    form and the MSD. Length ties in suffix rules are broken by frequency.
-    For prefix-changing rules, only the most frequent rule is chosen.
+        msd   -- unimorph string representing desired features in derived form of lemma
+
+        allrules -- 2-length list of dictionaries mapping all msds to possible affixing rules found
+                    in the language. prefix rules at 0 index and suffix rules at 1
+
+        keys -- (default: None) the alternative functions to use when comparing rules against one
+                another. must be a dictionary, where the 'pre' key maps to the prefix rule func and
+                'suf' to the suffix func. when this argument is None, compares prefixing rules
+                using frequency and suffixing rules using input length, with ties broken by frequency,
+                and then output length.
+
+    Applies the longest-matching suffix-changing rule given an input form and the MSD.
     """
 
-    if not subset is None and not is_in_subset(lemma, subset, wordmap):
-        return
+    if keys == None:
+        keys = {PRE: lambda x: x[2], SUF: lambda x: (len(x[0]), x[2], len(x[1]))}
 
-    if debug: print("Lemma: %s\nFeatures: %s" % (lemma, msd))
-
-    base = "<" + lemma + ">"
-
-    if msd not in allprules and msd not in allsrules:
-        return lemma # Haven't seen this inflection, so bail out
-
-    if msd in allsrules:
-        # One applicable rule is a 3-tuple containing the input, output, and frequency
-        applicablerules = [(x[0],x[1],y) for x,y in allsrules[msd].items() if x[0] in base]
-        if base[-4] not in 'aâeéèêiïîoôuû':
-            for x,y in allsrules[msd].items():
-                if len(x[0]) == 5 and x[0] == base[-5] + 'C' + base[-3:]:
-                    applicablerules.append((x[0].replace('C',base[-4]), x[1].replace('C',base[-4]), y))
-
-        if applicablerules: # If there are applicable rules, find the best one
-            bestrule = max(applicablerules, key = lambda x: (len(x[0]), x[2], len(x[1])))
-            if debug: print("Applicable suffix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
-            base = base.replace(bestrule[0], bestrule[1]) # Apply best rule to base form
-
-    # Use above method to apply relevant prefixing rule to base form
-    if msd in allprules:
-        applicablerules = [(x[0],x[1],y) for x,y in allprules[msd].items() if x[0] in base]
-        if applicablerules:
-            bestrule = max(applicablerules, key = lambda x: (x[2])) 
-            if debug and not no_pref: print("Applicable prefix rules:\n%s\nUsing: %s" % (applicablerules, bestrule))
-            base = base.replace(bestrule[0], bestrule[1])
+    affixes = ('pre', 'suf')
     
-    if debug: print()
+    if debug: print(f'Lemma: {lemma}\nFeatures: {msd}')
+    
+    base = '<' + lemma + '>' # surrounding characters anchor prefix and suffix rules to the ends of the word
 
-    # Remove extra characters
-    base = base.replace('<', '')
-    base = base.replace('>', '')
-    return base
+    for fix in (PRE, SUF):
+        if msd not in allrules[fix]:
+            continue # do nothing if no X-fixing rules exist for this form
 
+        applicablerules = [(rule[0],rule[1],freq) for rule,freq in allrules[fix][msd].items() if rule[0] in base]
+        if fix == SUF and is_ecer(lemma):
+            for rule,freq in allrules[fix][msd].items():
+                if rule[0].replace('C', lemma[-3]) in base:
+                    applicablerules.append((rule[0].replace('C', lemma[-3]), rule[1].replace('C', lemma[-3]), freq))
 
-def numleadingsyms(s, symbol):
-    """Get number of leading symbol characters in s"""
-    return len(s) - len(s.lstrip(symbol))
+        if len(applicablerules) > 0:
+            bestrule = max(applicablerules, key=keys[fix])
+            base = base.replace(bestrule[0], bestrule[1])
+            if debug: print(f'Applicable {fix}fixing rules:\n{applicablerules}\nUsing: {bestrule}')
+    
+    return base[1:-1] # trim boundary chars
 
+def is_ecer(lemma):
+    return lemma[-4] in 'ée' and lemma[-3] not in 'aâeéèêiïîoôuû' and lemma[-2:] == 'er'
 
-def numtrailingsyms(s, symbol):
-    """Get number of trailing symbol characters in s"""
-    return len(s) - len(s.rstrip(symbol))
+def numleadingsyms(s, sym='_'):
+    return len(s) - len(s.lstrip(sym))
+
+def numtrailingsyms(s, sym='_'):
+    return len(s) - len(s.rstrip(sym))
 
 def is_in_subset(lemma, subset, wordmap):
     subset_opts_map = {             # Use dictionary to define which categories are included
@@ -261,22 +253,22 @@ def is_in_subset(lemma, subset, wordmap):
         'mod_strict': ['-']
     }
 
-    if subset is None: # If there was no subset argument, the 'subset' is the full data set
+    if subset is None or subset == 'all': # If there was no subset argument, do not filter the data
         return True
     
     if '.' in subset: # Include option to run on certain prefixes or suffixes
         fix, substr = subset.split('.', maxsplit=1)
-        if fix == 'pre':
+        if fix == PRE:
             return lemma[:len(substr)] == substr
-        if fix == 'suf':
+        if fix == SUF:
             return lemma[-len(substr):] == substr
-        warn('{} is not a valid affix type. Running script on unfiltered data set.'.format(fix))
+        warn(f'{fix} is not a valid affix type. Running script on unfiltered data set.')
         return True
     
     if subset in subset_opts_map.keys():
         return wordmap[lemma] in subset_opts_map[subset]
     
-    warn('Invalid argument passed to --subset option. Running script on unfiltered data set.')
+    warn('Invalid argument passed to -T -V or -S. Running script on unfiltered data set.')
     return True # Run as though no subset was passed if the subset arg invalid
 
 def load_word_map():
@@ -308,146 +300,140 @@ def replace_first_inst(s, to_replace, replace_with):
             t += c
     return t
 
-###############################################################################
+def main(parsed):
+    # Look how fun! the argparse library lets you access your options/arguments as object attributes!
+    # Isn't it so much nicer than the ugly, ugly sys.gnu_getopt() line? and now the function isn't all
+    # cluttered with argument parsing and setting defaults
 
+    out, evl_ext, debug = parsed.out, parsed.eval, parsed.debug
+    trn_set, eval_set, subset = parsed.trn_set, parsed.eval_set, parsed.subset
+    path = parsed.path
 
-def main(argv):
-    options, remainder = getopt.gnu_getopt(argv[1:], 'odSX:Y:thp:', ['output','debug','suffix-only','x-set=','y-set=','test','help','path='])
-    DEBUG, NO_PREF, XSET, YSET, TEST, OUTPUT, HELP, path = False,False,None,None,False,False, False, './data/'
-    for opt, arg in options:
-        if opt in ('-o', '--output'):
-            OUTPUT = True
-        if opt in ('-d', '--debug'):
-            DEBUG = True
-        if opt in ('-S', '--suffix-only'):
-            NO_PREF = True
-        if opt in ('-X', '--x-set'):
-            XSET = arg
-        if opt in ('-Y', '--y-set'):
-            YSET = arg
-        if opt in ('-t', '--test'):
-            TEST = True
-        if opt in ('-h', '--help'):
-            HELP = True
-        if opt in ('-p', '--path'):
-            path = arg
-
-    if HELP:
-            print("\n*** Baseline for the SIGMORPHON 2020 shared task ***\n")
-            print("By default, the program runs all languages only evaluating accuracy.")
-            print("To create output files, use -o")
-            print("The training and dev-data are assumed to live in ./part1/development_languages/")
-            print("Options:")
-            print(" -o         create output files with guesses (and don't just evaluate)")
-            print(" -t         evaluate on test instead of dev")
-            print(" -d         evaluate on debug (or subset when specified) and print debug statements instead of dev")
-            print(" -S         when -d flag is set, only print information for suffixing rules")
-            print(" -X [set]   trains on subset of data. Must specify one of the following: mod, no_old,")
-            print("            no_obs, no_dtd, pre.<prefix string>, suf.<suffix string>")
-            print(" -Y [set]   tests on subset of data. Must specify one of the following: mod, no_old,")
-            print("            no_obs, no_dtd, pre.<prefix string>, suf.<suffix string>")
-            print(" -p [path]  data files path. Default is ../data/")
-            quit()
+    if debug:
+        evl_ext = '.dbg'
+    if not subset is None:
+        trn_set = subset
+        eval_set = subset
 
     totalavg, numlang = 0.0, 0
     wordmap = load_word_map()
 
-    for lang in [os.path.splitext(d)[0] for d in os.listdir(path) if '.trn' in d]:
-        allprules, allsrules = {}, {}
-        if not os.path.isfile(path + lang +  ".trn"):
-            continue
-        lines = [line.strip() for line in open(path + lang + ".trn", "r", encoding='utf8') if line != '\n']
+    for lang in [os.path.splitext(d)[0] for d in os.listdir(path) if d[-4:] == '.trn']:
 
-        # First, test if language is predominantly suffixing or prefixing
-        # If prefixing, work with reversed strings
-        prefbias, suffbias = 0,0
-        for l in lines:
-            lemma, _, form = l.split(u'\t')
-            aligned = halign(lemma, form)
-            if ' ' not in aligned[0] and ' ' not in aligned[1] and '-' not in aligned[0] and '-' not in aligned[1]:
-                prefbias += numleadingsyms(aligned[0],'_') + numleadingsyms(aligned[1],'_')
-                suffbias += numtrailingsyms(aligned[0],'_') + numtrailingsyms(aligned[1],'_')
+        lang_fname = os.path.join(path, lang) # makes some lines shorter/cleaner
 
-        for l in lines: # Read in lines and extract transformation rules from pairs
-            lemma, msd, form = l.split(u'\t')
+        if not os.path.isfile(lang_fname+'.trn') or not os.path.isfile(lang_fname+evl_ext):
+            continue # don't do anything if trn or dev/tst files don't exist in the path
 
-            if XSET is None or is_in_subset(lemma, XSET, wordmap):
-                if prefbias > suffbias:
-                    lemma = lemma[::-1]
-                    form = form[::-1]
-                prules, srules = prefix_suffix_rules_get(lemma, form)
+        with open(lang_fname+'.trn', 'r', encoding='utf8') as trnfile:
+            # directly extract lines as 3-tuples of (lemma, msd, form)
+            trnlines = [line.strip().split('\t') for line in trnfile if line != '\n']
 
-                if msd not in allprules and len(prules) > 0:
-                    allprules[msd] = {}
-                if msd not in allsrules and len(srules) > 0:
-                    allsrules[msd] = {}
+        prefbias,suffbias = 0,0
+        for lemma,_,form in trnlines:
+            hal_lemma, hal_form = halign(lemma, form)
 
-                for r in prules:
-                    if (r[0],r[1]) in allprules[msd]:
-                        allprules[msd][(r[0],r[1])] = allprules[msd][(r[0],r[1])] + 1
-                    else:
-                        allprules[msd][(r[0],r[1])] = 1
-
-                for r in srules:
-                    if (r[0],r[1]) in allsrules[msd]:
-                        allsrules[msd][(r[0],r[1])] = allsrules[msd][(r[0],r[1])] + 1
-                    else:
-                        allsrules[msd][(r[0],r[1])] = 1
-
-        if not YSET is None:
-            outname = lang + '-' + YSET.replace('.', '-').replace('_', '-')
-        else:
-            outname = lang
-
-        # Run eval on dev
+            prefbias += numleadingsyms(hal_lemma) + numleadingsyms(hal_form)
+            suffbias += numtrailingsyms(hal_lemma) + numtrailingsyms(hal_form)
         
-        devlines = [line.strip() for line in open(path + lang + ".dev", "r", encoding='utf8') if line != '\n']
-        if TEST:
-            devlines = [line.strip() for line in open(path + lang + ".tst", "r", encoding='utf8') if line != '\n']
-        if DEBUG and ('pre' not in YSET or 'suf' not in YSET):
-            devlines = [line.strip() for line in open(path + lang + ".dbg", "r", encoding='utf8') if line != '\n']
+        slicedir = 1 # instead of several if-statements, slice every string before and after applying algorithm
+        if prefbias > suffbias:
+            slicedir = -1
+        
+        allrules = {PRE: {}, SUF: {}} # init list of empty dictionaries to store prefix and suffix rules
+        for lemma,msd,form in trnlines:
+
+            if is_in_subset(lemma, trn_set, wordmap):
+                lemma = lemma[::slicedir] # slice string forward/backward depending on affixing bias
+                form = form[::slicedir]
+
+                rules = prefix_suffix_rules_get(lemma, form)
+
+                for fix in (PRE, SUF):
+
+                    if msd not in allrules[fix]: # init empty freq dictionary for new msd
+                        allrules[fix][msd] = {}
+                
+                    for rule in rules[fix]:
+                        if rule not in allrules[fix][msd]: # add freq entry for new rule
+                            allrules[fix][msd][rule] = 0
+                    
+                        allrules[fix][msd][rule] += 1 # increase freq by 1 for every repeat rule
+        
+        # run model on dev file, calculate accuracy
+        with open(lang_fname+evl_ext, 'r', encoding='utf8') as evalfile:
+            evallines = [line.strip().split('\t') for line in evalfile if line != '\n']
+
         numcorrect = 0
         numguesses = 0
-        if OUTPUT:
-            if TEST:
-                outfile = open(path + outname + ".tst.out", 'w', encoding='utf8')
-            else:
-                outfile = open(path + outname + ".dev.out", "w", encoding='utf8')
-        
-        for l in devlines:
-            lemma, msd, correct = l.split(u'\t')
-#                    lemma, msd, = l.split(u'\t')
-            if prefbias > suffbias:
-                lemma = lemma[::-1]
-            if not YSET is None:
-                outform = apply_best_rule(lemma, msd, allprules, allsrules,
-                                          debug=DEBUG,
-                                          no_pref=NO_PREF,
-                                          subset=YSET,
-                                          wordmap=wordmap)
-            else:
-                outform = apply_best_rule(lemma, msd, allprules, allsrules, debug=DEBUG)
 
-            if not outform is None:
-                if prefbias > suffbias:
-                    outform = outform[::-1]
-                    lemma = lemma[::-1]
+        if out: outfile = open(lang_fname+'.out', 'w', encoding='utf8')
+
+        for lemma,msd,correct in evallines:
+            if is_in_subset(lemma, eval_set, wordmap):
+                lemma = lemma[::slicedir]
+                outform = apply_best_rule(lemma, msd, allrules, debug=debug)
+
+                lemma = lemma[::slicedir]
+                outform = outform[::slicedir]
+
                 if outform == correct:
                     numcorrect += 1
                 numguesses += 1
-                if OUTPUT:
-                    outfile.write(lemma + "\t" + msd + "\t" + outform + "\n")
+            
+                if out:
+                    outfile.write('\t'.join((lemma,msd,correct,outform))+'\n')
+        
+        if out: outfile.close()
+        
+        pctcorrect = numcorrect / float(numguesses)
+        print(f'{lang} accuracy: {pctcorrect:.2%}')
 
-        if OUTPUT:
-            outfile.close()
-
+        totalavg += pctcorrect
         numlang += 1
-        totalavg += numcorrect/float(numguesses)
+    
+    totalavg /= float(numlang)
+    print(f'average accuracy: {totalavg:.2%}')
 
-        print(lang + ": " + str(str(numcorrect/float(numguesses)))[0:7])
-
-    print("Average accuracy", totalavg/float(numlang))
-
-
-if __name__ == "__main__":
-    main(sys.argv)
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(prog='NonNeuralMyTeam',
+                                     description='Our cleaned and very slightly edited version'
+                                        + ' of the original nonneural.py code.',
+                                     epilog='Generating this help message was done with the argparse library'
+                                        + ' instead of manually with a bunch of print-statements.')
+    
+    parser.add_argument('-o', '--output',
+                        dest='out',
+                        action='store_true',
+                        help='generate output files with guesses. files are written to the same place as'
+                            + ' the path argument (or default value if no path was specified) under <lang>.out')
+    parser.add_argument('-t', '--test',
+                        dest='eval',
+                        action='store_const',
+                        const='.tst',
+                        default='.dev',
+                        help='evaluate models on test instead of dev data.')
+    parser.add_argument('-d', '--debug',
+                        dest='debug',
+                        action='store_true',
+                        help='evaluate on debug (or subset when specified) instead of dev and print debug statements')
+    parser.add_argument('-T', '--trn-set',
+                        dest='trn_set',
+                        default='all',
+                        help='subset of data to train on. must specify one of the following: all, mod, no_old,'
+                        + 'no_obs, no_dtd, pre.<prefix string>, suf.<suffix string>. defaults to \'all\'.')
+    parser.add_argument('-V', '--eval-set',
+                        dest='eval_set',
+                        help='subset of data to evaluate on. categories are the same as for the -T arg.'
+                        + ' defaults to \'all\'')
+    parser.add_argument('-S', '--subset',
+                        dest='subset',
+                        help='subset of data to work with for both training and evaluation. overwrites arguments passed'
+                        + ' to -T and -V. when nothing is passed, uses the values of -T and -V, so default behavior is'
+                        + ' to run on the unfiltered data, but \'mod\' is recommended for the best results.')
+    parser.add_argument('-p', '--path',
+                        dest='path',
+                        default='data',
+                        help='path to the directory containing data files. defaults to \'data\'.')
+    
+    main(parser.parse_args())

@@ -1,0 +1,114 @@
+Lemma: craqueler
+Features: V.PTCP;PRS
+Applicable prefixing rules:
+[('<', '<', 190), ('<c', '<c', 26), ('<cr', '<cr', 1), ('<', '<se ', 3)]
+Using: ('<', '<', 190)
+Applicable suffixing rules:
+[('>', 't>', 180), ('>', '>', 193), ('r>', 'nt>', 159), ('er>', 'ant>', 154), ('er>', 'nt>', 11), ('r>', 't>', 13), ('ler>', 'lant>', 18), ('>', 'sant>', 7), ('>', 'nt>', 18), ('r>', 'ssant>', 7), ('>', 'ant>', 7), ('r>', 'ant>', 8), ('er>', 'eant>', 8), ('eler>', 'elant>', 1), ('eler>', 'elant>', 6), ('éler>', 'élant>', 5)]
+Using: ('eler>', 'elant>', 6)
+Lemma: craqueler
+Features: V;COND;NOM(3,PL)
+Applicable prefixing rules:
+[('<', '<', 224), ('<c', '<c', 16), ('<cra', '<cra', 1), ('<cr', '<cr', 3), ('<', '<se ', 1)]
+Using: ('<', '<', 224)
+Applicable suffixing rules:
+[('r>', 'raient>', 167), ('>', 'ent>', 208), ('er>', 'eraient>', 157), ('>', 't>', 225), ('>', 'ient>', 208), ('>', 'nt>', 217), ('>', '>', 225), ('>', 'aient>', 167), ('er>', 'eroient>', 40), ('>', 'oient>', 41), ('r>', 'roient>', 41), ('ler>', 'leraient>', 18), ('er>', 'ent>', 8), ('r>', 'nt>', 8), ('r>', 'ent>', 4), ('ler>', 'leroient>', 3), ('éler>', 'èleraient>', 7), ('eler>', 'eleraient>', 1), ('eler>', 'èleraient>', 2), ('eler>', 'eleroient>', 1)]
+Using: ('éler>', 'èleraient>', 7)
+Lemma: craqueler
+Features: V;IND;FUT;NOM(1,SG)
+Applicable prefixing rules:
+[('<', '<', 197), ('<c', '<c', 21), ('<', '<me ', 1)]
+Using: ('<', '<', 197)
+Applicable suffixing rules:
+[('>', 'ai>', 186), ('>', 'i>', 193), ('>', '>', 198), ('r>', 'rai>', 186), ('er>', 'erai>', 176), ('ler>', 'lerai>', 27), ('r>', '>', 4), ('r>', 'roi>', 1), ('er>', 'eroi>', 1), ('>', 'oi>', 1), ('éler>', 'èlerai>', 8), ('eler>', 'èlerai>', 1), ('eler>', 'elerai>', 1)]
+Using: ('éler>', 'èlerai>', 8)
+Lemma: craqueler
+Features: V;IND;FUT;NOM(2,PL)
+Applicable prefixing rules:
+[('<', '<', 199), ('<c', '<c', 25), ('<cra', '<cra', 1), ('<cr', '<cr', 3), ('<', '<vous ', 3)]
+Using: ('<', '<', 199)
+Applicable suffixing rules:
+[('er>', 'erez>', 162), ('r>', 'rez>', 167), ('>', 'z>', 198), ('>', '>', 202), ('>', 'ez>', 167), ('er>', 'eroiz>', 23), ('>', 'oiz>', 23), ('r>', 'roiz>', 23), ('>', 'iz>', 24), ('r>', 'z>', 4), ('ler>', 'lerez>', 22), ('ler>', 'leroiz>', 2), ('eler>', 'èlerez>', 1), ('éler>', 'èlerez>', 6), ('eler>', 'elerez>', 1), ('eler>', 'èlerez>', 1), ('eler>', 'eleroiz>', 2)]
+Using: ('éler>', 'èlerez>', 6)
+Lemma: craqueler
+Features: V;IND;FUT;NOM(2,SG)
+Applicable prefixing rules:
+[('<', '<', 213), ('<c', '<c', 22), ('<cra', '<cra', 1), ('<cr', '<cr', 2)]
+Using: ('<', '<', 213)
+Applicable suffixing rules:
+[('r>', 'ras>', 199), ('>', '>', 213), ('>', 'as>', 199), ('>', 's>', 212), ('er>', 'eras>', 188), ('ler>', 'leras>', 23), ('eler>', 'èleras>', 1), ('r>', 's>', 1), ('éler>', 'èleras>', 7), ('eler>', 'èleras>', 1), ('eler>', 'eleras>', 1)]
+Using: ('éler>', 'èleras>', 7)
+Lemma: craqueler
+Features: V;IND;PRS;NOM(1,PL)
+Applicable prefixing rules:
+[('<', '<', 202), ('<c', '<c', 19), ('<cr', '<cr', 1), ('<', '<nous ', 3), ('<', '<nou', 1)]
+Using: ('<', '<', 202)
+Applicable suffixing rules:
+[('er>', 'ons>', 164), ('>', '>', 206), ('>', 's>', 194), ('r>', 'ns>', 168), ('r>', 'ons>', 10), ('>', 'ns>', 22), ('er>', 'eons>', 10), ('ler>', 'lons>', 22), ('r>', 'ssons>', 8), ('>', 'ons>', 9), ('>', 'sons>', 8), ('r>', 's>', 9), ('er>', 'ns>', 7), ('eler>', 'elons>', 1), ('éler>', 'élons>', 6), ('eler>', 'elons>', 3)]
+Using: ('éler>', 'élons>', 6)
+Lemma: craqueler
+Features: V;IND;PRS;NOM(2,PL)
+Applicable prefixing rules:
+[('<', '<', 207), ('<c', '<c', 20), ('<cr', '<cr', 1), ('<', '<vous ', 3), ('<', '<vou', 1)]
+Using: ('<', '<', 207)
+Applicable suffixing rules:
+[('>', '>', 211), ('r>', 'z>', 195), ('er>', 'ez>', 191), ('ler>', 'lez>', 19), ('r>', 'ssez>', 7), ('>', 'z>', 12), ('>', 'sez>', 7), ('>', 'ez>', 7), ('eler>', 'elez>', 1), ('>', 's>', 1), ('r>', 'ez>', 1), ('r>', '>', 3), ('éler>', 'élez>', 5), ('eler>', 'elez>', 3)]
+Using: ('éler>', 'élez>', 5)
+Lemma: craqueler
+Features: V;IND;PRS;NOM(2,SG)
+Applicable prefixing rules:
+[('<', '<', 193), ('<c', '<c', 21), ('<c', '<k', 1), ('<cra', '<cra', 1), ('<cr', '<cr', 2), ('<', '<te ', 3)]
+Using: ('<', '<', 193)
+Applicable suffixing rules:
+[('r>', 's>', 180), ('er>', 'es>', 170), ('>', '>', 196), ('r>', '>', 4), ('ler>', 'les>', 19), ('r>', 'z>', 1), ('eler>', 'eles>', 1), ('éler>', 'èles>', 6), ('eler>', 'oiles>', 1), ('eler>', 'èles>', 1)]
+Using: ('éler>', 'èles>', 6)
+Lemma: craqueler
+Features: V;IND;PRS;NOM(3,PL)
+Applicable prefixing rules:
+[('<', '<', 217), ('<c', '<c', 20), ('<cra', '<cra', 1), ('<cr', '<cr', 2), ('<', '<se ', 1)]
+Using: ('<', '<', 217)
+Applicable suffixing rules:
+[('er>', 'ent>', 195), ('>', 't>', 215), ('>', '>', 218), ('r>', 'nt>', 199), ('r>', 'ent>', 2), ('>', 'nt>', 16), ('ler>', 'lent>', 24), ('>', 'ent>', 8), ('r>', 'ssent>', 8), ('>', 'sent>', 8), ('eler>', 'èlent>', 1), ('r>', 't>', 1), ('éler>', 'èlent>', 7), ('eler>', 'elent>', 1), ('eler>', 'oilent>', 1), ('eler>', 'èlent>', 3), ('eler>', 'eilent>', 1)]
+Using: ('éler>', 'èlent>', 7)
+Lemma: craqueler
+Features: V;IND;PRS;NOM(3,SG)
+Applicable prefixing rules:
+[('<', '<', 211), ('<c', '<c', 26), ('<cr', '<cr', 2), ('<', '<se ', 2)]
+Using: ('<', '<', 211)
+Applicable suffixing rules:
+[('>', '>', 213), ('r>', '>', 202), ('er>', 'e>', 199), ('ler>', 'le>', 28), ('r>', 't>', 5), ('eler>', 'èle>', 1), ('>', 't>', 1), ('r>', 'st>', 1), ('éler>', 'èle>', 5), ('eler>', 'oile>', 1), ('eler>', 'èle>', 2), ('eler>', 'eile>', 1)]
+Using: ('éler>', 'èle>', 5)
+Lemma: craqueler
+Features: V;IND;PST;IPFV;NOM(3,SG)
+Applicable prefixing rules:
+[('<', '<', 205), ('<c', '<c', 24), ('<cra', '<cra', 1), ('<cr', '<cr', 2), ('<', '<se ', 1)]
+Using: ('<', '<', 205)
+Applicable suffixing rules:
+[('er>', 'ait>', 138), ('>', 't>', 184), ('>', '>', 206), ('r>', 'it>', 168), ('r>', 'ait>', 6), ('>', 'it>', 14), ('er>', 'eait>', 6), ('r>', 't>', 7), ('ler>', 'lait>', 19), ('er>', 't>', 12), ('r>', '>', 12), ('>', 'sait>', 3), ('r>', 'ssait>', 3), ('>', 'ait>', 3), ('er>', 'oit>', 30), ('r>', 'oit>', 1), ('er>', 'eoit>', 1), ('ler>', 'loit>', 3), ('eler>', 'elait>', 1), ('éler>', 'élait>', 7), ('eler>', 'elait>', 3), ('eler>', 'eloit>', 1)]
+Using: ('éler>', 'élait>', 7)
+Lemma: craqueler
+Features: V;IND;PST;PFV;NOM(2,PL)
+Applicable prefixing rules:
+[('<', '<', 201), ('<c', '<c', 19), ('<cr', '<cr', 2), ('<', '<vous ', 3), ('<', '<vou', 1)]
+Using: ('<', '<', 201)
+Applicable suffixing rules:
+[('r>', 's>', 174), ('er>', 'tes>', 174), ('er>', 'es>', 174), ('>', '>', 205), ('er>', 'âtes>', 141), ('>', 'tes>', 12), ('>', 'es>', 22), ('er>', 'eâtes>', 7), ('>', 's>', 29), ('r>', 'âtes>', 7), ('r>', 'es>', 1), ('ler>', 'lâtes>', 19), ('er>', 'stes>', 33), ('r>', 'stes>', 3), ('er>', 'astes>', 25), ('r>', 'tes>', 10), ('ler>', 'lastes>', 3), ('er>', 'eastes>', 2), ('>', 'stes>', 2), ('r>', 'astes>', 2), ('r>', '>', 1), ('éler>', 'élâtes>', 9), ('eler>', 'elâtes>', 2)]
+Using: ('éler>', 'élâtes>', 9)
+Lemma: craqueler
+Features: V;IND;PST;PFV;NOM(2,SG)
+Applicable prefixing rules:
+[('<', '<', 196), ('<c', '<c', 21), ('<cra', '<cra', 1), ('<cr', '<cr', 2), ('<', '<te ', 3)]
+Using: ('<', '<', 196)
+Applicable suffixing rules:
+[('er>', 'eas>', 9), ('>', '>', 199), ('>', 's>', 10), ('r>', 'as>', 9), ('r>', 's>', 171), ('er>', 'as>', 161), ('ler>', 'las>', 16), ('er>', 's>', 11), ('r>', '>', 13), ('éler>', 'élas>', 6), ('eler>', 'elas>', 4)]
+Using: ('éler>', 'élas>', 6)
+Lemma: craqueler
+Features: V;NFIN
+Applicable prefixing rules:
+[('<', '<', 203), ('<c', '<c', 21), ('<cr', '<cr', 2)]
+Using: ('<', '<', 203)
+Applicable suffixing rules:
+[('er>', 'er>', 181), ('r>', 'r>', 195), ('>', '>', 203), ('ler>', 'ler>', 15), ('éler>', 'éler>', 12), ('eler>', 'eler>', 3)]
+Using: ('éler>', 'éler>', 12)
+fra accuracy: 14.29%
+average accuracy: 14.29%

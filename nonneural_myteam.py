@@ -211,7 +211,7 @@ def apply_best_rule(lemma, msd, allrules, keys=None):
         if msd not in allrules[fix]:
             continue # do nothing if no X-fixing rules exist for this form
 
-        applicablerules = [(rule[0],rule[1],freq) for rule,freq in allrules[fix][msd].items() if rule[0] in base]
+        applicablerules = [(rule[0],rule[1],freq) for rule,freq in allrules[fix][msd].items()]
 
         if len(applicablerules) > 0:
             bestrule = max(applicablerules, key=keys[fix])
@@ -224,6 +224,8 @@ def numleadingsyms(s, sym='_'):
 
 def numtrailingsyms(s, sym='_'):
     return len(s) - len(s.rstrip(sym))
+
+# =========================== MAIN PROGRAM STARTS HERE =============================
 
 def main(parsed):
     out = parsed.out
