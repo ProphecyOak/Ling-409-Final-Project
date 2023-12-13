@@ -302,7 +302,7 @@ def replace_first_inst(s, to_replace, replace_with):
 
 def main(parsed):
     # Look how fun! the argparse library lets you access your options/arguments as object attributes!
-    # Isn't it so much nicer than the ugly, ugly sys.gnu_getopt() line? and now the function isn't all
+    # Isn't it so much nicer than the ugly, ugly getopt.gnu_getopt() line? and now the function isn't all
     # cluttered with argument parsing and setting defaults
 
     out, evl_ext, debug = parsed.out, parsed.eval, parsed.debug
@@ -340,7 +340,7 @@ def main(parsed):
         if prefbias > suffbias:
             slicedir = -1
         
-        allrules = {PRE: {}, SUF: {}} # init list of empty dictionaries to store prefix and suffix rules
+        allrules = {PRE: {}, SUF: {}} # init empty dictionaries to store prefix and suffix rules
         for lemma,msd,form in trnlines:
 
             if is_in_subset(lemma, trn_set, wordmap):
